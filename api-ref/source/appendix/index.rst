@@ -6,11 +6,11 @@ Appendix
 ========
 
 -  :ref:`Status Codes <sfs_02_0089>`
--  :ref:`Error Codes <errorcode>`
+-  :ref:`SFS Turbo Error Codes <errorcode>`
 
 .. toctree::
    :maxdepth: 1
    :hidden: 
 
    status_codes
-   error_codes
+   sfs_turbo_error_codes
