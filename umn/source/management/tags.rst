@@ -27,7 +27,7 @@ Procedure
 
    .. _sfs_01_0043__fig146683492144:
 
-   .. figure:: /_static/images/en-us_image_0251361308.png
+   .. figure:: /_static/images/en-us_image_0000001516236460.png
       :alt: **Figure 1** Managing file system tags
 
       **Figure 1** Managing file system tags

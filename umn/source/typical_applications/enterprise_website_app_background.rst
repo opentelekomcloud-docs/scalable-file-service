@@ -19,7 +19,7 @@ Configuration Process
 
 #. Sort out the website files.
 #. Log in to SFS Console. Create an SFS Turbo file system to store the website files.
-#. Log in to the ECS that functions as the compute node and mount the file system.
+#. Log in to the server that functions as the compute node and mount the file system.
 #. On the head node, upload the files to the file system.
 #. Start the web server.
 
@@ -27,7 +27,7 @@ Prerequisites
 -------------
 
 -  A VPC has been created.
--  ECSs that function as head nodes and compute nodes have been created, and have been assigned to the VPC.
+-  Servers that function as head nodes and compute nodes have been created, and have been assigned to the VPC.
 -  SFS has been enabled.
 
 Example Configuration
@@ -41,8 +41,8 @@ Example Configuration
 
 #. After the configuration is complete, click **Create Now**.
 
-   For details about how to mount a file system to an ECS running Linux, see :ref:`Mounting an NFS File System to ECSs (Linux) <en-us_topic_0034428728>`. For details about how to mount a file system running Windows, see :ref:`Mounting an NFS File System to ECSs (Windows) <en-us_topic_0105224109>`.
+   To mount a file system to Linux ECSs, see :ref:`Mounting an NFS File System to ECSs (Linux) <en-us_topic_0000001567076661>`. To mount a file system to Windows ECSs, see :ref:`Mounting an NFS File System to ECSs (Windows) <en-us_topic_0105224109>`.
 
-#. Log in to the head node, and upload the files to the file system.
+#. Log in to the head node and upload the files to the file system.
 
 #. Start the web server.

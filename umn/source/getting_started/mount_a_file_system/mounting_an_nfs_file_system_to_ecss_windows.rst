@@ -5,11 +5,11 @@
 Mounting an NFS File System to ECSs (Windows)
 =============================================
 
-After creating a file system, you need to mount the file system to ECSs so that they can share the file system.
+After creating a file system, you need to mount the file system to servers so that they can share the file system.
 
-This section uses Windows Server 2012 as an example to describe how to mount an NFS file system. For other versions, perform the steps based on the actual situation.
+This section uses Windows Server 2012 as the example OS to describe how to mount an NFS file system. For other versions, perform the steps based on the actual situation.
 
-Operations on BMSs and containers (CCE) are the same as those on ECSs.
+In this section, ECSs are used as example servers. Operations on BMSs and containers (CCE) are the same as those on ECSs.
 
 Prerequisites
 -------------
@@ -18,16 +18,13 @@ Prerequisites
 -  At least one ECS that belongs to the same VPC as the file system exists.
 -  The IP address of the DNS server for resolving the domain names of the file systems has been configured on the ECS. For details, see :ref:`Configuring DNS <sfs_01_0038>`. SFS Turbo file systems do not require domain name resolution.
 
-Limitations and Constraints
----------------------------
-
 Procedure
 ---------
 
 #. Log in to the management console using a cloud account.
 
    a. Log in to the management console and select a region and a project.
-   b. Under **Computing**, click **Elastic Cloud Server** to switch to the ECS console.
+   b. Under **Computing**, click **Elastic Cloud Server** to go to the ECS console.
 
 #. Go to the ECS console and log in to the ECS running Windows Server 2012.
 
@@ -37,7 +34,7 @@ Procedure
 
       .. _en-us_topic_0105224109__fig5988173610457:
 
-      .. figure:: /_static/images/en-us_image_0105365714.png
+      .. figure:: /_static/images/en-us_image_0000001516076872.png
          :alt: **Figure 1** Server Manager
 
          **Figure 1** Server Manager
@@ -46,7 +43,7 @@ Procedure
 
       .. _en-us_topic_0105224109__fig598816362459:
 
-      .. figure:: /_static/images/en-us_image_0105366557.png
+      .. figure:: /_static/images/en-us_image_0000001567396641.png
          :alt: **Figure 2** Wizard for adding roles and features
 
          **Figure 2** Wizard for adding roles and features
@@ -55,7 +52,7 @@ Procedure
 
       .. _en-us_topic_0105224109__fig1998863615458:
 
-      .. figure:: /_static/images/en-us_image_0105369597.png
+      .. figure:: /_static/images/en-us_image_0000001516236464.png
          :alt: **Figure 3** Selecting the server for NFS
 
          **Figure 3** Selecting the server for NFS
@@ -64,7 +61,7 @@ Procedure
 
       .. _en-us_topic_0105224109__fig398666640:
 
-      .. figure:: /_static/images/en-us_image_0132330932.png
+      .. figure:: /_static/images/en-us_image_0000001516236452.png
          :alt: **Figure 4** Selecting the NFS client
 
          **Figure 4** Selecting the NFS client
@@ -75,7 +72,7 @@ Procedure
 
       .. _en-us_topic_0105224109__fig773834418456:
 
-      .. figure:: /_static/images/en-us_image_0105371941.png
+      .. figure:: /_static/images/en-us_image_0000001516396452.png
          :alt: **Figure 5** Administrative tools
 
          **Figure 5** Administrative tools
@@ -84,14 +81,14 @@ Procedure
 
       .. _en-us_topic_0105224109__fig47381445453:
 
-      .. figure:: /_static/images/en-us_image_0105373154.png
+      .. figure:: /_static/images/en-us_image_0000001516236456.png
          :alt: **Figure 6** Services for NFS
 
          **Figure 6** Services for NFS
 
       .. _en-us_topic_0105224109__fig8738344144513:
 
-      .. figure:: /_static/images/en-us_image_0105374234.png
+      .. figure:: /_static/images/en-us_image_0000001567076741.png
          :alt: **Figure 7** Client for NFS properties
 
          **Figure 7** Client for NFS properties
@@ -114,14 +111,14 @@ Procedure
 
    .. _en-us_topic_0105224109__fig212663513297:
 
-   .. figure:: /_static/images/en-us_image_0251323172.png
+   .. figure:: /_static/images/en-us_image_0000001515917300.png
       :alt: **Figure 8** Mount point
 
       **Figure 8** Mount point
 
    .. _en-us_topic_0105224109__fig13957194774517:
 
-   .. figure:: /_static/images/en-us_image_0105396156.png
+   .. figure:: /_static/images/en-us_image_0000001516076884.png
       :alt: **Figure 9** Running the command
 
       **Figure 9** Running the command
@@ -132,7 +129,7 @@ Procedure
 
    .. _en-us_topic_0105224109__fig1120010188467:
 
-   .. figure:: /_static/images/en-us_image_0108360730.png
+   .. figure:: /_static/images/en-us_image_0000001516076888.png
       :alt: **Figure 10** Successful mounting
 
       **Figure 10** Successful mounting
@@ -144,7 +141,7 @@ Procedure
 Troubleshooting
 ---------------
 
-If a file system is mounted to a Linux ECS and a Windows ECS, you cannot write data to the files created by the Linux ECS on the Windows ECS. To address this problem, you need to modify the registry and change both values of UID and GID of the Windows user accessing NFS to **0**. This section uses Windows Server 2012 as an example. Do as follows:
+If a file system is mounted to a Linux ECS and a Windows ECS, on the Windows ECS, data cannot be written to the files created by the Linux ECS. To address this problem, modify the registry and change both UID and GID values to **0** for NFS accesses from Windows. This section uses Windows Server 2012 as an example. Do as follows:
 
 #. Choose **Start** > **Run** and enter **regedit** to open the registry.
 
@@ -152,7 +149,7 @@ If a file system is mounted to a Linux ECS and a Windows ECS, you cannot write d
 
    .. _en-us_topic_0105224109__fig103481655182917:
 
-   .. figure:: /_static/images/en-us_image_0132187564.png
+   .. figure:: /_static/images/en-us_image_0000001567076733.png
       :alt: **Figure 11** Entering the directory
 
       **Figure 11** Entering the directory
@@ -161,11 +158,11 @@ If a file system is mounted to a Linux ECS and a Windows ECS, you cannot write d
 
    .. _en-us_topic_0105224109__fig56963212379:
 
-   .. figure:: /_static/images/en-us_image_0132187573.png
+   .. figure:: /_static/images/en-us_image_0000001567396645.png
       :alt: **Figure 12** Adding values
 
       **Figure 12** Adding values
 
 #. After modifying the registry, restart the server for the modification to take effect.
 
-.. |image1| image:: /_static/images/en-us_image_0110722360.png
+.. |image1| image:: /_static/images/en-us_image_0000001567076725.png

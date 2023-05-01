@@ -8,11 +8,11 @@ What Is SFS?
 Overview
 --------
 
-Scalable File Service (SFS) provides scalable, high-performance file storage. With SFS, you can enjoy shared file access spanning multiple Elastic Cloud Server (ECSs), Bare Metal Servers (BMSs), and containers created on Cloud Container Engine (CCE). See :ref:`Figure 1 <en-us_topic_0034428718__fig1762807410259>`.
+Scalable File Service (SFS) provides scalable, high-performance (NAS) file storage. With SFS, you can enjoy shared file access spanning multiple Elastic Cloud Servers (ECSs), Bare Metal Servers (BMSs), and containers created on Cloud Container Engine (CCE). See :ref:`Figure 1 <en-us_topic_0034428718__fig1762807410259>`.
 
 .. _en-us_topic_0034428718__fig1762807410259:
 
-.. figure:: /_static/images/en-us_image_0259710043.png
+.. figure:: /_static/images/en-us_image_0000001516236400.png
    :alt: **Figure 1** Accessing SFS
 
    **Figure 1** Accessing SFS
@@ -21,7 +21,7 @@ Compared with traditional file sharing storage, SFS has the following advantages
 
 -  File sharing
 
-   ECSs in multiple availability zones (AZs) of a same region can access the same file system concurrently and share files.
+   Servers in multiple availability zones (AZs) of a same region can access the same file system concurrently and share files.
 
 -  Elastic scaling
 
@@ -46,8 +46,8 @@ You can access SFS on the management console or via APIs by sending HTTPS reques
 
 -  APIs
 
-   Call APIs if you need to integrate SFS into a third-party system for secondary development. For detailed operations, see `Scalable File Service API Reference <https://docs.otc.t-systems.com/en-us/api/sfs/sfs_02_0001.html>`__.
+   Use APIs if you need to integrate SFS into a third-party system for secondary development. For detailed operations, see `Scalable File Service API Reference <https://docs.otc.t-systems.com/en-us/api/sfs/sfs_02_0001.html>`__.
 
 -  Management console
 
-   You can access SFS on the management console.
+   Use the console if you prefer a web-based UI to perform operations.

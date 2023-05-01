@@ -23,7 +23,7 @@ Take troubleshooting measures based on possible causes.
 Solution
 --------
 
-#. Log in to the ECS. The following operations use an ECS running Windows Server 2012 R2 as an example.
+#. Log in to the ECS. An ECS running Windows Server 2012 R2 is used in this example.
 
 #. Click **Server Manager** in the lower left corner.
 
@@ -37,14 +37,14 @@ Solution
 
    .. _sfs_01_0061__fig047928192514:
 
-   .. figure:: /_static/images/en-us_image_0251367892.png
+   .. figure:: /_static/images/en-us_image_0000001567396713.png
       :alt: **Figure 1** Mount point
 
       **Figure 1** Mount point
 
    .. _sfs_01_0061__fig1734814414346:
 
-   .. figure:: /_static/images/en-us_image_0156988117.png
+   .. figure:: /_static/images/en-us_image_0000001567196537.png
       :alt: **Figure 2** Physical path
 
       **Figure 2** Physical path

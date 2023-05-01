@@ -17,7 +17,7 @@ A region and availability zone (AZ) identify the location of a data center. You 
 
 .. _sfs_01_0002__en-us_topic_0184026189_fig8747114281212:
 
-.. figure:: /_static/images/en-us_image_0184026531.png
+.. figure:: /_static/images/en-us_image_0000001567316417.png
    :alt: **Figure 1** Regions and AZs
 
    **Figure 1** Regions and AZs
@@ -38,4 +38,4 @@ When deploying resources, consider your applications' requirements on disaster r
 Regions and Endpoints
 ---------------------
 
-Before you use an API to call resources, specify its region and endpoint. For more details, see `Regions and Endpoints <https://docs.otc.t-systems.com/en-us/endpoint/index.html>`__.
+Before you use an API to call resources, specify its region and endpoint. For more details, see `Regions and Endpoints <https://docs.otc.t-systems.com/additional/endpoints.html>`__.

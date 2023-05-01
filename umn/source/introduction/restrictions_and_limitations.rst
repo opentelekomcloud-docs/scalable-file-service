@@ -5,8 +5,8 @@
 Restrictions and Limitations
 ============================
 
-Restrictions
-------------
+General
+-------
 
 -  SFS supports the NFSv3 protocol only. The default export options are **rw**, **no_root_squash**, **no_all_squash**, and **sync**.
 -  To obtain better performance, you are advised to use the operating systems listed in :ref:`Supported Operating Systems <sfs_01_0014>`, which have passed the compatibility test.
@@ -22,7 +22,7 @@ SFS Capacity-Oriented
 -  Currently, NFSv3 protocol is supported (NFSv4 is not supported).
 -  A maximum of 10,000 compute nodes can be mounted to and access a single file system at the same time.
 -  The maximum capacity of a single file system is 2 PB, and that of a single file is 240 TB.
--  Multiple VPCs are supported. You can add a maximum of 20 VPCs for each file system. A maximum of 400 ACL rules for added VPCs can be created.
+-  Multi-VPC access is supported. You can add a maximum of 20 VPCs for one file system and create a maximum of 400 ACL rules for all added VPCs.
 
 SFS Turbo
 ---------

@@ -18,7 +18,7 @@ A shared NFS file system belongs to the root user and cannot be modified. The wr
 Fault Diagnosis
 ---------------
 
-To address this problem, you need to modify the registry and change both values of UID and GID of the Windows user accessing NFS to **0**.
+To address this problem, modify the registry and change both UID and GID values to **0** for NFS accesses from Windows.
 
 Solution
 --------
@@ -29,7 +29,7 @@ Solution
 
    .. _sfs_01_0060__fig103481655182917:
 
-   .. figure:: /_static/images/en-us_image_0123076280.png
+   .. figure:: /_static/images/en-us_image_0000001516236516.png
       :alt: **Figure 1** Entering the directory
 
       **Figure 1** Entering the directory
@@ -38,7 +38,7 @@ Solution
 
    .. _sfs_01_0060__fig56963212379:
 
-   .. figure:: /_static/images/en-us_image_0132187573.png
+   .. figure:: /_static/images/en-us_image_0000001567396645.png
       :alt: **Figure 2** Adding values
 
       **Figure 2** Adding values

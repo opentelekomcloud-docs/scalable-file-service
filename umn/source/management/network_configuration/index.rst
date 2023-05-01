@@ -5,12 +5,12 @@
 Network Configuration
 =====================
 
--  :ref:`Configuring VPCs <sfs_01_0036>`
+-  :ref:`Configuring Multi-VPC Access <sfs_01_0036>`
 -  :ref:`Configuring DNS <sfs_01_0038>`
 
 .. toctree::
    :maxdepth: 1
    :hidden: 
 
-   configuring_vpcs
+   configuring_multi-vpc_access
    configuring_dns
