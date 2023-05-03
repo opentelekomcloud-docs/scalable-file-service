@@ -5,16 +5,18 @@
 SFS Turbo APIs
 ==============
 
--  :ref:`Life Cycle Management <sfs_02_0050>`
+-  :ref:`Lifecycle Management <sfs_02_0050>`
 -  :ref:`Storage Capacity Management <sfs_02_0055>`
 -  :ref:`Connection Management <sfs_02_0096>`
--  :ref:`Share Tag <sfs_02_0074>`
+-  :ref:`Tag Management <sfs_02_0074>`
+-  :ref:`Name Management <en-us_topic_0000001537230113>`
 
 .. toctree::
    :maxdepth: 1
    :hidden: 
 
-   life_cycle_management/index
+   lifecycle_management/index
    storage_capacity_management/index
    connection_management/index
-   share_tag/index
+   tag_management/index
+   name_management/index

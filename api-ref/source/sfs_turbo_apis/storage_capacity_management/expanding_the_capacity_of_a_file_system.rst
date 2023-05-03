@@ -24,7 +24,7 @@ URI
    +============+===========+========+==========================================================================================================================+
    | project_id | Yes       | String | Specifies the project ID. For details about how to obtain the project ID, see :ref:`API Usage Guidelines <sfs_02_0001>`. |
    +------------+-----------+--------+--------------------------------------------------------------------------------------------------------------------------+
-   | share_id   | Yes       | String | Specifies the ID of an SFS Turbo file system.                                                                            |
+   | share_id   | Yes       | String | Specifies the ID of the SFS Turbo file system.                                                                           |
    +------------+-----------+--------+--------------------------------------------------------------------------------------------------------------------------+
 
 Request
@@ -42,15 +42,15 @@ Request
 
 -  Parameter in the **extend** field
 
-   +-----------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------------------------+
-   | Parameter       | Mandatory       | Type            | Description                                                                                                                           |
-   +=================+=================+=================+=======================================================================================================================================+
-   | new_size        | Yes             | Int             | Specifies the post-expansion capacity (GB) of the shared file system. The capacity expansion step is greater than or equal to 100 GB. |
-   |                 |                 |                 |                                                                                                                                       |
-   |                 |                 |                 | For a common file system, the value of capacity ranges from 500 to 32768.                                                             |
-   |                 |                 |                 |                                                                                                                                       |
-   |                 |                 |                 | For an enhanced file system, the value of capacity ranges from 10240 to 327680.                                                       |
-   +-----------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------------------------+
+   +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------+
+   | Parameter       | Mandatory       | Type            | Description                                                                                                                |
+   +=================+=================+=================+============================================================================================================================+
+   | new_size        | Yes             | Int             | Specifies the new capacity (GB) of the shared file system. The capacity expansion step is greater than or equal to 100 GB. |
+   |                 |                 |                 |                                                                                                                            |
+   |                 |                 |                 | For a common file system, the value of capacity ranges from 500 to 32768.                                                  |
+   |                 |                 |                 |                                                                                                                            |
+   |                 |                 |                 | For an enhanced file system, the value of capacity ranges from 10240 to 327680.                                            |
+   +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------+
 
 -  Example request
 
@@ -67,12 +67,12 @@ Response
 
 -  Parameter description
 
-   ========= ====== ===============================================
+   ========= ====== ================================================
    Parameter Type   Description
-   ========= ====== ===============================================
-   id        String Specifies the ID of an SFS Turbo file system.
-   name      String Specifies the name of an SFS Turbo file system.
-   ========= ====== ===============================================
+   ========= ====== ================================================
+   id        String Specifies the ID of the SFS Turbo file system.
+   name      String Specifies the name of the SFS Turbo file system.
+   ========= ====== ================================================
 
 -  Example response
 
