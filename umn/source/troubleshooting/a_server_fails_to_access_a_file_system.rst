@@ -2,19 +2,19 @@
 
 .. _sfs_01_0058:
 
-An ECS Fails to Access a File System
-====================================
+A Server Fails to Access a File System
+======================================
 
 Symptom
 -------
 
-An ECS fails to access a file system. The system displays a message indicating that the access request is denied. All services on the ECS are abnormal.
+A server fails to access a file system. The system displays a message indicating that the access request is denied. All services on the server are abnormal.
 
 Possible Causes
 ---------------
 
 -  Cause 1: The file system is abnormal.
--  Cause 2: After a forcible unmount operation on the ECS, mount fails.
+-  Cause 2: After a forcible unmount operation on the server, mount fails.
 
 Fault Diagnosis
 ---------------
@@ -31,9 +31,9 @@ Solution
    -  If yes, go to Cause 2.
    -  If no, see :ref:`The File System Is Abnormal <sfs_01_0059>` to restore the file system to the available state, and then access the file system again.
 
--  Cause 2: After a forcible unmount operation on the ECS, mount fails.
+-  Cause 2: After a forcible unmount operation on the server, mount fails.
 
-   #. This problem is caused by an inherent defect of ECSs. Restart the ECS to resolve this problem.
+   #. This problem is caused by an inherent defect of servers. Restart the server to resolve this problem.
    #. Check whether the file system can be properly mounted and accessed.
 
       -  If yes, no further action is required.

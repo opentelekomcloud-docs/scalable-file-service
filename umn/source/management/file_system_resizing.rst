@@ -17,7 +17,7 @@ The capacity of an SFS Turbo file system can be expanded but cannot be shrunk.
 
 SFS Capacity-Oriented file systems support resizing, which does not affect services.
 
-SFS Turbo file systems support capacity expansion. During capacity expansion, file systems will be unavailable for 2 to 3 minutes. You are advised to expand the capacity during off-peak hours.
+SFS Turbo file systems support online capacity expansion, during which mounting a file system may fail and the connection being used for mounting will experience about a 30-second (max. 3 minutes) I/O latency. You are advised to expand capacity during off-peak hours.
 
 Rules for Resizing
 ------------------
@@ -43,13 +43,13 @@ The rules for resizing an SFS Capacity-Oriented file system are as follows:
 Procedure
 ---------
 
-#. Log in to SFS Console.
+#. Log in to the SFS console.
 
 #. In the file system list, click **Resize** or **Expand Capacity** in the row of the desired file system. The following dialog box is displayed. See :ref:`Figure 1 <sfs_01_0039__fig50999458171929>`.
 
    .. _sfs_01_0039__fig50999458171929:
 
-   .. figure:: /_static/images/en-us_image_0251359565.png
+   .. figure:: /_static/images/en-us_image_0000001567196525.png
       :alt: **Figure 1** Resizing a file system
 
       **Figure 1** Resizing a file system
@@ -74,6 +74,6 @@ Procedure
       |                                   |    The new maximum capacity cannot be smaller than the used capacity.                                                     |
       +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------+
 
-#. In the dialog box that is displayed, confirm the information and click **OK**.
+#. In the displayed dialog box, confirm the information and click **OK**.
 
 #. In the file system list, check the capacity information after resizing.

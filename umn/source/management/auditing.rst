@@ -10,8 +10,6 @@ Scenarios
 
 Cloud Trace Service (CTS) records operations of SFS resources, facilitating query, audit, and backtracking.
 
-Currently, only SFS Turbo file systems support recording of resource operations using CTS. SFS Capacity-Oriented file systems do not support this function.
-
 Prerequisites
 -------------
 
@@ -33,6 +31,19 @@ Operations
    Expanding a shared file system sfs           extendShare
    Shrinking a shared file system sfs           shrinkShare
    ============================== ============= ===============
+
+.. _sfs_01_0050__table11412122812424:
+
+.. table:: **Table 2** SFS Turbo operations traced by CTS
+
+   ============================ ============= ============
+   Operation                    Resource Type Trace
+   ============================ ============= ============
+   Creating a file system       sfs_turbo     createShare
+   Deleting a file system       sfs_turbo     deleteShare
+   Querying file system details sfs_turbo     getShare
+   Listing file systems         sfs_turbo     getAllShares
+   ============================ ============= ============
 
 Querying Traces
 ---------------
@@ -72,5 +83,5 @@ This section describes how to disable an existing tracker on the CTS console. Af
 
 #. After the tracker is disabled, the available operation changes from **Disable** to **Enable**. To enable the tracker again, click **Enable** and then click **Yes**. The system will start recording operations again.
 
-.. |image1| image:: /_static/images/en-us_image_0113383875.jpg
-.. |image2| image:: /_static/images/en-us_image_0113383875.jpg
+.. |image1| image:: /_static/images/en-us_image_0000001567316929.jpg
+.. |image2| image:: /_static/images/en-us_image_0000001567316929.jpg

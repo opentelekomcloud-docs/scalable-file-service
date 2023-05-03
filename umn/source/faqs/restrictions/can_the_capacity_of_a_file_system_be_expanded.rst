@@ -5,4 +5,4 @@
 Can the Capacity of a File System Be Expanded?
 ==============================================
 
-Yes, by capacity resizing.
+Both SFS Capacity-Oriented and SFS Turbo file systems can be expanded by capacity resizing.

@@ -2,15 +2,15 @@
 
 .. _sfs_01_0026:
 
-Step 3: Unmount a File System
-=============================
+Unmount a File System
+=====================
 
 If a file system is no longer used and needs to be deleted, you are advised to unmount the file system and then delete it.
 
 Prerequisites
 -------------
 
-Before unmounting a file system, stop the process and the read/write operations.
+Before unmounting a file system, stop the process and read/write operations.
 
 Linux OS
 --------
@@ -18,7 +18,7 @@ Linux OS
 #. Log in to the management console using a cloud account.
 
    a. Log in to the management console and select a region and a project.
-   b. Under **Computing**, click **Elastic Cloud Server** to switch to the ECS console.
+   b. Under **Computing**, click **Elastic Cloud Server** to go to the ECS console.
 
 #. Log in to the ECS.
 
@@ -26,11 +26,11 @@ Linux OS
 
    **umount** *Local path*
 
-   *Local path*: Local path used to mount the file system on the ECS, for example, **/local_path**.
+   *Local path*: An ECS local directory where the file system is mounted, for example, **/local_path**.
 
    .. note::
 
-      Before running the **umount** command, stop all read and write operations related to the file system and exit from the local path. Otherwise, the unmounting will fail.
+      Before running the **umount** command, stop all read and write operations related to the file system and exit from the local path. Or, the unmounting will fail.
 
 Windows OS
 ----------
@@ -38,16 +38,16 @@ Windows OS
 #. Log in to the management console using a cloud account.
 
    a. Log in to the management console and select a region and a project.
-   b. Under **Computing**, click **Elastic Cloud Server** to switch to the ECS console.
+   b. Under **Computing**, click **Elastic Cloud Server** to go to the ECS console.
 
 #. Log in to the ECS.
 
 #. Right-click the file system to be unmounted and choose **Disconnect**.
 
 
-   .. figure:: /_static/images/en-us_image_0172223742.png
+   .. figure:: /_static/images/en-us_image_0000001567316373.png
       :alt: **Figure 1** Unmounting
 
       **Figure 1** Unmounting
 
-#. If the mounted file system does not exist in the network location anymore, the file system is successfully unmounted.
+#. If the file system disappears from the network location, it has been unmounted.

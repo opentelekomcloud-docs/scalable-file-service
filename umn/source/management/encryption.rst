@@ -14,11 +14,11 @@ For SFS Turbo file systems, no authorization is required.
 
 You can create a file system that is encrypted or not, but you cannot change the encryption settings of an existing file system.
 
-For details about how to create an encrypted file system, see :ref:`Step 1: Create a File System <en-us_topic_0034428727>`.
+For details about how to create an encrypted file system, see :ref:`Create a File System <en-us_topic_0034428727>`.
 
 Unmounting an Encrypted File System
 -----------------------------------
 
 If the CMK used by the encrypted file system is disabled or planned to be deleted, the file system can only be used within a certain period of time (30s by default). Exercise caution in this case.
 
-For details about how to unmount the file system, see :ref:`Step 3: Unmount a File System <sfs_01_0026>`.
+For details about how to unmount the file system, see :ref:`Unmount a File System <sfs_01_0026>`.

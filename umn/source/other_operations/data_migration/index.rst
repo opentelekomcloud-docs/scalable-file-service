@@ -5,10 +5,10 @@
 Data Migration
 ==============
 
--  :ref:`Migrating Data Between an SFS Capacity-Oriented File System and an SFS Turbo File System <sfs_01_0117>`
+-  :ref:`Migrating Data Between File Systems <sfs_01_0117>`
 
 .. toctree::
    :maxdepth: 1
    :hidden: 
 
-   migrating_data_between_an_sfs_capacity-oriented_file_system_and_an_sfs_turbo_file_system
+   migrating_data_between_file_systems

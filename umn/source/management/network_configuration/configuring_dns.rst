@@ -25,7 +25,7 @@ Procedure (Linux)
 
    .. _sfs_01_0038__fig3735131720121:
 
-   .. figure:: /_static/images/en-us_image_0078780345.png
+   .. figure:: /_static/images/en-us_image_0000001567396581.png
       :alt: **Figure 1** Configuring DNS
 
       **Figure 1** Configuring DNS
@@ -68,7 +68,7 @@ Procedure (Linux)
 
       .. _sfs_01_0038__fig46855620155120:
 
-      .. figure:: /_static/images/en-us_image_0058331748.png
+      .. figure:: /_static/images/en-us_image_0000001567196417.png
          :alt: **Figure 2** A locked file
 
          **Figure 2** A locked file
@@ -84,7 +84,7 @@ Procedure (Windows)
 
    .. _sfs_01_0038__fig11811485719:
 
-   .. figure:: /_static/images/en-us_image_0110762886.png
+   .. figure:: /_static/images/en-us_image_0000001515917256.png
       :alt: **Figure 3** Page for network and sharing center
 
       **Figure 3** Page for network and sharing center
@@ -93,7 +93,7 @@ Procedure (Windows)
 
    .. _sfs_01_0038__fig18980173031015:
 
-   .. figure:: /_static/images/en-us_image_0110763434.png
+   .. figure:: /_static/images/en-us_image_0000001516076828.png
       :alt: **Figure 4** Local area connection
 
       **Figure 4** Local area connection
@@ -102,7 +102,7 @@ Procedure (Windows)
 
    .. _sfs_01_0038__fig146301518171620:
 
-   .. figure:: /_static/images/en-us_image_0110764366.png
+   .. figure:: /_static/images/en-us_image_0000001567316333.png
       :alt: **Figure 5** Local area connection properties
 
       **Figure 5** Local area connection properties
@@ -111,7 +111,7 @@ Procedure (Windows)
 
    .. _sfs_01_0038__fig82464042713:
 
-   .. figure:: /_static/images/en-us_image_0110765557.png
+   .. figure:: /_static/images/en-us_image_0000001516396384.png
       :alt: **Figure 6** Configuring DNS on Windows
 
       **Figure 6** Configuring DNS on Windows

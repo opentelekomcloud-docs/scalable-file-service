@@ -5,12 +5,12 @@
 Basic Concepts
 ==============
 
--  :ref:`Product <sfs_01_0120>`
+-  :ref:`SFS Basic Concepts <sfs_01_0120>`
 -  :ref:`Region and AZ <sfs_01_0002>`
 
 .. toctree::
    :maxdepth: 1
    :hidden: 
 
-   product
+   sfs_basic_concepts
    region_and_az

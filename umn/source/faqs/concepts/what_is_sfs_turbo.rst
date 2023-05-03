@@ -5,7 +5,7 @@
 What Is SFS Turbo?
 ==================
 
-SFS Turbo enables high-performance file storage that can be expanded and shrunk on demand. It provides file sharing services for Elastic Cloud Servers (ECSs). SFS Turbo supports the Network File System (NFS) protocol (only NFSv3). You can seamlessly integrate existing applications and tools with the service.
+SFS Turbo provides high-performance file storage that can be expanded on demand. With SFS Turbo, you can enjoy shared file access spanning multiple ECSs. SFS Turbo supports the Network File System (NFS) protocol (only NFSv3). You can seamlessly integrate existing applications and tools with the service.
 
 SFS Turbo provides an easy-to-use graphical user interface (GUI). On the GUI, users can create and configure file systems, saving effort in deploying, resizing, and optimizing file systems.
 
