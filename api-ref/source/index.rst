@@ -1,6 +1,6 @@
-====================================
-Scalable File System - API Reference
-====================================
+=====================================
+Scalable File Service - API Reference
+=====================================
 
 .. toctree::
    :maxdepth: 1
