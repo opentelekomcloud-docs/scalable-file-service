@@ -1,6 +1,6 @@
-=================================
-Scalable File System - User Guide
-=================================
+==================================
+Scalable File Service - User Guide
+==================================
 
 .. toctree::
    :maxdepth: 1
