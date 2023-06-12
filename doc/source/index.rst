@@ -1,5 +1,5 @@
-Scalable File System
-====================
+Scalable File Service
+=====================
 
 Scalable File Service (SFS) provides high-performance file storage that is scalable on demand. It can be shared with multiple Elastic Cloud Servers (ECS).
 
