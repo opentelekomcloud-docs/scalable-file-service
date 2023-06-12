@@ -82,7 +82,7 @@ html_theme_options = {
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
 
-html_title = "Scalable File System - Service Based View"
+html_title = "Scalable File Service - Service Based View"
 
 
 # Add any paths that contain custom static files (such as style sheets) here,
