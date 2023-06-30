@@ -36,14 +36,12 @@ Operations
 
 .. table:: **Table 2** SFS Turbo operations traced by CTS
 
-   ============================ ============= ============
-   Operation                    Resource Type Trace
-   ============================ ============= ============
-   Creating a file system       sfs_turbo     createShare
-   Deleting a file system       sfs_turbo     deleteShare
-   Querying file system details sfs_turbo     getShare
-   Listing file systems         sfs_turbo     getAllShares
-   ============================ ============= ============
+   ====================== ============= ===========
+   Operation              Resource Type Trace
+   ====================== ============= ===========
+   Creating a file system sfs_turbo     createShare
+   Deleting a file system sfs_turbo     deleteShare
+   ====================== ============= ===========
 
 Querying Traces
 ---------------
