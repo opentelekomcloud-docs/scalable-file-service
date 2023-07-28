@@ -25,9 +25,20 @@ extensions = [
 otcdocs_auto_name = False
 otcdocs_auto_version = False
 
-project = 'Scalable File System'
+project = 'Scalable File Service'
 otcdocs_repo_name = 'opentelekomcloud-docs/scalable-file-service'
 # Those variables are required for edit/bug links
+
+# Those variables are needed for indexing into OpenSearch
+otcdocs_doc_environment = ''
+otcdocs_doc_link = ''
+otcdocs_doc_title = ''
+otcdocs_doc_type = ''
+otcdocs_service_category = 'storage'
+otcdocs_service_title = 'Scalable File Service'
+otcdocs_service_type = 'sfs'
+otcdocs_search_environment = 'hc_de'
+otcdocs_search_url = "https://opensearch.eco.tsi-dev.otc-service.com/"
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -82,7 +93,7 @@ html_theme_options = {
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
 
-html_title = "Scalable File System - Service Based View"
+html_title = "Scalable File Service - Service Based View"
 
 
 # Add any paths that contain custom static files (such as style sheets) here,
