@@ -1,6 +1,6 @@
-:original_name: en-us_topic_0000001567076569.html
+:original_name: en-us_topic_0000001476461694.html
 
-.. _en-us_topic_0000001567076569:
+.. _en-us_topic_0000001476461694:
 
 Viewing a File System
 =====================
@@ -12,9 +12,9 @@ Procedure
 
 #. Log in to the SFS console.
 
-#. In the file system list, view the file systems you have created. :ref:`Table 1 <en-us_topic_0000001567076569__table37365828114557>` describes the file system parameters.
+#. In the file system list, view the file systems you have created. :ref:`Table 1 <en-us_topic_0000001476461694__table37365828114557>` describes the file system parameters.
 
-   .. _en-us_topic_0000001567076569__table37365828114557:
+   .. _en-us_topic_0000001476461694__table37365828114557:
 
    .. table:: **Table 1** Parameter description
 
@@ -50,9 +50,9 @@ Procedure
       |                                   | For an SFS Turbo file system, operations include capacity expansion, deletion, and monitoring metric viewing.                                                                                                                                                    |
       +-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-#. Click the name of a file system to view detailed information about the file system. See :ref:`Figure 1 <en-us_topic_0000001567076569__fig964613241271>`.
+#. Click the name of a file system to view detailed information about the file system. See :ref:`Figure 1 <en-us_topic_0000001476461694__fig964613241271>`.
 
-   .. _en-us_topic_0000001567076569__fig964613241271:
+   .. _en-us_topic_0000001476461694__fig964613241271:
 
    .. figure:: /_static/images/en-us_image_0000001567316353.png
       :alt: **Figure 1** File system information

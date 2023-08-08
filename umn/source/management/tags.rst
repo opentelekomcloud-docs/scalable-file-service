@@ -14,14 +14,14 @@ Tags are used to identify and classify file systems.
    -  A tag key can contain a maximum of 36 characters and cannot be left blank. It can only contain letters, digits, hyphens (-), and underscores (_).
    -  A tag value can contain a maximum of 43 characters and can be an empty string. It can only contain letters, digits, hyphens (-), and underscores (_).
 
--  You can add a maximum of 10 tags to one file system.
+-  You can add a maximum of 20 tags to one file system.
 -  The tag keys of the same file system must be unique.
 -  Once created, the tag keys of the file system cannot be edited. You can only edit the tag values. You can delete tags.
 
 Procedure
 ---------
 
-#. Log in to SFS Console.
+#. Log in to the SFS console.
 
 #. In the file system list, find the file system to which you want to add tags and click the name of it. The file system details page is displayed, as shown in :ref:`Figure 1 <sfs_01_0043__fig146683492144>`.
 
