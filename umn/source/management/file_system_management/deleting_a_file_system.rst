@@ -1,6 +1,6 @@
-:original_name: en-us_topic_0000001515917216.html
+:original_name: en-us_topic_0000001527141597.html
 
-.. _en-us_topic_0000001515917216:
+.. _en-us_topic_0000001527141597:
 
 Deleting a File System
 ======================
@@ -21,13 +21,13 @@ Procedure
 
    If you want to delete more than one file system at a time, select the file systems, and then click **Delete** in the upper left part of the file system list. In the displayed dialog box, confirm the information, enter **Delete** in the text box, and then click **Yes**. Batch deletion is only supported for SFS Capacity-Oriented file systems.
 
-#. In the displayed dialog box, as shown in :ref:`Figure 1 <en-us_topic_0000001515917216__fig51368710153938>`, confirm the information and then click **Yes**.
+#. In the displayed dialog box, as shown in :ref:`Figure 1 <en-us_topic_0000001527141597__fig51368710153938>`, confirm the information and then click **Yes**.
 
    .. note::
 
       Only **Available** and **Unavailable** file systems can be deleted.
 
-   .. _en-us_topic_0000001515917216__fig51368710153938:
+   .. _en-us_topic_0000001527141597__fig51368710153938:
 
    .. figure:: /_static/images/en-us_image_0000001516236556.png
       :alt: **Figure 1** Deleting a file system
