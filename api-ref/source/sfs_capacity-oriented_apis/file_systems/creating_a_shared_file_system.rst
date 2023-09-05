@@ -95,9 +95,11 @@ Request
 
    .. note::
 
-      -  You are advised to use the default primary key **sfs/default** to create an encrypted shared file system. For details, see section "File System Encryption" and "Encryption" in the *Scalable File Service User Guide*.
+      -  You are advised to use the default key **sfs/default** to create an encrypted shared file system. For details, see section "File System Encryption" and "Encryption" in the *Scalable File Service User Guide*.
 
 -  Example request: POST https://{endpoint}/v2/16e1ab15c35a457e9c2b2aa189f544e1/shares
+
+   Creating a 1-GB NFS file system that can only be seen privately
 
    .. code-block::
 
@@ -113,6 +115,8 @@ Request
       }
 
 -  Example request (creating a shared file system with data encryption function): POST https://{endpoint}/v2/16e1ab15c35a457e9c2b2aa189f544e1/shares
+
+   Creating a 1-GB, encrypted NFS file system that can only be seen privately
 
    .. code-block::
 

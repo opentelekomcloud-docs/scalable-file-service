@@ -54,6 +54,8 @@ Request
 
 -  Example request
 
+   Batch deleting tags (key1, value1; key2; key3) from a shared file system
+
    .. code-block::
 
       {

@@ -10,7 +10,7 @@ Function
 
 This API is used to add a tag to a specified shared file system.
 
-A shared file system can have a maximum of 10 tags.
+A shared file system can have a maximum of 20 tags.
 
 The keys of multiple tags added to a shared file system must be unique.
 
@@ -51,6 +51,8 @@ Request
    +-----------+-----------+--------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 -  Example request
+
+   Adding a tag (key1, value1) to a shared file system
 
    .. code-block::
 
