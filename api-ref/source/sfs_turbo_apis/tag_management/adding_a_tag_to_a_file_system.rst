@@ -10,7 +10,7 @@ Function
 
 This API is used to add a tag to an SFS Turbo file system.
 
-A shared file system can have a maximum of 10 tags.
+A shared file system can have a maximum of 20 tags.
 
 The keys of multiple tags added to a shared file system must be unique.
 
