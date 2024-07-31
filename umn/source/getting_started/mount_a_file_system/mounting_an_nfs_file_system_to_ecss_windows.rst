@@ -103,7 +103,7 @@ Procedure
 
    .. note::
 
-      -  Free drive letter of the disk: A drive letter that is not in use, such as driver letter E or X.
+      -  Free drive letter of the disk: A drive letter that is not in use, such as drive letter E or X.
       -  The mount point of an SFS Turbo file system is the root directory. **Ensure that an English exclamation mark (!) is added to the mount point**, for example, **127.0.0.1:/!**.
       -  **casesensitive=yes** indicates that file names are case sensitive during file search. If this parameter is not added, the performance of creating files in a large directory will deteriorate.
 

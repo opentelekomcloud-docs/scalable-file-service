@@ -13,7 +13,7 @@ You can expand or shrink the capacity of a file system when needed.
 Limitations and Constraints
 ---------------------------
 
-The capacity of an SFS Turbo file system can be expanded but cannot be shrunk.
+The capacity of an SFS Turbo file system can be expanded but cannot be reduced.
 
 SFS Capacity-Oriented file systems support resizing, which does not affect services.
 
@@ -34,31 +34,35 @@ The rules for resizing an SFS Capacity-Oriented file system are as follows:
 
    -  When a shrink error or failure occurs on a file system, it takes approximately five minutes for the file system to restore to the available state.
 
-   -  After a shrink operation fails, you can only reattempt to shrink the file system storage capacity but cannot expand it directly.
+   -  After a shrink operation fails, you can try shrinking the file system capacity again, but you cannot expand it.
 
    -  Total capacity of a file system after shrinking >= Used capacity of the file system
 
-      For example, cloud account B has created a file system, SFS1. The total capacity and used capacity of SFS1 are 50 TB and 10 TB respectively. When shrinking SFS1, the user cannot set the new capacity to be smaller than 10 TB.
+      For example, cloud account B has created a file system, SFS1. The total capacity and used capacity of SFS1 are 50 TB and 10 TB respectively. When shrinking SFS1, the user cannot set a new capacity smaller than 10 TB.
 
 Procedure
 ---------
 
 #. Log in to the SFS console.
 
-#. In the file system list, click **Resize** or **Expand Capacity** in the row of the desired file system. The following dialog box is displayed. See :ref:`Figure 1 <sfs_01_0039__fig50999458171929>`.
+#. In the file system list, click **Resize** or **Expand Capacity** in the row of the desired file system, as shown in :ref:`Figure 1 <sfs_01_0039__fig50999458171929>`.
 
    .. _sfs_01_0039__fig50999458171929:
 
    .. figure:: /_static/images/en-us_image_0000001567196525.png
-      :alt: **Figure 1** Resizing a file system
+      :alt: **Figure 1** Resizing an SFS Capacity-Oriented file system
 
-      **Figure 1** Resizing a file system
+      **Figure 1** Resizing an SFS Capacity-Oriented file system
 
-#. Enter a new maximum capacity of the file system based on service requirements, and click **OK**. :ref:`Table 1 <sfs_01_0039__table1834202713541>` describes the parameters.
 
-   .. _sfs_01_0039__table1834202713541:
+   .. figure:: /_static/images/en-us_image_0000001970502117.png
+      :alt: **Figure 2** Expanding an SFS Turbo file system
 
-   .. table:: **Table 1** Parameter description
+      **Figure 2** Expanding an SFS Turbo file system
+
+#. Enter a new capacity and click **OK**. The following tables describe the parameters.
+
+   .. table:: **Table 1** SFS Capacity-Oriented file system resizing parameters
 
       +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------+
       | Parameter                         | Description                                                                                                               |
@@ -73,6 +77,21 @@ Procedure
       |                                   |                                                                                                                           |
       |                                   |    The new maximum capacity cannot be smaller than the used capacity.                                                     |
       +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------+
+
+   .. table:: **Table 2** SFS Turbo file system capacity expansion parameters
+
+      +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | Parameter                         | Description                                                                                                                                                                                                                                                                                       |
+      +===================================+===================================================================================================================================================================================================================================================================================================+
+      | Current Capacity                  | Current storage capacity of the file system                                                                                                                                                                                                                                                       |
+      +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | New Capacity                      | New storage capacity of the file system                                                                                                                                                                                                                                                           |
+      |                                   |                                                                                                                                                                                                                                                                                                   |
+      |                                   | Value constraints:                                                                                                                                                                                                                                                                                |
+      |                                   |                                                                                                                                                                                                                                                                                                   |
+      |                                   | -  For a Standard, Standard - Enhanced, Performance, or Performance - Enhanced file system, the expansion increment is 100 GB. A Standard or Performance file system can be expanded to up to 32 TB. A Standard - Enhanced or Performance - Enhanced file system can be expanded to up to 320 TB. |
+      |                                   | -  For a 20 MB/s/TiB, 40 MB/s/TiB, 125 MB/s/TiB, or 250 MB/s/TiB file system, the expansion increment is 1.2 TB, and a file system can be expanded to up to 1 PB. The maximum capacity that can be set cannot exceed 1 PB.                                                                        |
+      +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 #. In the displayed dialog box, confirm the information and click **OK**.
 

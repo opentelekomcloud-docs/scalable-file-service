@@ -46,7 +46,7 @@ In case of a virus attack, accidental deletion, or software or hardware fault, y
 
 #. Click the **Backups** tab and locate the desired backup.
 
-#. If the status of the target backup is **Available**, click **Create File System** in the **Operation** column of the backup.
+#. If the status of the target backup is **Available**, click **Create New File System** in the **Operation** column of the backup.
 
 #. Set the file system parameters. See :ref:`Figure 1 <sfs_01_0044__fig126043518315>`.
 
@@ -59,7 +59,7 @@ In case of a virus attack, accidental deletion, or software or hardware fault, y
 
    .. note::
 
-      -  For detailed parameter descriptions, see table "Parameter description" under :ref:`"Creating an SFS Turbo File System" <en-us_topic_0034428727__table19281678476>`.
+      -  For detailed parameter descriptions, see table "Parameter description" under :ref:`Creating an SFS Turbo File System <en-us_topic_0034428727__table724582213143>`.
 
 #. Click **Next**.
 
