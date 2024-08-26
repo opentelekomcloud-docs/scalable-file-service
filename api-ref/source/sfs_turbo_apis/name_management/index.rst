@@ -1,11 +1,11 @@
-:original_name: en-us_topic_0000001537230113.html
+:original_name: topic_300000003.html
 
-.. _en-us_topic_0000001537230113:
+.. _topic_300000003:
 
 Name Management
 ===============
 
--  :ref:`Changing the Name of a File System <en-us_topic_0000001537629949>`
+-  :ref:`Changing the Name of a File System <changesharename>`
 
 .. toctree::
    :maxdepth: 1

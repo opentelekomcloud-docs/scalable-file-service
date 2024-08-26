@@ -1,21 +1,19 @@
-:original_name: BatchAddSharedTags.html
+:original_name: CreateSharedTag.html
 
-.. _BatchAddSharedTags:
+.. _CreateSharedTag:
 
-Batch Adding Tags to a File System
-==================================
+Adding a Tag for a File System
+==============================
 
 Function
 --------
 
-This API is used to batch add tags for a specified file system.
-
-A maximum of 20 tags can be added to a file system. Tag keys added to the same file system must be unique. This API is idempotent. If the file system already has the key you want to add, the tag will be updated.
+This API is used to add a tag to a specified file system. A maximum of 20 tags can be added to a file system. Tag keys added to the same file system must be unique. This API is idempotent. If the file system already has the key you want to add, the tag will be updated.
 
 URI
 ---
 
-POST /v1/{project_id}/sfs-turbo/{share_id}/tags/action
+POST /v1/{project_id}/sfs-turbo/{share_id}/tags
 
 .. table:: **Table 1** Path Parameters
 
@@ -40,21 +38,13 @@ Request Parameters
 
 .. table:: **Table 3** Request body parameters
 
-   +-----------------+-----------------+-------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Parameter       | Mandatory       | Type                                                                          | Description                                                                                                                                                                                                              |
-   +=================+=================+===============================================================================+==========================================================================================================================================================================================================================+
-   | action          | Yes             | String                                                                        | Operation identifier. The value is **create**. Use **create** if you want to batch add tags to a file system.                                                                                                            |
-   |                 |                 |                                                                               |                                                                                                                                                                                                                          |
-   |                 |                 |                                                                               | Enumeration values:                                                                                                                                                                                                      |
-   |                 |                 |                                                                               |                                                                                                                                                                                                                          |
-   |                 |                 |                                                                               | -  **create**                                                                                                                                                                                                            |
-   +-----------------+-----------------+-------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | tags            | No              | Array of :ref:`ResourceTag <batchaddsharedtags__request_resourcetag>` objects | Tag list. This field is mandatory for users. For users with the op_service permission, choose either this field or **sys_tags**.                                                                                         |
-   +-----------------+-----------------+-------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | sys_tags        | No              | Array of :ref:`ResourceTag <batchaddsharedtags__request_resourcetag>` objects | System tag list. This field is available only to users with the op_service permission. Choose either this field or **tags**. Only one resource_tag structure key, **\_sys_enterprise_project_id**, is used in TMS calls. |
-   +-----------------+-----------------+-------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   +-----------+-----------+------------------------------------------------------------------+-------------------------------------------+
+   | Parameter | Mandatory | Type                                                             | Description                               |
+   +===========+===========+==================================================================+===========================================+
+   | tag       | Yes       | :ref:`ResourceTag <createsharedtag__request_resourcetag>` object | Description of the **resource_tag** field |
+   +-----------+-----------+------------------------------------------------------------------+-------------------------------------------+
 
-.. _batchaddsharedtags__request_resourcetag:
+.. _createsharedtag__request_resourcetag:
 
 .. table:: **Table 4** ResourceTag
 
@@ -90,19 +80,15 @@ None
 Example Requests
 ----------------
 
-Batch adding tags for a file system, with tag key of the first tag set to **key1**, tag value of the first tag **value1**, tag key of the second tag **key2**, and tag value of the second tag **value1**
+Creating a file system tag, with tag value set to **key1** and tag key **value1**
 
 .. code-block::
 
    {
-     "action" : "create",
-     "tags" : [ {
+     "tag" : {
        "key" : "key1",
        "value" : "value1"
-     }, {
-       "key" : "key2",
-       "value" : "value1"
-     } ]
+     }
    }
 
 Example Responses
@@ -113,11 +99,11 @@ None
 Status Codes
 ------------
 
-=========== =======================
+=========== =============================
 Status Code Description
-=========== =======================
-204         File system tags added.
-=========== =======================
+=========== =============================
+204         Tag adding request delivered.
+=========== =============================
 
 Error Codes
 -----------

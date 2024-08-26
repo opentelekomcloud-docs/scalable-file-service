@@ -1,6 +1,6 @@
-:original_name: en-us_topic_0000001537629949.html
+:original_name: ChangeShareName.html
 
-.. _en-us_topic_0000001537629949:
+.. _ChangeShareName:
 
 Changing the Name of a File System
 ==================================
@@ -8,59 +8,61 @@ Changing the Name of a File System
 Function
 --------
 
-This API is used to change the name of a file system.
+This API is used to change the name of an SFS Turbo file system.
 
 URI
 ---
 
 POST /v1/{project_id}/sfs-turbo/shares/{share_id}/action
 
-.. table:: **Table 1** Path parameters
+.. table:: **Table 1** Path Parameters
 
-   ========== ========= ====== =============================
+   ========== ========= ====== ==============
    Parameter  Mandatory Type   Description
-   ========== ========= ====== =============================
-   project_id Yes       String Specifies the project ID.
-   share_id   Yes       String Specifies the file system ID.
-   ========== ========= ====== =============================
+   ========== ========= ====== ==============
+   project_id Yes       String Project ID
+   share_id   Yes       String File system ID
+   ========== ========= ====== ==============
 
 Request Parameters
 ------------------
 
 .. table:: **Table 2** Request header parameters
 
-   ============ ========= ====== ============================
+   ============ ========= ====== =============
    Parameter    Mandatory Type   Description
-   ============ ========= ====== ============================
-   X-Auth-Token Yes       String Specifies the account token.
-   Content-Type Yes       String Specifies the MIME type.
-   ============ ========= ====== ============================
+   ============ ========= ====== =============
+   X-Auth-Token Yes       String Account token
+   Content-Type Yes       String MIME type
+   ============ ========= ====== =============
 
-.. table:: **Table 3** Request body parameter
+.. table:: **Table 3** Request body parameters
 
-   +-------------+-----------+---------------------------------------------------------------------------+------------------------------------------------------------------+
-   | Parameter   | Mandatory | Type                                                                      | Description                                                      |
-   +=============+===========+===========================================================================+==================================================================+
-   | change_name | Yes       | :ref:`ShareName <en-us_topic_0000001537629949__request_sharename>` object | Specifies the SFS Turbo file system you want to change the name. |
-   +-------------+-----------+---------------------------------------------------------------------------+------------------------------------------------------------------+
+   +-------------+-----------+--------------------------------------------------------------+--------------------------------------+
+   | Parameter   | Mandatory | Type                                                         | Description                          |
+   +=============+===========+==============================================================+======================================+
+   | change_name | Yes       | :ref:`ShareName <changesharename__request_sharename>` object | SFS Turbo file system to be modified |
+   +-------------+-----------+--------------------------------------------------------------+--------------------------------------+
 
-.. _en-us_topic_0000001537629949__request_sharename:
+.. _changesharename__request_sharename:
 
 .. table:: **Table 4** ShareName
 
-   +-----------+-----------+--------+------------------------------------------------------------------------------+
-   | Parameter | Mandatory | Type   | Description                                                                  |
-   +===========+===========+========+==============================================================================+
-   | name      | Yes       | String | Specifies the name of the SFS Turbo file system you want to change the name. |
-   +-----------+-----------+--------+------------------------------------------------------------------------------+
+   +-----------+-----------+--------+--------------------------------------------------+
+   | Parameter | Mandatory | Type   | Description                                      |
+   +===========+===========+========+==================================================+
+   | name      | Yes       | String | Name of the SFS Turbo file system to be modified |
+   +-----------+-----------+--------+--------------------------------------------------+
 
 Response Parameters
 -------------------
 
 None
 
-Example Request
----------------
+Example Requests
+----------------
+
+Changing the name of an SFS Turbo file system to **sfs-turbo-test1**
 
 .. code-block::
 
@@ -70,19 +72,24 @@ Example Request
      }
    }
 
-Example Response
-----------------
+Example Responses
+-----------------
 
 None
 
 Status Codes
 ------------
 
-=========== ================================
+=========== ====================================
 Status Code Description
-=========== ================================
-204         Request successful.
-400         Invalid parameters.
-500         Internal error.
-409         File system name already exists.
-=========== ================================
+=========== ====================================
+204         Request successful
+400         Invalid parameter
+409         The file system name already exists.
+500         Internal error
+=========== ====================================
+
+Error Codes
+-----------
+
+See :ref:`Error Codes <errorcode>`.

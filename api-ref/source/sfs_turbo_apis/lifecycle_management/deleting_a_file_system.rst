@@ -1,6 +1,6 @@
-:original_name: sfs_02_0052.html
+:original_name: DeleteShare.html
 
-.. _sfs_02_0052:
+.. _DeleteShare:
 
 Deleting a File System
 ======================
@@ -8,42 +8,63 @@ Deleting a File System
 Function
 --------
 
-This API is used to delete an SFS Turbo file system.
+This API is used to delete a file system.
 
 URI
 ---
 
--  URI format
+DELETE /v1/{project_id}/sfs-turbo/shares/{share_id}
 
-   DELETE /v1/{project_id}/sfs-turbo/shares/{share_id}
+.. table:: **Table 1** Path Parameters
 
--  Parameter description
+   ========== ========= ====== ==============
+   Parameter  Mandatory Type   Description
+   ========== ========= ====== ==============
+   project_id Yes       String Project ID
+   share_id   Yes       String File system ID
+   ========== ========= ====== ==============
 
-   +------------+-----------+--------+--------------------------------------------------------------------------------------------------------------------------+
-   | Parameter  | Mandatory | Type   | Description                                                                                                              |
-   +============+===========+========+==========================================================================================================================+
-   | project_id | Yes       | String | Specifies the project ID. For details about how to obtain the project ID, see :ref:`API Usage Guidelines <sfs_02_0001>`. |
-   +------------+-----------+--------+--------------------------------------------------------------------------------------------------------------------------+
-   | share_id   | Yes       | String | Specifies the ID of the SFS Turbo file system.                                                                           |
-   +------------+-----------+--------+--------------------------------------------------------------------------------------------------------------------------+
+Request Parameters
+------------------
 
-Request
--------
+.. table:: **Table 2** Request header parameters
 
--  None
+   ============ ========= ====== =============
+   Parameter    Mandatory Type   Description
+   ============ ========= ====== =============
+   X-Auth-Token Yes       String Account token
+   Content-Type Yes       String MIME type
+   ============ ========= ====== =============
 
-Response
---------
+Response Parameters
+-------------------
 
--  None
+None
+
+Example Requests
+----------------
+
+Deleting the file system whose ID is **77ba6f4b-6365-4895-8dda-bc7142af4dde**
+
+.. code-block:: text
+
+   DELETE HTTPS://{endpoint}/v1/{project_id}/sfs-turbo/shares/77ba6f4b-6365-4895-8dda-bc7142af4dde
+
+Example Responses
+-----------------
+
+None
 
 Status Codes
 ------------
 
--  Normal
+=========== =======================================
+Status Code Description
+=========== =======================================
+202         File system deletion request delivered.
+=========== =======================================
 
-202
+Error Codes
+-----------
 
--  Abnormal
-
-For details, see :ref:`Status Codes <sfs_02_0089>`.
+See :ref:`Error Codes <errorcode>`.

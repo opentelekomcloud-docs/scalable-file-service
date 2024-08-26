@@ -48,6 +48,8 @@ Request
 
 -  Example request
 
+   Expanding the capacity of a shared file system to 2 GB:
+
    .. code-block::
 
       {

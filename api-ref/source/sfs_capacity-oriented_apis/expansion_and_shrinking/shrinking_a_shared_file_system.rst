@@ -48,6 +48,8 @@ Request
 
 -  Example request
 
+   Reducing the capacity of a shared file system to 1 GB:
+
    .. code-block::
 
       {
