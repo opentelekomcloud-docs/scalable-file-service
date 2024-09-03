@@ -52,6 +52,8 @@ Request
 
 -  Example request
 
+   Deleting a file system access rule (rule ID: **418e3cf4-08c3-4ed2-a29a-ceffa346b3b8**):
+
    .. code-block::
 
       {

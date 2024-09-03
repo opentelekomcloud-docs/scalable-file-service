@@ -1,14 +1,14 @@
-:original_name: sfs_02_0096.html
+:original_name: topic_300000001.html
 
-.. _sfs_02_0096:
+.. _topic_300000001:
 
 Connection Management
 =====================
 
--  :ref:`Changing a Security Group <sfs_02_0097>`
+-  :ref:`Changing the Security Group Associated with a File System <changesecuritygroup>`
 
 .. toctree::
    :maxdepth: 1
    :hidden: 
 
-   changing_a_security_group
+   changing_the_security_group_associated_with_a_file_system

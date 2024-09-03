@@ -1,6 +1,6 @@
-:original_name: sfs_02_0094.html
+:original_name: ListSharedTags.html
 
-.. _sfs_02_0094:
+.. _ListSharedTags:
 
 Querying Tags of All File Systems of a Tenant
 =============================================
@@ -13,84 +13,101 @@ This API is used to query the tags of all file systems of a tenant.
 URI
 ---
 
--  GET /v1/{project_id}/sfs-turbo/tags
--  Parameter description
+GET /v1/{project_id}/sfs-turbo/tags
 
-   ========== ========= ====== =========================================
+.. table:: **Table 1** Path Parameters
+
+   ========== ========= ====== ===========
    Parameter  Mandatory Type   Description
-   ========== ========= ====== =========================================
-   project_id Yes       String Specifies the project ID of the operator.
-   ========== ========= ====== =========================================
+   ========== ========= ====== ===========
+   project_id Yes       String Project ID
+   ========== ========= ====== ===========
 
-Request
--------
+Request Parameters
+------------------
 
--  Parameter description
+.. table:: **Table 2** Request header parameters
 
-   None
+   ============ ========= ====== =============
+   Parameter    Mandatory Type   Description
+   ============ ========= ====== =============
+   X-Auth-Token Yes       String Account token
+   Content-Type Yes       String MIME type
+   ============ ========= ====== =============
 
--  Example request
+Response Parameters
+-------------------
 
-   None
+**Status code: 200**
 
-Response
---------
+.. table:: **Table 3** Response body parameters
 
--  Parameter description
+   +-----------+------------------------------------------------------------+-------------+
+   | Parameter | Type                                                       | Description |
+   +===========+============================================================+=============+
+   | tags      | Array of :ref:`Tag <listsharedtags__response_tag>` objects | Tag list    |
+   +-----------+------------------------------------------------------------+-------------+
 
-   +-----------------------+-----------------------+--------------------------------------------------------------------------------------+
-   | Parameter             | Type                  | Description                                                                          |
-   +=======================+=======================+======================================================================================+
-   | tags                  | Array of tags         | Specifies the tag list.                                                              |
-   |                       |                       |                                                                                      |
-   |                       |                       | For details, see :ref:`Description of field tag <sfs_02_0094__table14385185545214>`. |
-   +-----------------------+-----------------------+--------------------------------------------------------------------------------------+
+.. _listsharedtags__response_tag:
 
--  Description of the **tag** field
+.. table:: **Table 4** Tag
 
-   .. _sfs_02_0094__table14385185545214:
+   +-----------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Parameter             | Type                  | Description                                                                                                                                                           |
+   +=======================+=======================+=======================================================================================================================================================================+
+   | key                   | String                | Tag key.                                                                                                                                                              |
+   |                       |                       |                                                                                                                                                                       |
+   |                       |                       | A key can contain a maximum of 128 characters and cannot be left blank.                                                                                               |
+   |                       |                       |                                                                                                                                                                       |
+   |                       |                       | Minimum: **1**                                                                                                                                                        |
+   |                       |                       |                                                                                                                                                                       |
+   |                       |                       | Maximum: **128**                                                                                                                                                      |
+   +-----------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | values                | Array of strings      | Tag values. Each value can contain a maximum of 255 characters. An empty list of values can match with any value. All values of a tag key are in the OR relationship. |
+   |                       |                       |                                                                                                                                                                       |
+   |                       |                       | Minimum: **0**                                                                                                                                                        |
+   |                       |                       |                                                                                                                                                                       |
+   |                       |                       | Maximum: **255**                                                                                                                                                      |
+   +-----------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-   +-----------+------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Parameter | Type             | Description                                                                                                                                          |
-   +===========+==================+======================================================================================================================================================+
-   | key       | String           | Specifies the key of the tag.                                                                                                                        |
-   +-----------+------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | values    | Array of strings | Lists the values of the tag. The value is a list of tag values of all shared file systems of a tenant. Only one of the same tag values is displayed. |
-   +-----------+------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+
+Example Requests
+----------------
 
--  Example response
+Query tags of all file systems in the project whose ID is **e1e45b08f3ea4480ab4655ef9c7160ba**
 
-   .. code-block::
+.. code-block:: text
 
-      {
-        "tags" : [ {
-          "key" : "key1",
-          "values" : [ "value1", "" ]
-        }, {
-          "key" : "key2",
-          "values" : [ "value1", "value2" ]
-        } ]
-      }
+   GET HTTPS://{endpoint}/v1/e1e45b08f3ea4480ab4655ef9c7160ba/sfs-turbo/tags
+
+Example Responses
+-----------------
+
+**Status code: 200**
+
+Response body for querying a file system
+
+.. code-block::
+
+   {
+     "tags" : [ {
+       "key" : "key1",
+       "values" : [ "value1", "" ]
+     }, {
+       "key" : "key2",
+       "values" : [ "value1", "value2" ]
+     } ]
+   }
 
 Status Codes
 ------------
 
--  Normal
+=========== ========================================
+Status Code Description
+=========== ========================================
+200         Response body for querying a file system
+=========== ========================================
 
-   200
+Error Codes
+-----------
 
--  Abnormal
-
-   +---------------------------+----------------------------------------------------------+
-   | Status Code               | Description                                              |
-   +===========================+==========================================================+
-   | 400 Bad Request           | Invalid value.                                           |
-   +---------------------------+----------------------------------------------------------+
-   | 401 Unauthorized          | Authentication failed.                                   |
-   +---------------------------+----------------------------------------------------------+
-   | 403 Forbidden             | Access to the requested page is forbidden.               |
-   +---------------------------+----------------------------------------------------------+
-   | 404 Not Found             | The requested resource was not found.                    |
-   +---------------------------+----------------------------------------------------------+
-   | 500 Internal Server Error | The request is not completed because of a service error. |
-   +---------------------------+----------------------------------------------------------+
+See :ref:`Error Codes <errorcode>`.

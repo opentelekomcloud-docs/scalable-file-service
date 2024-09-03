@@ -102,7 +102,7 @@ Request
 
    POST /v2/{project_id}/shares/{share_id}/action?vpc_ip_base_acl=enable
 
-   NFS file system:
+   Adding a file system access rule (value of the rule parameter **0560a527-0e77-40a6-aa3b-110beecad368#127.0.0.1#1#all_squash,root_squash**):
 
    .. code-block::
 

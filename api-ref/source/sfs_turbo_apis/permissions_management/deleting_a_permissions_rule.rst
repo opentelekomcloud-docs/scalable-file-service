@@ -1,6 +1,6 @@
-:original_name: en-us_topic_0000001614557076.html
+:original_name: DeletePermRule.html
 
-.. _en-us_topic_0000001614557076:
+.. _DeletePermRule:
 
 Deleting a Permissions Rule
 ===========================
@@ -15,7 +15,7 @@ URI
 
 DELETE /v1/{project_id}/sfs-turbo/shares/{share_id}/fs/perm-rules/{rule_id}
 
-.. table:: **Table 1** Path parameters
+.. table:: **Table 1** Path Parameters
 
    ========== ========= ====== ==================
    Parameter  Mandatory Type   Description
@@ -44,49 +44,53 @@ Response Parameters
 
 .. table:: **Table 3** Response body parameters
 
-   +-----------------------+-----------------------+--------------------------------+
-   | Parameter             | Type                  | Description                    |
-   +=======================+=======================+================================+
-   | errCode               | String                | Error code                     |
-   |                       |                       |                                |
-   |                       |                       | Minimum length: 8 characters   |
-   |                       |                       |                                |
-   |                       |                       | Maximum length: 36 characters  |
-   +-----------------------+-----------------------+--------------------------------+
-   | errMsg                | String                | Error message                  |
-   |                       |                       |                                |
-   |                       |                       | Minimum length: 2 characters   |
-   |                       |                       |                                |
-   |                       |                       | Maximum length: 512 characters |
-   +-----------------------+-----------------------+--------------------------------+
+   +-----------------------+-----------------------+-----------------------+
+   | Parameter             | Type                  | Description           |
+   +=======================+=======================+=======================+
+   | errCode               | String                | Error code            |
+   |                       |                       |                       |
+   |                       |                       | Minimum: **8**        |
+   |                       |                       |                       |
+   |                       |                       | Maximum: **36**       |
+   +-----------------------+-----------------------+-----------------------+
+   | errMsg                | String                | Error description     |
+   |                       |                       |                       |
+   |                       |                       | Minimum: **2**        |
+   |                       |                       |                       |
+   |                       |                       | Maximum: **512**      |
+   +-----------------------+-----------------------+-----------------------+
 
 **Status code: 500**
 
 .. table:: **Table 4** Response body parameters
 
-   +-----------------------+-----------------------+--------------------------------+
-   | Parameter             | Type                  | Description                    |
-   +=======================+=======================+================================+
-   | errCode               | String                | Error code                     |
-   |                       |                       |                                |
-   |                       |                       | Minimum length: 8 characters   |
-   |                       |                       |                                |
-   |                       |                       | Maximum length: 36 characters  |
-   +-----------------------+-----------------------+--------------------------------+
-   | errMsg                | String                | Error message                  |
-   |                       |                       |                                |
-   |                       |                       | Minimum length: 2 characters   |
-   |                       |                       |                                |
-   |                       |                       | Maximum length: 512 characters |
-   +-----------------------+-----------------------+--------------------------------+
+   +-----------------------+-----------------------+-----------------------+
+   | Parameter             | Type                  | Description           |
+   +=======================+=======================+=======================+
+   | errCode               | String                | Error code            |
+   |                       |                       |                       |
+   |                       |                       | Minimum: **8**        |
+   |                       |                       |                       |
+   |                       |                       | Maximum: **36**       |
+   +-----------------------+-----------------------+-----------------------+
+   | errMsg                | String                | Error description     |
+   |                       |                       |                       |
+   |                       |                       | Minimum: **2**        |
+   |                       |                       |                       |
+   |                       |                       | Maximum: **512**      |
+   +-----------------------+-----------------------+-----------------------+
 
-Example Request
----------------
-
-None
-
-Example Response
+Example Requests
 ----------------
+
+Deleting the permission rule whose ID is **11abef677ac40f46644d1d5cfc2424a4** for the file system whose ID is **77ba6f4b-6365-4895-8dda-bc7142af4dde**
+
+.. code-block:: text
+
+   DELETE HTTPS://{endpoint}/v1/{project_id}/sfs-turbo/shares/77ba6f4b-6365-4895-8dda-bc7142af4dde/fs/perm-rules/11abef677ac40f46644d1d5cfc2424a4
+
+Example Responses
+-----------------
 
 **Status code: 500**
 
@@ -109,3 +113,8 @@ Status Code Description
 400         Error response
 500         Error response
 =========== ===================
+
+Error Codes
+-----------
+
+See :ref:`Error Codes <errorcode>`.

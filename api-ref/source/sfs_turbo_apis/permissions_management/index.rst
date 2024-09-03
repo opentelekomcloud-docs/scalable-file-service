@@ -1,15 +1,15 @@
-:original_name: en-us_topic_0000001663116961.html
+:original_name: topic_300000007.html
 
-.. _en-us_topic_0000001663116961:
+.. _topic_300000007:
 
 Permissions Management
 ======================
 
--  :ref:`Creating a Permission Rule <en-us_topic_0000001663156945>`
--  :ref:`Querying Permission Rules of a File System <en-us_topic_0000001614397248>`
--  :ref:`Querying a Permission Rule by ID <en-us_topic_0000001662877113>`
--  :ref:`Modifying a Permission Rule <en-us_topic_0000001662997101>`
--  :ref:`Deleting a Permissions Rule <en-us_topic_0000001614557076>`
+-  :ref:`Creating a Permission Rule <createpermrule>`
+-  :ref:`Querying Permission Rules of a File System <listpermrules>`
+-  :ref:`Querying a Permission Rule by ID <showpermrule>`
+-  :ref:`Modifying a Permission Rule <updatepermrule>`
+-  :ref:`Deleting a Permissions Rule <deletepermrule>`
 
 .. toctree::
    :maxdepth: 1

@@ -9,9 +9,9 @@ File Systems
 ------------
 
 +-----------------------------------------+-----------------------------------------------------+------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------+
-| Permission                              | API                                                 | Action                       | Dependent Permission                                                                                                                                                                                                                                                     | IAM         |
+| Permission                              | API                                                 | Action                       | Dependent Permission                                                                                                                                                                                                                                                     | IAM Project |
 |                                         |                                                     |                              |                                                                                                                                                                                                                                                                          |             |
-|                                         |                                                     |                              |                                                                                                                                                                                                                                                                          | Project     |
+|                                         |                                                     |                              |                                                                                                                                                                                                                                                                          | (Project)   |
 +=========================================+=====================================================+==============================+==========================================================================================================================================================================================================================================================================+=============+
 | Creating a File System                  | POST /v1/{project_id}/sfs-turbo/shares              | sfsturbo:shares:createShare  | -  You must have VPC-related permissions when creating an SFS Turbo instance, including the permissions for verifying VPCs, subnets, and security groups, creating virtual IP addresses and ports, and creating security group rules. You must add the following action: | Y           |
 |                                         |                                                     |                              |                                                                                                                                                                                                                                                                          |             |
@@ -43,9 +43,9 @@ File System Expansion
 ---------------------
 
 +-----------------------------------------+----------------------------------------------------------+-----------------------------+-----------------+
-| Permission                              | API                                                      | Action                      | IAM             |
+| Permission                              | API                                                      | Action                      | IAM Project     |
 |                                         |                                                          |                             |                 |
-|                                         |                                                          |                             | Project         |
+|                                         |                                                          |                             | (Project)       |
 +=========================================+==========================================================+=============================+=================+
 | Expanding the Capacity of a File System | POST /v1/{project_id}/sfs-turbo/shares/{share_id}/action | sfsturbo:shares:shareAction | Y               |
 +-----------------------------------------+----------------------------------------------------------+-----------------------------+-----------------+
@@ -54,9 +54,9 @@ APIs for Console Only
 ---------------------
 
 +------------------------------------+------------------+--------------------------------+----------------------------------------------------------------------+-------------+
-| Permission                         | API              | Action                         | Dependent Permission                                                 | IAM         |
+| Permission                         | API              | Action                         | Dependent Permission                                                 | IAM Project |
 |                                    |                  |                                |                                                                      |             |
-|                                    |                  |                                |                                                                      | Project     |
+|                                    |                  |                                |                                                                      | (Project)   |
 +====================================+==================+================================+======================================================================+=============+
 | Changing a Security Group          | For Console only | sfsturbo:shares:shareAction    | To modify a security group, you must have the following permissions: | Y           |
 |                                    |                  |                                |                                                                      |             |
