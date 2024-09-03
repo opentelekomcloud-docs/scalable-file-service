@@ -9,6 +9,7 @@ Others
 -  :ref:`How Do I Check Whether a File System on a Linux Server Is Available? <sfs_01_0093>`
 -  :ref:`What Resources Does SFS Occupy? <sfs_01_0094>`
 -  :ref:`How Is the SFS Turbo Capacity Quota Calculated? <sfs_01_0130>`
+-  :ref:`How Do I Make the Most Out of My SFS Turbo File System? <sfs_01_1141>`
 
 .. toctree::
    :maxdepth: 1
@@ -18,3 +19,4 @@ Others
    how_do_i_check_whether_a_file_system_on_a_linux_server_is_available
    what_resources_does_sfs_occupy
    how_is_the_sfs_turbo_capacity_quota_calculated
+   how_do_i_make_the_most_out_of_my_sfs_turbo_file_system
