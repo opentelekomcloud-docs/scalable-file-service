@@ -5,6 +5,8 @@
 SFS Metrics
 ===========
 
+General purpose file systems do not support monitoring. The monitoring metrics described in this section apply only to SFS Capacity-Oriented file systems.
+
 Function
 --------
 
@@ -66,10 +68,7 @@ Viewing Monitoring Statistics
 
 #. Log in to the management console.
 
-#. View the monitoring graphs using either of the following methods.
-
-   -  Method 1: Choose **Service List** > **Storage** > **Scalable File Service**. In the file system list, click **View Metric** in the **Operation** column of the target file system.
-   -  Method 2: Choose **Management & Deployment** > **Cloud Eye** > **Cloud Service Monitoring** > **Scalable File Service**. In the file system list, click **View Metric** in the **Operation** column of the target file system.
+#. Choose **Management & Deployment** > **Cloud Eye** > **Cloud Service Monitoring** > **Scalable File Service**. In the file system list, click **View Metric** in the **Operation** column of the desired file system.
 
 #. View the SFS file system monitoring data by metric or monitored duration.
 
@@ -77,7 +76,7 @@ Viewing Monitoring Statistics
 
    .. _sfs_01_0047__fig4460418173118:
 
-   .. figure:: /_static/images/en-us_image_0000001516236476.png
+   .. figure:: /_static/images/en-us_image_0251362180.png
       :alt: **Figure 1** Monitoring graphs
 
       **Figure 1** Monitoring graphs

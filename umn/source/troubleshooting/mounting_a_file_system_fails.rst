@@ -56,7 +56,7 @@ Solution
 
       .. _sfs_01_0057__fig1289720753914:
 
-      .. figure:: /_static/images/en-us_image_0000001516076856.png
+      .. figure:: /_static/images/en-us_image_0113980196.png
          :alt: **Figure 1** Running the ping command to access SFS
 
          **Figure 1** Running the ping command to access SFS

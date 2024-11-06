@@ -8,7 +8,7 @@ Data Fails to Be Written into a File System Mounted to ECSs Running Different Ty
 Symptom
 -------
 
-If a file system is mounted to a Linux ECS and a Windows ECS, you cannot write data to the files created by the Linux ECS on the Windows ECS.
+If a file system is mounted to a Linux ECS and a Windows ECS, on the Windows ECS, data cannot be written to the files created by the Linux ECS.
 
 Possible Causes
 ---------------
@@ -29,7 +29,7 @@ Solution
 
    .. _sfs_01_0060__fig103481655182917:
 
-   .. figure:: /_static/images/en-us_image_0000001516236516.png
+   .. figure:: /_static/images/en-us_image_0123076280.png
       :alt: **Figure 1** Entering the directory
 
       **Figure 1** Entering the directory
@@ -38,7 +38,7 @@ Solution
 
    .. _sfs_01_0060__fig56963212379:
 
-   .. figure:: /_static/images/en-us_image_0000001567396645.png
+   .. figure:: /_static/images/en-us_image_0132187573.png
       :alt: **Figure 2** Adding values
 
       **Figure 2** Adding values

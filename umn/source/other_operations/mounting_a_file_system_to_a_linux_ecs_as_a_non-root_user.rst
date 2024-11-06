@@ -8,14 +8,14 @@ Mounting a File System to a Linux ECS as a Non-root User
 Scenarios
 ---------
 
-By default, a Linux ECS allows only the **root** user to run the **mount** command for mounting a file system. However, if the permissions of user **root** are assigned to other common users, such users can also run the **mount** command for file system mounting. The following describes how to mount a file system to a Linux ECS as a common user. The EulerOS is used as an example.
+By default, a Linux ECS allows only the **root** user to run the **mount** command to mount a file system. However, if the permissions of user **root** are assigned to other users, such users can also run the **mount** command to mount the file system. The following describes how to mount a file system to a Linux ECS as a common user. EulerOS is used as in this example.
 
 Prerequisites
 -------------
 
 -  A non-**root** user has been created on the ECS.
 -  A file system has been created and can be mounted to the ECS by the **root** user.
--  You have obtained the mount point of the file system.
+-  The mount point of the file system has been obtained.
 
 Procedure
 ---------
@@ -29,17 +29,17 @@ Procedure
    b. Use the **which** command to view the **mount** and **umount** command paths.
 
 
-      .. figure:: /_static/images/en-us_image_0000001516236436.png
+      .. figure:: /_static/images/en-us_image_0000001331394458.png
          :alt: **Figure 1** Viewing command paths
 
          **Figure 1** Viewing command paths
 
    c. Run the **vi /etc/resolv.conf** command to edit the **sudoers** file.
 
-   d. Add a common user under the **root** account. In the following figure, user **Mike** is added.
+   d. Add a common user under the **root** account. In this example, user **Mike** is added.
 
 
-      .. figure:: /_static/images/en-us_image_0000001516396416.png
+      .. figure:: /_static/images/en-us_image_0153998681.png
          :alt: **Figure 2** Adding a user
 
          **Figure 2** Adding a user
@@ -61,7 +61,7 @@ Procedure
       +-----------------------------------+-------------------------------------------------------------------------------------------+
       | Parameter                         | Description                                                                               |
       +===================================+===========================================================================================+
-      | *Mount point*                     | .. note::                                                                                 |
+      | Mount Point                       | .. note::                                                                                 |
       |                                   |                                                                                           |
       |                                   |    *x* is a digit or letter.                                                              |
       |                                   |                                                                                           |

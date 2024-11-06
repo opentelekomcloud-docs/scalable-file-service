@@ -1,6 +1,6 @@
-:original_name: en-us_topic_0000001567316265.html
+:original_name: en-us_topic_0033386660.html
 
-.. _en-us_topic_0000001567316265:
+.. _en-us_topic_0033386660:
 
 Introduction
 ============
@@ -11,9 +11,8 @@ Introduction
 -  :ref:`File System Encryption <sfs_01_0006>`
 -  :ref:`SFS and Other Services <sfs_01_0007>`
 -  :ref:`Basic Concepts <sfs_01_0008>`
--  :ref:`Restrictions and Limitations <sfs_01_0011>`
+-  :ref:`Notes and Constraints <sfs_01_0011>`
 -  :ref:`Permissions <sfs_01_0013>`
--  :ref:`Supported Operating Systems <sfs_01_0014>`
 
 .. toctree::
    :maxdepth: 1
@@ -25,6 +24,5 @@ Introduction
    file_system_encryption
    sfs_and_other_services
    basic_concepts/index
-   restrictions_and_limitations
+   notes_and_constraints
    permissions
-   supported_operating_systems

@@ -16,7 +16,7 @@ Possible Causes
 -  Cause 1: The network status is not stable.
 -  Cause 2: The network connection is abnormal.
 -  Cause 3: The DNS configuration of the server is incorrect. As a result, the domain name of the file system cannot be resolved, and the mounting fails. This issue will not occur on SFS Turbo file systems.
--  Cause 4: The server where the file system is to be mounted runs Ubuntu18 or later.
+-  Cause 4: The server that mounts the file system runs Ubuntu18 or later.
 
 Fault Diagnosis
 ---------------
@@ -50,7 +50,7 @@ Solution
       Modify the **/etc/resolv.conf** configuration file, configure the correct tenant DNS, and run **vi /etc/resolv.conf** to edit the **/etc/resolv.conf** file. Add the DNS server IP address above the existing nameserver information. The DNS server IP address is 100.125.4.25.
 
 
-      .. figure:: /_static/images/en-us_image_0000001567076757.png
+      .. figure:: /_static/images/en-us_image_0147961692.png
          :alt: **Figure 1** Configuring DNS
 
          **Figure 1** Configuring DNS
@@ -67,7 +67,7 @@ Solution
 
          .. _en-us_topic_0037934210__fig93781793919:
 
-         .. figure:: /_static/images/en-us_image_0000001516236488.png
+         .. figure:: /_static/images/en-us_image_0147961696.png
             :alt: **Figure 2** A locked file
 
             **Figure 2** A locked file
@@ -82,14 +82,14 @@ Solution
 
       .. _en-us_topic_0037934210__fig155441710394:
 
-      .. figure:: /_static/images/en-us_image_0000001515917328.png
+      .. figure:: /_static/images/en-us_image_0147961699.png
          :alt: **Figure 3** VPC details
 
          **Figure 3** VPC details
 
       .. _en-us_topic_0037934210__fig056217113912:
 
-      .. figure:: /_static/images/en-us_image_0000001516076916.png
+      .. figure:: /_static/images/en-us_image_0147961721.png
          :alt: **Figure 4** Modifying the DNS
 
          **Figure 4** Modifying the DNS
@@ -101,7 +101,7 @@ Solution
       -  If the problem is solved, no further action is required.
       -  If the problem persists, see the solution for cause 4.
 
--  Cause 4: The server where the file system is to be mounted runs Ubuntu18 or later.
+-  Cause 4: The server that mounts the file system runs Ubuntu18 or later.
 
    #. Reconfigure DNS by referring to :ref:`Configuring DNS <sfs_01_0038>`.
 
@@ -118,7 +118,7 @@ Solution
 
          To create a private image based on an existing ECS, see section "Creating an Image" in the *Elastic Cloud Server User Guide*.
 
-      b. Use the private image created in :ref:`3.a <en-us_topic_0037934210__li57046472083>` to create an ECS or change the ECS OS using the private image created in :ref:`3.a <en-us_topic_0037934210__li57046472083>`. For details, see section "Changing the OS" in the *Elastic Cloud Server User Guide*.
+      b. Use the private image created in :ref:`3.a <en-us_topic_0037934210__li57046472083>` to create an ECS or change the ECS OS. For details, see section "Changing the OS" in the *Elastic Cloud Server User Guide*.
 
    #. .. _en-us_topic_0037934210__li199471275217:
 
