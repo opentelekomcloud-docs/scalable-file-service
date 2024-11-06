@@ -5,26 +5,28 @@
 File System Encryption
 ======================
 
-SFS provides you with the encryption function. You can encrypt your data on the newly created file systems if needed.
+SFS provides you with the encryption function. You can encrypt data on the new file systems if needed.
 
-Keys for encrypting file systems are provided by Key Management Service (KMS), which is secure and convenient. You do not need to establish and maintain key management infrastructure. If you want to use your own key material, you can use the key import function on KMS Console to create a customer master key (CMK) whose key material is empty, and import the key material to the CMK. For details, see section "Importing Key Materials" in *Key Management Service User Guide*.
+Keys for encrypting file systems are provided by Key Management Service (KMS), which is secure and convenient. You do not need to establish and maintain key management infrastructure. If you want to use your own key material, use the key import function on the KMS console to create a custom key whose key material is empty and import the key material to the custom key. For details, see section "Importing Key Materials" in *Key Management Service User Guide*.
 
-To use the file system encryption function, you need to authorize SFS Capacity-Oriented to access KMS when creating an SFS Capacity-Oriented file system. For SFS Turbo file systems, no authorization is required.
+To use the file system encryption function, you need to authorize SFS Capacity-Oriented to access KMS when creating an SFS Capacity-Oriented file system. SFS Turbo file systems do not need authorization.
 
 Encryption Key
 --------------
 
-The keys provided by KMS for SFS Capacity-Oriented file system encryption include a default master key and CMKs.
+Keys provided by KMS for encrypting SFS Capacity-Oriented file systems include a default key and custom keys.
 
--  Default master key: SFS automatically creates a default master key and names it **sfs/default**.
+-  Default key: SFS automatically creates a default key and names it **sfs/default**.
 
-   The default master key cannot be disabled and does not support scheduled deletion.
+   The default key cannot be disabled and does not support scheduled deletion.
 
--  CMKs: Existing or newly created CMKs. For details, see "Creating a CMK" in *Key Management Service User Guide*.
+-  Custom keys: Existing or newly created custom keys. For details, see Creating a Custom Key in the *Key Management Service User Guide*.
 
-   If the CMK used by the encrypted file system is disabled or planned to be deleted, the file system can only be used within a certain period of time (30s by default). Exercise caution in this case.
+   If the custom key used by the encrypted file system is disabled or scheduled for deletion, the file system can only be used within a certain period of time (30s by default). Exercise caution in this case.
 
-An SFS Turbo file system does not have a default master key. You can use your existing key or create a new key. For details, see "Creating a CMK" in *Key Management Service User Guide*.
+SFS Turbo file systems do not have default keys. You can use your existing key or create a key. For details, see section "Creating a Key" in the *Key Management Service User Guide*.
+
+General Purpose File System does not support file system encryption.
 
 Who Has the Rights to Encrypt File Systems?
 -------------------------------------------

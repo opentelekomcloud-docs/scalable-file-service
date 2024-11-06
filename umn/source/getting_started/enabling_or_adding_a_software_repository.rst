@@ -18,7 +18,7 @@ CentOS
 
    .. _sfs_01_0027__fig50710110103819:
 
-   .. figure:: /_static/images/en-us_image_0000001516076948.png
+   .. figure:: /_static/images/en-us_image_0077173267.png
       :alt: **Figure 1** Checking software repositories
 
       **Figure 1** Checking software repositories
@@ -28,7 +28,7 @@ CentOS
    **yum-config-manager --enable Public-OTC-CentOS-7-Base**
 
 
-   .. figure:: /_static/images/en-us_image_0000001516076956.png
+   .. figure:: /_static/images/en-us_image_0077173268.png
       :alt: **Figure 2** Enabling a software repository
 
       **Figure 2** Enabling a software repository
@@ -41,7 +41,7 @@ CentOS
 
    .. _sfs_01_0027__fig33842796104733:
 
-   .. figure:: /_static/images/en-us_image_0000001567316449.png
+   .. figure:: /_static/images/en-us_image_0077173489.png
       :alt: **Figure 3** Checking whether the software repository has been enabled
 
       **Figure 3** Checking whether the software repository has been enabled
@@ -53,11 +53,11 @@ SUSE
 
    **zypper lr**
 
-   If no software repository is detected, as shown in :ref:`Figure 4 <sfs_01_0027__en-us_topic_0077171435_en-us_topic_0077171435_fig50710110103819>`, proceed to the next step.
+   If no software repository is detected, as shown in :ref:`Figure 4 <sfs_01_0027__sfs_01_0027_sfs_01_0027_fig50710110103819>`, proceed to the next step.
 
-   .. _sfs_01_0027__en-us_topic_0077171435_en-us_topic_0077171435_fig50710110103819:
+   .. _sfs_01_0027__sfs_01_0027_sfs_01_0027_fig50710110103819:
 
-   .. figure:: /_static/images/en-us_image_0000001567076789.png
+   .. figure:: /_static/images/en-us_image_0077181786.png
       :alt: **Figure 4** Checking software repositories
 
       **Figure 4** Checking software repositories
@@ -67,7 +67,7 @@ SUSE
    **zypper addrepo http://download.opensuse.org/distribution/12.2/repo/oss/ opensuse-main**
 
 
-   .. figure:: /_static/images/en-us_image_0000001516076952.png
+   .. figure:: /_static/images/en-us_image_0077185561.png
       :alt: **Figure 5** Adding a software repository
 
       **Figure 5** Adding a software repository
@@ -77,7 +77,7 @@ SUSE
    **zypper refresh**
 
 
-   .. figure:: /_static/images/en-us_image_0000001567076793.png
+   .. figure:: /_static/images/en-us_image_0077185562.png
       :alt: **Figure 6** Updating and adding repositories
 
       **Figure 6** Updating and adding repositories
@@ -86,11 +86,11 @@ SUSE
 
    **zypper lr**
 
-   If **Enabled** is **Yes**, as shown in :ref:`Figure 7 <sfs_01_0027__en-us_topic_0077171435_en-us_topic_0077171435_fig33842796104733>`, the software repository has been enabled.
+   If **Enabled** is **Yes**, as shown in :ref:`Figure 7 <sfs_01_0027__sfs_01_0027_sfs_01_0027_fig33842796104733>`, the software repository has been enabled.
 
-   .. _sfs_01_0027__en-us_topic_0077171435_en-us_topic_0077171435_fig33842796104733:
+   .. _sfs_01_0027__sfs_01_0027_sfs_01_0027_fig33842796104733:
 
-   .. figure:: /_static/images/en-us_image_0000001567396709.png
+   .. figure:: /_static/images/en-us_image_0077186364.png
       :alt: **Figure 7** Checking whether the software repository has been enabled
 
       **Figure 7** Checking whether the software repository has been enabled
@@ -103,7 +103,7 @@ Ubuntu
    **apt-add-repository http://archive.canonical.com/ubuntu**
 
 
-   .. figure:: /_static/images/en-us_image_0000001567316453.png
+   .. figure:: /_static/images/en-us_image_0077187391.png
       :alt: **Figure 8** Adding a software repository
 
       **Figure 8** Adding a software repository
@@ -113,7 +113,7 @@ Ubuntu
    **apt-get update**
 
 
-   .. figure:: /_static/images/en-us_image_0000001515917372.png
+   .. figure:: /_static/images/en-us_image_0077187392.png
       :alt: **Figure 9** Updating and adding repositories
 
       **Figure 9** Updating and adding repositories

@@ -22,14 +22,14 @@ Learn about the permissions (see :ref:`Permissions <sfs_01_0013>`) supported by 
 Restrictions
 ------------
 
--  All system-defined policies and custom policies are supported in SFS Turbo file systems.
+-  Both system-defined policies and custom policies are supported in SFS Turbo file systems.
 
 Process Flow
 ------------
 
 .. _sfs_01_0032__fig625610403530:
 
-.. figure:: /_static/images/en-us_image_0000001567196497.png
+.. figure:: /_static/images/en-us_image_0221089836.png
    :alt: **Figure 1** Process for granting SFS permissions
 
    **Figure 1** Process for granting SFS permissions
@@ -46,7 +46,7 @@ Process Flow
 
 #. Log in and verify permissions.
 
-   Log in to SFS Console using the created user, and verify that the user only has read permissions for SFS.
+   Log in to the SFS console using the created user, and verify that the user only has read permissions for SFS.
 
-   -  Choose **Scalable File Service**. Click **Create File System** on SFS Console. If a message appears indicating that you have insufficient permissions to perform the operation, the **SFS Turbo ReadOnlyAccess** policy has already taken effect.
+   -  Choose **Scalable File Service**. Click **Create File System** on the SFS console. If a message appears indicating that you have insufficient permissions to perform the operation, the **SFS Turbo ReadOnlyAccess** policy has already taken effect.
    -  Choose any other service. If a message appears indicating that you have insufficient permissions to access the service, the **SFS Turbo ReadOnlyAccess** policy has already taken effect.

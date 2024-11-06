@@ -8,7 +8,7 @@ Quotas
 What Is Quota?
 --------------
 
-Quotas can limit the number or amount of resources available to users, such as the maximum number of ECSs or EVS disks that can be created.
+Quotas can limit the number or amount of resources available to users, such as the maximum number of ECS or EVS disks that can be created.
 
 If the existing resource quota cannot meet your service requirements, you can apply for a higher quota.
 
@@ -21,7 +21,7 @@ How Do I View My Quotas?
 
 #. In the upper right corner of the page, click |image2|.
 
-   The **Service Quota** page is displayed.
+   The **Quotas** page is displayed.
 
 #. View the used and total quota of each type of resources on the displayed page.
 
@@ -46,5 +46,5 @@ Before dialing the hotline number or sending an email, make sure that the follow
 
 `Learn how to obtain the service hotline and email address. <https://open-telekom-cloud.com/en/contact>`__
 
-.. |image1| image:: /_static/images/en-us_image_0000001515917396.png
-.. |image2| image:: /_static/images/en-us_image_0000001516076980.png
+.. |image1| image:: /_static/images/en-us_image_0275513364.png
+.. |image2| image:: /_static/images/en-us_image_0152727234.png

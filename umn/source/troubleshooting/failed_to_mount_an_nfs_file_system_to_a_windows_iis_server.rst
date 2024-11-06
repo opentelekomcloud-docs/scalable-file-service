@@ -33,18 +33,18 @@ Solution
 
 #. The correct physical path is that of the mount point with the colon (:) deleted.
 
-   :ref:`Figure 1 <sfs_01_0061__fig047928192514>` shows the mount point of a file system. You need to enter the physical path **\\\\sfs-nas1.XXXXXXXXX.com\\share-396876e8**, as shown in :ref:`Figure 2 <sfs_01_0061__fig1734814414346>`.
+   :ref:`Figure 1 <sfs_01_0061__fig047928192514>` shows the mount point of a file system. You need to enter the physical path **\\\\sfs-nas1.example.com\\share-396876e8**, as shown in :ref:`Figure 2 <sfs_01_0061__fig1734814414346>`.
 
    .. _sfs_01_0061__fig047928192514:
 
-   .. figure:: /_static/images/en-us_image_0000001567396713.png
+   .. figure:: /_static/images/en-us_image_0251367892.png
       :alt: **Figure 1** Mount point
 
       **Figure 1** Mount point
 
    .. _sfs_01_0061__fig1734814414346:
 
-   .. figure:: /_static/images/en-us_image_0000001567196537.png
+   .. figure:: /_static/images/en-us_image_0156988117.png
       :alt: **Figure 2** Physical path
 
       **Figure 2** Physical path

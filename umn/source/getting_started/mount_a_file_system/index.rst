@@ -5,7 +5,7 @@
 Mount a File System
 ===================
 
--  :ref:`Mounting an NFS File System to ECSs (Linux) <en-us_topic_0034428728>`
+-  :ref:`Mounting an NFS File System to ECSs (Linux) <sfs_01_1001>`
 -  :ref:`Mounting an NFS File System to ECSs (Windows) <en-us_topic_0105224109>`
 -  :ref:`Mounting a File System Automatically <sfs_01_0025>`
 

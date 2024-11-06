@@ -18,13 +18,20 @@ Prerequisites
 -  At least one ECS that belongs to the same VPC as the file system exists.
 -  The IP address of the DNS server for resolving the domain names of the file systems has been configured on the ECS. For details, see :ref:`Configuring DNS <sfs_01_0038>`. SFS Turbo file systems do not require domain name resolution.
 
+Limitations and Constraints
+---------------------------
+
+SFS Turbo file systems cannot be mounted to Windows ECSs.
+
+General purpose file systems cannot be mounted to Windows ECSs.
+
 Procedure
 ---------
 
 #. Log in to the management console using a cloud account.
 
    a. Log in to the management console and select a region and a project.
-   b. Under **Computing**, click **Elastic Cloud Server** to go to the ECS console.
+   b. Under **Computing**, click **Elastic Cloud Server** to switch to the ECS console.
 
 #. Go to the ECS console and log in to the ECS running Windows Server 2012.
 
@@ -34,7 +41,7 @@ Procedure
 
       .. _en-us_topic_0105224109__fig5988173610457:
 
-      .. figure:: /_static/images/en-us_image_0000001516076872.png
+      .. figure:: /_static/images/en-us_image_0105365714.png
          :alt: **Figure 1** Server Manager
 
          **Figure 1** Server Manager
@@ -43,7 +50,7 @@ Procedure
 
       .. _en-us_topic_0105224109__fig598816362459:
 
-      .. figure:: /_static/images/en-us_image_0000001567396641.png
+      .. figure:: /_static/images/en-us_image_0105366557.png
          :alt: **Figure 2** Wizard for adding roles and features
 
          **Figure 2** Wizard for adding roles and features
@@ -52,7 +59,7 @@ Procedure
 
       .. _en-us_topic_0105224109__fig1998863615458:
 
-      .. figure:: /_static/images/en-us_image_0000001516236464.png
+      .. figure:: /_static/images/en-us_image_0105369597.png
          :alt: **Figure 3** Selecting the server for NFS
 
          **Figure 3** Selecting the server for NFS
@@ -61,7 +68,7 @@ Procedure
 
       .. _en-us_topic_0105224109__fig398666640:
 
-      .. figure:: /_static/images/en-us_image_0000001516236452.png
+      .. figure:: /_static/images/en-us_image_0132330932.png
          :alt: **Figure 4** Selecting the NFS client
 
          **Figure 4** Selecting the NFS client
@@ -72,7 +79,7 @@ Procedure
 
       .. _en-us_topic_0105224109__fig773834418456:
 
-      .. figure:: /_static/images/en-us_image_0000001516396452.png
+      .. figure:: /_static/images/en-us_image_0105371941.png
          :alt: **Figure 5** Administrative tools
 
          **Figure 5** Administrative tools
@@ -81,14 +88,14 @@ Procedure
 
       .. _en-us_topic_0105224109__fig47381445453:
 
-      .. figure:: /_static/images/en-us_image_0000001516236456.png
+      .. figure:: /_static/images/en-us_image_0105373154.png
          :alt: **Figure 6** Services for NFS
 
          **Figure 6** Services for NFS
 
       .. _en-us_topic_0105224109__fig8738344144513:
 
-      .. figure:: /_static/images/en-us_image_0000001567076741.png
+      .. figure:: /_static/images/en-us_image_0105374234.png
          :alt: **Figure 7** Client for NFS properties
 
          **Figure 7** Client for NFS properties
@@ -99,26 +106,22 @@ Procedure
 
    For SFS Capacity-Oriented file systems: **mount -o nolock** *mount point* **X:**
 
-   For SFS Turbo file systems: **mount -o nolock -o casesensitive=yes** *IP address*\ **:/!** **X:**
-
    .. note::
 
       -  Free drive letter of the disk: A drive letter that is not in use, such as drive letter E or X.
-      -  The mount point of an SFS Turbo file system is the root directory. **Ensure that an English exclamation mark (!) is added to the mount point**, for example, **127.0.0.1:/!**.
-      -  **casesensitive=yes** indicates that file names are case sensitive during file search. If this parameter is not added, the performance of creating files in a large directory will deteriorate.
 
    You can move the cursor to the mount point and click |image1| next to the mount point to copy the mount point. For details, see :ref:`Figure 8 <en-us_topic_0105224109__fig212663513297>`. If the information shown in :ref:`Figure 9 <en-us_topic_0105224109__fig13957194774517>` is displayed, the mounting is successful.
 
    .. _en-us_topic_0105224109__fig212663513297:
 
-   .. figure:: /_static/images/en-us_image_0000001515917300.png
+   .. figure:: /_static/images/en-us_image_0251323172.png
       :alt: **Figure 8** Mount point
 
       **Figure 8** Mount point
 
    .. _en-us_topic_0105224109__fig13957194774517:
 
-   .. figure:: /_static/images/en-us_image_0000001516076884.png
+   .. figure:: /_static/images/en-us_image_0105396156.png
       :alt: **Figure 9** Running the command
 
       **Figure 9** Running the command
@@ -129,7 +132,7 @@ Procedure
 
    .. _en-us_topic_0105224109__fig1120010188467:
 
-   .. figure:: /_static/images/en-us_image_0000001516076888.png
+   .. figure:: /_static/images/en-us_image_0108360730.png
       :alt: **Figure 10** Successful mounting
 
       **Figure 10** Successful mounting
@@ -149,7 +152,7 @@ If a file system is mounted to a Linux ECS and a Windows ECS, on the Windows ECS
 
    .. _en-us_topic_0105224109__fig103481655182917:
 
-   .. figure:: /_static/images/en-us_image_0000001567076733.png
+   .. figure:: /_static/images/en-us_image_0132187564.png
       :alt: **Figure 11** Entering the directory
 
       **Figure 11** Entering the directory
@@ -158,11 +161,11 @@ If a file system is mounted to a Linux ECS and a Windows ECS, on the Windows ECS
 
    .. _en-us_topic_0105224109__fig56963212379:
 
-   .. figure:: /_static/images/en-us_image_0000001567396645.png
+   .. figure:: /_static/images/en-us_image_0132187573.png
       :alt: **Figure 12** Adding values
 
       **Figure 12** Adding values
 
 #. After modifying the registry, restart the server for the modification to take effect.
 
-.. |image1| image:: /_static/images/en-us_image_0000001567076725.png
+.. |image1| image:: /_static/images/en-us_image_0110722360.png

@@ -14,7 +14,7 @@ Management
 -  :ref:`Tags <sfs_01_0043>`
 -  :ref:`Backup <sfs_01_0044>`
 -  :ref:`Monitoring <sfs_01_0046>`
--  :ref:`Auditing <sfs_01_0050>`
+-  :ref:`Auditing <sfs_01_0340>`
 
 .. toctree::
    :maxdepth: 1
@@ -29,4 +29,4 @@ Management
    tags
    backup
    monitoring/index
-   auditing
+   auditing/index

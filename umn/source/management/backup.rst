@@ -5,7 +5,7 @@
 Backup
 ======
 
-Only SFS Turbo file systems can be backed up using CBR while SFS Capacity-Oriented file systems cannot.
+You can only back up SFS Turbo file systems using CBR while you cannot back up SFS Capacity-Oriented and general purpose file systems.
 
 Scenarios
 ---------
@@ -19,11 +19,15 @@ Creating a File System Backup
 
 Ensure that the target file system is available. Or, the backup task cannot start. This procedure describes how to manually create a file system backup.
 
+.. note::
+
+   If any modification is made to a file system during the backup, inconsistencies may occur. For example, there may be duplicate or deleted data, or data discrepancies. Such a modification includes a write, rename, move or delete. To ensure backup data consistency, you are advised to stop the applications or programs that use the file system during the backup, or schedule the backup at off-peak hours.
+
 #. Log in to CBR Console.
 
 #. In the navigation pane on the left, choose **SFS Turbo Backups**.
 
-#. Create a backup vault by following the instructions in section "Creating an SFS Turbo Backup Vault" in the *Cloud Backup and Recovery User Guide*. Then, create a backup by following the instructions in section "Creating an SFS Turbo Backup."
+#. Create a backup vault by referring to section "Creating an SFS Turbo Backup Vault" and then create a backup by referring to section "Creating an SFS Turbo Backup" in the *Cloud Backup and Recovery User Guide*.
 
 #. The system automatically backs up the file system.
 
@@ -46,20 +50,20 @@ In case of a virus attack, accidental deletion, or software or hardware fault, y
 
 #. Click the **Backups** tab and locate the desired backup.
 
-#. If the status of the target backup is **Available**, click **Create New File System** in the **Operation** column of the backup.
+#. If the status of the target backup is **Available**, click **Create File System** in the **Operation** column of the backup.
 
 #. Set the file system parameters. See :ref:`Figure 1 <sfs_01_0044__fig126043518315>`.
 
    .. _sfs_01_0044__fig126043518315:
 
-   .. figure:: /_static/images/en-us_image_0000001516396508.png
+   .. figure:: /_static/images/en-us_image_0000001357615949.png
       :alt: **Figure 1** Create File System
 
       **Figure 1** Create File System
 
    .. note::
 
-      -  For detailed parameter descriptions, see table "Parameter description" under :ref:`Creating an SFS Turbo File System <en-us_topic_0034428727__table724582213143>`.
+      -  For detailed parameter descriptions, see table "Parameter description" under :ref:`Table 3 <en-us_topic_0034428727__table724582213143>`.
 
 #. Click **Next**.
 
@@ -67,4 +71,4 @@ In case of a virus attack, accidental deletion, or software or hardware fault, y
 
    You will see the file system status change as follows: **Creating**, **Available**, **Restoring**, **Available**. You may not notice the **Restoring** status because Instant Restore is supported and the restoration speed is very fast. After the file system status has changed from **Creating** to **Available**, the file system is successfully created. After the status has changed from **Restoring** to **Available**, backup data has been successfully restored to the created file system.
 
-.. |image1| image:: /_static/images/en-us_image_0000001516236528.png
+.. |image1| image:: /_static/images/en-us_image_0000001304536416.png

@@ -7,7 +7,7 @@ What Resources Does SFS Occupy?
 
 To ensure that file systems can be used properly, the service occupies the following resources:
 
--  For SFS Capacity-Oriented file systems:
+-  For SFS Capacity-Oriented or general purpose file systems:
 
    -  When a file system is created, the inbound rules of ports 111, 445, 2049, 2051, and 2052 are enabled in the security group entered by the user. The default source IP address is 0.0.0.0/0. You can change the IP address as required.
    -  If an encrypted SFS Capacity-Oriented file system is created, the KMS key entered by the user is used for encryption. Note that if the key is deleted, data in the file system cannot be used.

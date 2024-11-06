@@ -15,7 +15,7 @@ Network File System (NFS) is a distributed file system protocol that allows diff
 File System
 -----------
 
-A file system provides users with shared file storage service through NFS. It is used for accessing network files remotely. After a user creates a mount point on the management console, the file system can be mounted to multiple servers and is accessible through the standard POSIX.
+A file system provides users with shared file storage service through NFS. It is used for accessing network files remotely. After a user creates a file system on the console, the file system can be mounted to multiple servers and is accessible through the standard POSIX.
 
 POSIX
 -----

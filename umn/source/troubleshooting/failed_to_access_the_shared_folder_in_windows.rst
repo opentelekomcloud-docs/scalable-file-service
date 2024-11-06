@@ -30,7 +30,7 @@ Solution
 #. Open **Run** command box, enter **gpedit.msc**, and press **Enter** to start **Local Group Policy Editor**.
 
 
-   .. figure:: /_static/images/en-us_image_0000001567076805.png
+   .. figure:: /_static/images/en-us_image_0216773813.png
       :alt: **Figure 1** Entering gpedit.msc
 
       **Figure 1** Entering gpedit.msc
@@ -38,7 +38,7 @@ Solution
 #. On the **Local Group Policy Editor** page, choose **Computer Configuration** > **Administrative Templates**.
 
 
-   .. figure:: /_static/images/en-us_image_0000001567316461.png
+   .. figure:: /_static/images/en-us_image_0216828477.png
       :alt: **Figure 2** Local Group Policy Editor
 
       **Figure 2** Local Group Policy Editor
@@ -46,7 +46,7 @@ Solution
 #. Under **Administrative Templates**, choose **Network** > **Lanman Workstation** and find the option of **Enable insecure guest logons**.
 
 
-   .. figure:: /_static/images/en-us_image_0000001515917384.png
+   .. figure:: /_static/images/en-us_image_0216836626.png
       :alt: **Figure 3** Locating the option
 
       **Figure 3** Locating the option
@@ -54,7 +54,7 @@ Solution
 #. Double-click **Enable insecure guest logons**. Select **Enabled** and click **OK**.
 
 
-   .. figure:: /_static/images/en-us_image_0000001516076964.png
+   .. figure:: /_static/images/en-us_image_0216842861.png
       :alt: **Figure 4** Enabling insecure guest logons
 
       **Figure 4** Enabling insecure guest logons
@@ -68,7 +68,7 @@ Solution
 #. Go to the **HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\LanmanWorkstation\\Parameters** directory.
 
 
-   .. figure:: /_static/images/en-us_image_0000001567396721.png
+   .. figure:: /_static/images/en-us_image_0000001092716652.png
       :alt: **Figure 5** Entering the registry
 
       **Figure 5** Entering the registry
@@ -76,7 +76,7 @@ Solution
 #. Right-click **AllowInsecureGuestAuth** and choose **Modify** from the shortcut menu. In the pop-up window, change the value to **1**.
 
 
-   .. figure:: /_static/images/en-us_image_0000001516236536.png
+   .. figure:: /_static/images/en-us_image_0000001092717428.png
       :alt: **Figure 6** Changing the value
 
       **Figure 6** Changing the value

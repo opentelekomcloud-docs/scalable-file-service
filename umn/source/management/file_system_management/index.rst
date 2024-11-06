@@ -5,8 +5,8 @@
 File System Management
 ======================
 
--  :ref:`Viewing a File System <en-us_topic_0000001476461694>`
--  :ref:`Deleting a File System <en-us_topic_0000001527141597>`
+-  :ref:`Viewing a File System <sfs_01_0346>`
+-  :ref:`Deleting a File System <sfs_01_0347>`
 
 .. toctree::
    :maxdepth: 1

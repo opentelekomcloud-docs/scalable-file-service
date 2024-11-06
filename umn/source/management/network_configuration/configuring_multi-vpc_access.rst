@@ -14,15 +14,16 @@ For more information about VPC, see the *Virtual Private Cloud User Guide*.
 Scenarios
 ---------
 
-Multi-VPC access can be configured for an SFS Capacity-Oriented file system so that ECSs in different VPCs can share the same file system, as long as the VPCs that the ECSs belong to are added to the VPC list of the file system or the ECS IP addresses are added as authorized IP addresses of the VPCs.
+Multi-VPC access can be configured for an SFS Capacity-Oriented or a general purpose file system so that ECSs in different VPCs can share the same file system, as long as the VPCs that the ECSs belong to are added as authorized VPCs of the file system or the ECS IP addresses are added as authorized IP addresses of the VPCs.
 
-This section describes how to configure multi-VPC access for an SFS Capacity-Oriented file system.
+This section describes how to configure multi-VPC access for an SFS Capacity-Oriented or a general purpose file system.
 
 Restrictions
 ------------
 
 -  You can add a maximum of 20 VPCs for each file system. A maximum of 400 ACL rules for added VPCs can be created. When adding a VPC, the default IP address 0.0.0.0/0 is automatically added.
--  If a VPC added to a file system has been deleted from the VPC console, the IP address/address segment of this VPC can still be seen as activated in the file system's VPC list. But this VPC can no longer be used and you are advised to delete it from the list.
+-  If a VPC added to a file system has been deleted from the VPC console, the IP addresses or IP address ranges of this VPC can still be seen as activated in the file system's VPC list. But this VPC can no longer be used and you are advised to delete it from the list.
+-  You need to configure a VPC endpoint for each VPC you want to create the general purpose file system. Or, the file system will fail to be mounted.
 
 Procedure for SFS Capacity-Oriented
 -----------------------------------
@@ -37,7 +38,7 @@ Procedure for SFS Capacity-Oriented
 
    .. _sfs_01_0036__fig8892193084618:
 
-   .. figure:: /_static/images/en-us_image_0000001515917280.png
+   .. figure:: /_static/images/en-us_image_0251350300.png
       :alt: **Figure 1** Adding VPCs
 
       **Figure 1** Adding VPCs
@@ -64,7 +65,7 @@ Procedure for SFS Capacity-Oriented
 
    .. _sfs_01_0036__fig3912714184914:
 
-   .. figure:: /_static/images/en-us_image_0000001567076705.png
+   .. figure:: /_static/images/en-us_image_0251351310.png
       :alt: **Figure 2** Adding an authorized address or segment
 
       **Figure 2** Adding an authorized address or segment
@@ -102,6 +103,110 @@ Procedure for SFS Capacity-Oriented
 
       For an ECS in VPC A, its IP address can be added to the authorized IP address list of VPC B, but the file system of VPC B cannot be mounted to this ECS. The VPC of the ECS and the file system must be the same.
 
+**Procedure for General Purpose File System**
+---------------------------------------------
+
+#. Log in to the SFS console.
+
+#. In the file system list, click the name of the target file system. On the displayed page, locate the permissions list.
+
+#. If no VPCs are available, create one. Click **Add VPC**.
+
+   :ref:`Table 3 <sfs_01_0036__table334110121292>` describes the parameters.
+
+
+   .. figure:: /_static/images/en-us_image_0000001921916500.png
+      :alt: **Figure 3** Add VPC
+
+      **Figure 3** Add VPC
+
+   .. _sfs_01_0036__table334110121292:
+
+   .. table:: **Table 3** Parameter description
+
+      +----------------+----------------------------------------------------------------------------------------+
+      | Parameter      | Description                                                                            |
+      +================+========================================================================================+
+      | VPC            | VPC you want to add, for example, **vpc-30e0**. If no VPC is available, create one.    |
+      +----------------+----------------------------------------------------------------------------------------+
+      | Authorizations | The value can be **Read/Write** or **Read-only**. The default value is **Read/Write**. |
+      +----------------+----------------------------------------------------------------------------------------+
+
+#. Click **OK**. The added VPC will be displayed in the list.
+
+#. On the **VPC Endpoints** page, click **Create VPC Endpoint**.
+
+   The **Create VPC Endpoint** page is displayed.
+
+
+   .. figure:: /_static/images/en-us_image_0000001310873016.png
+      :alt: **Figure 4** Create VPC Endpoint
+
+      **Figure 4** Create VPC Endpoint
+
+#. Set the parameters as prompted.
+
+   .. table:: **Table 4** Parameters for purchasing an endpoint
+
+      +-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | Parameter                         | Description                                                                                                                                                |
+      +===================================+============================================================================================================================================================+
+      | Region                            | Region where the VPC endpoint is located. Ensure that this region is the same as the one where the planned general purpose file system resides.            |
+      +-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | Service Category                  | Select **Find a service by name**.                                                                                                                         |
+      |                                   |                                                                                                                                                            |
+      |                                   | After entering the service name, click **Verify**.                                                                                                         |
+      |                                   |                                                                                                                                                            |
+      |                                   | If **Service name found** is displayed, proceed with subsequent steps.                                                                                     |
+      |                                   |                                                                                                                                                            |
+      |                                   | If **Service name not found** is displayed, check whether the entered service name is correct. If the problem persists, contact the website administrator. |
+      +-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | VPC                               | Select the VPC you have added as authorized VPC of the general purpose file system.                                                                        |
+      +-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | Tag                               | Optional                                                                                                                                                   |
+      |                                   |                                                                                                                                                            |
+      |                                   | VPC endpoint tags. Each tag consists of a key and a value.                                                                                                 |
+      |                                   |                                                                                                                                                            |
+      |                                   | Tag keys and values must meet the requirements listed in :ref:`Table 5 <sfs_01_0036__table191162312815>`.                                                  |
+      |                                   |                                                                                                                                                            |
+      |                                   | .. note::                                                                                                                                                  |
+      |                                   |                                                                                                                                                            |
+      |                                   |    If a predefined tag has been created in TMS, you can select the corresponding tag key and value.                                                        |
+      |                                   |                                                                                                                                                            |
+      |                                   |    For details about predefined tags, see section "Predefined Tag Overview" in the *Tag Management Service User Guide*.                                    |
+      +-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+   :ref:`Table 5 <sfs_01_0036__table191162312815>` describes the tag parameters.
+
+   .. _sfs_01_0036__table191162312815:
+
+   .. table:: **Table 5** Tag parameter description
+
+      +-----------------------+-----------------------------------------------------------------------------------------------------------+-----------------------+
+      | Parameter             | Description                                                                                               | Example Value         |
+      +=======================+===========================================================================================================+=======================+
+      | Tag key               | Each tag has a unique key. You can customize the key or select the key of an existing tag created in TMS. | Key_0001              |
+      |                       |                                                                                                           |                       |
+      |                       | A tag key:                                                                                                |                       |
+      |                       |                                                                                                           |                       |
+      |                       | -  Can contain 1 to 36 Unicode characters.                                                                |                       |
+      |                       | -  Can contain only letters, digits, hyphens (-), and underscores (_).                                    |                       |
+      +-----------------------+-----------------------------------------------------------------------------------------------------------+-----------------------+
+      | Tag value             | A tag value can be repetitive or left blank.                                                              | Value_0001            |
+      |                       |                                                                                                           |                       |
+      |                       | A tag value:                                                                                              |                       |
+      |                       |                                                                                                           |                       |
+      |                       | -  Can contain 0 to 43 Unicode characters.                                                                |                       |
+      |                       | -  Can contain only letters, digits, hyphens (-), and underscores (_).                                    |                       |
+      +-----------------------+-----------------------------------------------------------------------------------------------------------+-----------------------+
+
+#. Click **Next**.
+
+   -  If you do not need to modify the specifications, click **Submit**.
+   -  If you need to modify the specifications, click **Previous**, modify the parameters as needed, and then click **Submit**.
+
+#. Go back to the VPC endpoint list and check whether the status of the VPC endpoint changes to **Accepted**. If so, the VPC endpoint has been connected to the VPC endpoint service.
+
 Verification
 ------------
 
@@ -114,4 +219,4 @@ A user creates an SFS Capacity-Oriented file system A in VPC-B. The network segm
 
 The user purchases an ECS F that uses the private IP address **192.168.10.22** in the VPC-C network segment **192.168.10.0/24**. If the user wants ECS F to have only the read permission for file system A and its read priority to be lower than that of ECS D, the user needs to add ECS F's private IP address to VPC-C's authorized addresses, set **Read-Write Permission** to **Read-only**, and set **Priority** to an integer between 0 and 100 and greater than the priority set for ECS D.
 
-.. |image1| image:: /_static/images/en-us_image_0000001516076852.png
+.. |image1| image:: /_static/images/en-us_image_0222409582.png

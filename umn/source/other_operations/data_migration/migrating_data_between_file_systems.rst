@@ -44,29 +44,26 @@ Procedure
 
       mount -t nfs -o vers=3,timeo=600,noresvport,nolock [Mount point of file system 2] /mnt/dst
 
-#. Run the following commands on the Linux ECS to install the rclone tool:
-
-   .. code-block::
-
-      wget https://downloads.rclone.org/v1.53.4/rclone-v1.53.4-linux-amd64.zip --no-check-certificate
-      unzip rclone-v1.53.4-linux-amd64.zip
-      chmod 0755 ./rclone-*/rclone
-      cp ./rclone-*/rclone /usr/bin/
-      rm -rf ./rclone-*
+#. Download and install rclone. For the download address, see https://rclone.org/downloads/.
 
 #. Run the following command to synchronize data:
 
    .. code-block::
 
-      rclone copy /mnt/src /mnt/dst -P --transfers 32 --checkers 64
+      rclone copy /mnt/src /mnt/dst -P --transfers 32 --checkers 64 --links --create-empty-src-dirs
 
    .. note::
 
       Set **transfers** and **checkers** based on the system specifications. The parameters are described as follows:
 
-      -  **transfers**: number of files that can be transferred concurrently
-      -  **checkers**: number of files that can be scanned concurrently
-      -  **P**: data copy progress
+      -  **/mnt/src**: source path
+      -  **/mnt/dst**: destination path
+      -  **--transfers**: number of files that can be transferred concurrently
+      -  **--checkers**: number of local files that can be scanned concurrently
+      -  **-P**: data copy progress
+      -  **--links**: replicates the soft links from the source. They are saved as soft links in the destination.
+      -  **--copy-links**: replicates the content of files to which the soft links point. They are saved as files rather than soft links in the destination.
+      -  **--create-empty-src-dirs**: replicates the empty directories from the source to the destination.
 
    After data synchronization is complete, go to the target file system to check whether data is migrated.
 
