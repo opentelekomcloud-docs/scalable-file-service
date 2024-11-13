@@ -1,6 +1,6 @@
-:original_name: en-us_topic_0034428728.html
+:original_name: sfs_01_1001.html
 
-.. _en-us_topic_0034428728:
+.. _sfs_01_1001:
 
 Mounting an NFS File System to ECSs (Linux)
 ===========================================
@@ -9,6 +9,8 @@ After creating a file system, you need to mount the file system to servers so th
 
 In this section, ECSs are used as example servers. Operations on BMSs and containers (CCE) are the same as those on ECSs.
 
+General purpose file systems cannot be mounted to 32-bit Linux servers.
+
 Prerequisites
 -------------
 
@@ -16,6 +18,39 @@ Prerequisites
 -  You have created a file system and have obtained the mount point of the file system.
 -  At least one ECS that belongs to the same VPC as the file system exists.
 -  The IP address of the DNS server for resolving the domain names of the file systems has been configured on the ECS. SFS Turbo file systems do not require domain name resolution.
+
+Constraints
+-----------
+
+.. note::
+
+   This constraint only applies to local paths (mount points) and does not affect other files or directories.
+
+Metadata of the local paths (mount points) cannot be modified. Specifically, the following operations cannot be performed on the local paths' metadata:
+
+**- touch**: Update file access time and modification time.
+
+**- rm**: Delete files or directories.
+
+**- cp**: Replicate files or directories.
+
+**- mv**: Move files or directories.
+
+**- rename**: Rename files or directories.
+
+**- chmod**:Modify permissions on files or directories.
+
+**- chown**: Change file or directory owners.
+
+**- chgrp**: Change file or directory groups.
+
+**- ln**: Create hard links.
+
+**- link**: Create hard links.
+
+**- unlink**: Delete hard links.
+
+The **atime**, **ctime**, and **mtime** attributes of a local path (root directory of the mount point) are the current time. So each time the root directory attribute is queried, the current time of the server is returned.
 
 Procedure
 ---------
@@ -33,59 +68,61 @@ Procedure
 
 #. Install the NFS client.
 
-   a. Run the following command to check whether the NFS software package is installed.
+   a. **Install the NFS client.**
 
-      -  On CentOS, Red Hat, Oracle Enterprise Linux, SUSE, EulerOS, Fedora, or OpenSUSE:
+      #. Run the following command to check whether the NFS software package is installed.
 
-         **rpm -qa|grep nfs**
+         -  In CentOS, Red Hat, Oracle Enterprise Linux, SUSE, EulerOS, Fedora, or OpenSUSE:
 
-      -  On Debian or Ubuntu:
+            **rpm -qa|grep nfs**
 
-         **dpkg -l nfs-common**
+         -  In Debian or Ubuntu:
 
-      If a command output similar to the following is displayed, the NFS software package has been installed and you can go to :ref:`4 <en-us_topic_0034428728__li6090605610251>`. If nothing is displayed, go to :ref:`3.b <en-us_topic_0034428728__li4299938211109>`.
+            **dpkg -l nfs-common**
 
-      -  On CentOS, Red Hat, EulerOS, Fedora, or Oracle Enterprise Linux:
+         If a command output similar to the following is displayed, the NFS software package has been installed and you can go to :ref:`4 <sfs_01_1001__li6090605610251>`. If no such command output is displayed, go to :ref:`b <sfs_01_1001__li1895373549>`.
 
-         .. code-block::
+         -  In CentOS, Red Hat, EulerOS, Fedora, or Oracle Enterprise Linux:
 
-            libnfsidmap
-            nfs-utils
+            .. code-block::
 
-      -  On SUSE or OpenSUSE:
+               libnfsidmap
+               nfs-utils
 
-         .. code-block::
+         -  In SUSE or OpenSUSE:
 
-            nfsidmap
-            nfs-client
+            .. code-block::
 
-      -  On Debian or Ubuntu:
+               nfsidmap
+               nfs-client
 
-         .. code-block::
+         -  In Debian or Ubuntu:
 
-            nfs-common
+            .. code-block::
 
-   b. .. _en-us_topic_0034428728__li4299938211109:
+               nfs-common
 
-      Run the following command to install the NFS software package.
+      #. .. _sfs_01_1001__li1895373549:
 
-      .. note::
+         Run the following command to install the NFS software package.
 
-         The following commands require that ECSs be connected to the Internet. Or, the installation will fail. Installing NFS clients requires enabling effective software repositories. Installing NFS clients will fail if no software repository is enabled or the ECS does not have any software repository. If installing NFS clients fails, refer to :ref:`Enabling or Adding a Software Repository <sfs_01_0027>`.
+         .. note::
 
-      -  On CentOS, Red Hat, EulerOS, Fedora, or Oracle Enterprise Linux:
+            The following commands require that ECSs be connected to the Internet. Or, the installation will fail. Installing NFS clients requires enabling effective software repositories. Installing NFS clients will fail if no software repository is enabled or the ECS does not have any software repository. If installing NFS clients fails, refer to :ref:`Enabling or Adding a Software Repository <sfs_01_0027>`.
 
-         **sudo yum -y install nfs-utils**
+         -  In CentOS, Red Hat, EulerOS, Fedora, or Oracle Enterprise Linux:
 
-      -  On Debian or Ubuntu:
+            **sudo yum -y install nfs-utils**
 
-         **sudo apt-get install nfs-common**
+         -  In Debian or Ubuntu:
 
-      -  On SUSE or OpenSUSE:
+            **sudo apt-get install nfs-common**
 
-         **zypper install nfs-client**
+         -  In SUSE or OpenSUSE:
 
-#. .. _en-us_topic_0034428728__li6090605610251:
+            **zypper install nfs-client**
+
+#. .. _sfs_01_1001__li6090605610251:
 
    Run the following command to check whether the domain name in the file system mount point can be resolved. SFS Turbo file systems do not require domain name resolution. Skip this step and directly mount the file system.
 
@@ -93,13 +130,13 @@ Procedure
 
    .. note::
 
-      -  A file system domain name is just a part of the mount point, for example, **sfs-nas1.**\ *xxxx*\ **.com**. You can obtain a file system domain name from the mount point of a file system. In this step, you are not supposed to enter the entire mount point but only the domain name.
+      -  A file system domain name is just a part of the mount point, for example, **sfs-nas1.example.com**. You can obtain a file system domain name from the mount point of a file system. In this step, you are not supposed to enter the entire mount point but only the domain name.
       -  If the **nslookup** command cannot be used, install the **bind-utils** software package by running the **yum install bind-utils** command.
 
-   -  If the domain name can be resolved, go to :ref:`5 <en-us_topic_0034428728__li4945457518115>`.
+   -  If the domain name can be resolved, go to :ref:`5 <sfs_01_1001__li4945457518115>`.
    -  If the domain name cannot be resolved, configure the DNS server IP address and then mount the file system. For details, see :ref:`Configuring DNS <sfs_01_0038>`.
 
-#. .. _en-us_topic_0034428728__li4945457518115:
+#. .. _sfs_01_1001__li4945457518115:
 
    Run the following command to create a local path for mounting the file system:
 
@@ -111,17 +148,21 @@ Procedure
 
 #. Run the following command to mount the file system to the ECS that belongs to the same VPC as the file system. Currently, the file system can be mounted to Linux ECSs using NFSv3 only.
 
-   :ref:`Table 1 <en-us_topic_0034428728__table199544014035>` describes the variables.
+   :ref:`Table 1 <sfs_01_1001__table199544014035>` describes the variables.
 
    To mount an SFS Capacity-Oriented file system, run the following command: **mount -t nfs -o vers=3,timeo=600,noresvport,nolock** *Mount point* *Local path*
 
-   To mount an SFS Turbo file system, run the following command: **mount -t nfs -o vers=3,timeo=600,noresvport,nolock** *Mount point* *Local path*
+   To mount an SFS Turbo file system, run the following command: **mount -t nfs -o vers=3,timeo=600,noresvport,nolock,tcp** *Mount point* *Local path*
+
+   To mount a general purpose file system, run the following command: **mount -t nfs -o vers=3,timeo=600,nolock,proto=tcp** *Mount point* *Local path*
 
    .. important::
 
+      General purpose file systems do not support the **noresvport** mount option.
+
       After an ECS where file systems have been mounted restarts, it loses the file system mount information. You can configure automatic mount in the **fstab** file to ensure that an ECS automatically mounts file systems when it restarts. For details, see :ref:`Mounting a File System Automatically <sfs_01_0025>`.
 
-   .. _en-us_topic_0034428728__table199544014035:
+   .. _sfs_01_1001__table199544014035:
 
    .. table:: **Table 1** Parameter description
 
@@ -132,15 +173,19 @@ Procedure
       +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | timeo                             | Waiting time before the NFS client retransmits a request. The unit is 0.1 second. The recommended value is **600**.                                                                                                                                                                                                                                                       |
       +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | resvport/noresvport               | Whether the confidential source port is used for server connection. By default, **resvport** indicates that the confidential port is used, and **noresvport** indicates that the confidential port is not used. The kernel version is 2.6.28 or later.                                                                                                                    |
+      | noresvport                        | Whether the NFS client uses a new TCP port when a network connection is re-established.                                                                                                                                                                                                                                                                                   |
       |                                   |                                                                                                                                                                                                                                                                                                                                                                           |
-      |                                   | You are advised to set this parameter to **noresvport** so that a new TCP port can be used when the network is reconnected. This ensures that the connection is not interrupted when the network recovers from a fault.                                                                                                                                                   |
+      |                                   | It is strongly recommended you use the **noresvport** option, which ensures that your file system maintains uninterrupted availability after a network reconnection or recovery.                                                                                                                                                                                          |
       +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | lock/nolock                       | Whether to lock files on the server using the NLM protocol. If **nolock** is selected, the lock is valid for applications on one host. For applications on another host, the lock is invalid. The recommended value is **nolock**. If this parameter is not specified, **lock** is selected by default. In this case, other servers cannot write data to the file system. |
       +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | proto                             | Protocol used by NFS clients to send requests to the server. Both UDP and TCP protocols can be used.                                                                                                                                                                                                                                                                      |
+      |                                   |                                                                                                                                                                                                                                                                                                                                                                           |
+      |                                   | UDP is currently not supported by general purpose file systems. If you are using general purpose file systems, set this option to **tcp**, that is, **proto=tcp**.                                                                                                                                                                                                        |
+      +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | *Mount point*                     | The format for an SFS Capacity-Oriented file system is *File system domain name*:/*Path*, for example, **example.com:/share-**\ *xxx*. The format for an SFS Turbo file system is *File system IP address*:/, for example, **192.168.0.0:/**.                                                                                                                             |
       |                                   |                                                                                                                                                                                                                                                                                                                                                                           |
-      |                                   | See :ref:`Figure 1 <en-us_topic_0034428728__fig929579017114>`.                                                                                                                                                                                                                                                                                                            |
+      |                                   | :ref:`Figure 1 <sfs_01_1001__fig929579017114>` shows an example.                                                                                                                                                                                                                                                                                                          |
       |                                   |                                                                                                                                                                                                                                                                                                                                                                           |
       |                                   | .. note::                                                                                                                                                                                                                                                                                                                                                                 |
       |                                   |                                                                                                                                                                                                                                                                                                                                                                           |
@@ -151,18 +196,18 @@ Procedure
       | *Local path*                      | Local path on the ECS, used to mount the file system, for example, **/local_path**.                                                                                                                                                                                                                                                                                       |
       +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-   .. _en-us_topic_0034428728__fig929579017114:
+   .. _sfs_01_1001__fig929579017114:
 
-   .. figure:: /_static/images/en-us_image_0000001516396528.png
+   .. figure:: /_static/images/en-us_image_0251318230.png
       :alt: **Figure 1** Mount point
 
       **Figure 1** Mount point
 
-   For more mounting parameters for performance optimization during file system mounting, see :ref:`Table 2 <en-us_topic_0034428728__table372185017537>`. Use commas (,) to separate parameters. The following command is an example:
+   For more mounting parameters for performance optimization during file system mounting, see :ref:`Table 2 <sfs_01_1001__table372185017537>`. Use commas (,) to separate parameters. The following command is an example:
 
    **mount -t nfs -o vers=3,timeo=600,nolock,rsize=1048576,wsize=1048576,hard,retrans=3,noresvport,ro,async,noatime,nodiratime** *Mount point* *Local path*
 
-   .. _en-us_topic_0034428728__table372185017537:
+   .. _sfs_01_1001__table372185017537:
 
    .. table:: **Table 2** Parameters for file system mounting
 
@@ -181,16 +226,16 @@ Procedure
       |                                   |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
       |                                   | The default value is **hard**.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
       +-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | retrans                           | Number of retransmission times before the client returns an error.                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+      | retrans                           | Number of retransmission times before the client returns an error. Recommended value: **1**                                                                                                                                                                                                                                                                                                                                                                                                                            |
       +-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | ro/rw                             | -  **ro**: indicates that the file system is mounted as read-only.                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
       |                                   | -  **rw**: indicates that the file system is mounted as read/write.                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
       |                                   |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
       |                                   | The default value is **rw**. If this parameter is not specified, the file system will be mounted as read/write.                                                                                                                                                                                                                                                                                                                                                                                                        |
       +-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | resvport/noresvport               | Whether the confidential source port is used for server connection. By default, **resvport** indicates that the confidential port is used, and **noresvport** indicates that the confidential port is not used. The kernel version is 2.6.28 or later.                                                                                                                                                                                                                                                                 |
+      | noresvport                        | Whether the NFS client uses a new TCP port when a network connection is re-established.                                                                                                                                                                                                                                                                                                                                                                                                                                |
       |                                   |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-      |                                   | You are advised to set this parameter to **noresvport** so that a new TCP port can be used when the network is reconnected. This ensures that the connection is not interrupted when the network recovers from a fault.                                                                                                                                                                                                                                                                                                |
+      |                                   | It is strongly recommended you use the **noresvport** option, which ensures that your file system maintains uninterrupted availability after a network reconnection or recovery.                                                                                                                                                                                                                                                                                                                                       |
       +-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | sync/async                        | **sync** indicates that data is written to the server immediately. **async** indicates that data is first written to the cache before being written to the server.                                                                                                                                                                                                                                                                                                                                                     |
       |                                   |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |

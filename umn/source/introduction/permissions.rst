@@ -5,7 +5,7 @@
 Permissions
 ===========
 
-If you need to assign different permissions to employees in your enterprise to access your SFS resources on the cloud, Identity and Access Management (IAM) is a good choice for fine-grained permissions management. IAM provides identity authentication, permissions management, and access control, helping you secure access to your cloud resources.
+If you need to assign different permissions to employees in your enterprise to access your SFS resources on the cloud, Identity and Access Management (IAM) is a good choice for fine-grained permissions management. IAM provides identity authentication, permissions management, and access control, helping you to securely access your cloud resources.
 
 With IAM, you can use your cloud account to create IAM users, and assign permissions to the users to control their access to specific resources. For example, some software developers in your enterprise need to use SFS resources but should not be allowed to delete the resources or perform any other high-risk operations. In this scenario, you can create IAM users for the software developers and grant them only the permissions required for using SFS resources.
 
@@ -38,3 +38,17 @@ You can grant users permissions by using roles and policies.
    +--------------------------+--------------------------------------------------------------------------------------------------------------------------------+-----------------------+------------+
    | SFS Turbo ReadOnlyAccess | Read-only permissions for SFS Turbo. Users granted these permissions can only view SFS Turbo file system data.                 | System-defined policy | None       |
    +--------------------------+--------------------------------------------------------------------------------------------------------------------------------+-----------------------+------------+
+
+:ref:`Table 2 <sfs_01_0013__table1836173142018>` lists all the system-defined roles and policies supported by General Purpose File System.
+
+.. _sfs_01_0013__table1836173142018:
+
+.. table:: **Table 2** System-defined roles and policies supported by General Purpose File System
+
+   +----------------------+------------------------------------------------------------------------+-----------------------+------------+
+   | Role/Policy Name     | Description                                                            | Type                  | Dependency |
+   +======================+========================================================================+=======================+============+
+   | Tenant Administrator | Permissions to perform all operations on all services except IAM       | System-defined policy | None       |
+   +----------------------+------------------------------------------------------------------------+-----------------------+------------+
+   | Tenant Guest         | Permissions to perform read-only operations on all services except IAM | System-defined policy | None       |
+   +----------------------+------------------------------------------------------------------------+-----------------------+------------+

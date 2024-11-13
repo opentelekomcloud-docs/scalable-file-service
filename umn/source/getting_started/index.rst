@@ -5,7 +5,8 @@
 Getting Started
 ===============
 
--  :ref:`Overview <en-us_topic_0000001516236368>`
+-  :ref:`Overview <en-us_topic_0037925065>`
+-  :ref:`Configure a VPC Endpoint <sfs_01_0134>`
 -  :ref:`Create a File System <en-us_topic_0034428727>`
 -  :ref:`Mount a File System <sfs_01_0024>`
 -  :ref:`Unmount a File System <sfs_01_0026>`
@@ -16,6 +17,7 @@ Getting Started
    :hidden: 
 
    overview
+   configure_a_vpc_endpoint
    create_a_file_system
    mount_a_file_system/index
    unmount_a_file_system

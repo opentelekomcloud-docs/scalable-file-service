@@ -30,7 +30,7 @@ Solution
       rpm -qa|grep nfs
 
 
-   .. figure:: /_static/images/en-us_image_0000001516076968.png
+   .. figure:: /_static/images/en-us_image_0205874230.png
       :alt: **Figure 1** Checking whether the software package has been installed
 
       **Figure 1** Checking whether the software package has been installed
@@ -42,13 +42,13 @@ Solution
       yum -y install nfs-utils
 
 
-   .. figure:: /_static/images/en-us_image_0000001567196553.png
+   .. figure:: /_static/images/en-us_image_0205880095.png
       :alt: **Figure 2** Executing the installation command
 
       **Figure 2** Executing the installation command
 
 
-   .. figure:: /_static/images/en-us_image_0000001567396725.png
+   .. figure:: /_static/images/en-us_image_0205880066.png
       :alt: **Figure 3** Successful installation
 
       **Figure 3** Successful installation

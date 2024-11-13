@@ -5,14 +5,10 @@
 Application Scenarios
 =====================
 
-SFS Capacity-Oriented
----------------------
+SFS Capacity-Oriented and General Purpose File System
+-----------------------------------------------------
 
 Expandable to petabytes, SFS Capacity-Oriented provides fully hosted shared file storage. It features high availability and durability, and seamlessly handles data-intensive and bandwidth-intensive applications. It is suitable for multiple scenarios, including high-performance computing (HPC), media processing, file sharing, as well as content management and web services.
-
--  HPC
-
-   In industries that require HPC, such as simulation experiments, biopharmacy, gene sequencing, image processing, and weather forecast, SFS provides superb compute and storage capabilities, as well as high bandwidth and low latency.
 
 -  Media processing
 
@@ -24,12 +20,12 @@ Expandable to petabytes, SFS Capacity-Oriented provides fully hosted shared file
 
 -  Big data and analytic applications
 
-   SFS delivers an aggregate bandwidth of up to 10 GB/s, capable of handling ultra-large data files such as satellite images.
+   SFS delivers an aggregate bandwidth of up to 10 Gbit/s, capable of handling ultra-large data files such as satellite images.
 
 SFS Turbo
 ---------
 
-Expandable to 32 TB, SFS Turbo provides a fully hosted shared file storage. It features high availability and durability to support massive small files and applications requiring low latency and high IOPS. SFS Turbo is perfect to scenarios such as high-performance websites, log storage, compression and decompression, DevOps, enterprise offices, and container applications.
+Expandable to 32 TB, SFS Turbo provides fully hosted shared file storage. It features high availability and durability to support massive small files and applications requiring low latency and high IOPS. SFS Turbo is perfect to scenarios such as high-performance websites, log storage, compression and decompression, DevOps, enterprise offices, and container applications.
 
 -  High-performance websites
 
