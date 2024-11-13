@@ -35,12 +35,12 @@ Solution
 
 #. On the displayed page, click the **Inbound Rules** tab and click **Add Rule**. The **Add Inbound Rule** page is displayed. Add rules as follows:
 
-   After an SFS Turbo file system is created, the system automatically enables the security group port required by the NFS protocol in the SFS Turbo file system. This ensures that the SFS Turbo file system can be accessed by your server and prevents file system mounting failures. The inbound ports required by the NFS protocol are ports 111, 2049, 2051, 2052, and 20048. If you need to change the enabled ports, choose **Access Control** > **Security Groups** of the VPC console and locate the target security group.
+   After an SFS Turbo file system is created, the system automatically enables the security group port required by the NFS protocol. This ensures that the SFS Turbo file system can be accessed by your servers and prevents file system mounting failures. The inbound ports required by the NFS protocol are ports 111, 2049, 2051, 2052, and 20048. If you need to change the enabled ports, go to the VPC console, choose **Access Control** > **Security Groups**, locate the target security group, and change the ports.
 
-   You are advised to use an independent security group for an SFS Turbo instance to isolate it from service nodes.
+   You are advised to use an independent security group for an SFS Turbo file system to isolate it from service nodes.
 
    You need to add inbound and outbound rules for the security group of an SFS Capacity-Oriented file system. For details, see section "Adding a Security Group Rule" in the *Virtual Private Cloud User Guide*. In an SFS Capacity-Oriented file system, the inbound ports required by the NFS protocol are ports 111, 2049, 2051, and 2052. The inbound port required by the DNS server is port 53.
 
 #. Click **OK**. Access the file system again for verification.
 
-.. |image1| image:: /_static/images/en-us_image_0000001567076701.png
+.. |image1| image:: /_static/images/en-us_image_0159365094.png

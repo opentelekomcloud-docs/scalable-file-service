@@ -5,7 +5,7 @@
 File System Types
 =================
 
-SFS provides two types of file systems: SFS Capacity-Oriented and SFS Turbo.
+SFS provides three types of file systems: SFS Capacity-Oriented, SFS Turbo, and General Purpose File System.
 
 The following table describes the features, advantages, and application scenarios of these file system types.
 
@@ -15,7 +15,7 @@ SFS Capacity-Oriented
 .. table:: **Table 1** SFS Capacity-Oriented file systems
 
    +-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Parameter                         | SFS Capacity-Oriented                                                                                                                                                                                      |
+   | Parameter                         | Description                                                                                                                                                                                                |
    +===================================+============================================================================================================================================================================================================+
    | Max. bandwidth                    | 10 GB/s                                                                                                                                                                                                    |
    +-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -31,8 +31,27 @@ SFS Capacity-Oriented
    +-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | Highlights                        | Large capacity, high bandwidth, and low cost                                                                                                                                                               |
    +-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Use cases                         | Cost-sensitive workloads which require large-capacity scalability, such as media processing, file sharing, HPC, and data backup. For workloads dealing with massive small files, SFS Turbo is recommended. |
+   | Application Scenarios             | Cost-sensitive workloads which require large-capacity scalability, such as media processing, file sharing, HPC, and data backup. For workloads dealing with massive small files, SFS Turbo is recommended. |
    +-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+General Purpose File System
+---------------------------
+
+.. table:: **Table 2** General purpose file systems
+
+   +-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Parameter             | Description                                                                                                                                                                                                                       |
+   +=======================+===================================================================================================================================================================================================================================+
+   | Max. bandwidth        | 5 GB/s                                                                                                                                                                                                                            |
+   +-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Latency               | 10 ms                                                                                                                                                                                                                             |
+   +-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Max. capacity         | EB                                                                                                                                                                                                                                |
+   +-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Highlights            | Large capacity, high bandwidth, and low cost                                                                                                                                                                                      |
+   +-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Application Scenarios | Cost-sensitive workloads which require large-capacity scalability, such as media processing, file sharing, high-performance computing, and data backup. For workloads dealing with massive small files, SFS Turbo is recommended. |
+   +-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 .. note::
 
@@ -42,7 +61,7 @@ SFS Capacity-Oriented
 SFS Turbo
 ---------
 
-.. table:: **Table 2** SFS Turbo file systems
+.. table:: **Table 3** SFS Turbo file systems
 
    +----------------------------+--------------------------------------------------------------+--------------------------------------------------------------+-------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------+
    | **Parameter**              | **20 MB/s/TiB**                                              | **40 MB/s/TiB**                                              | **125 MB/s/TiB**                                                                                      | **250 MB/s/TiB**                                                                                      |
@@ -61,13 +80,13 @@ SFS Turbo
    +----------------------------+--------------------------------------------------------------+--------------------------------------------------------------+-------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------+
    | Highlights                 | Large capacity and low cost                                  | Large capacity and low cost                                  | Low latency and cost effectiveness                                                                    | Low latency and cost effectiveness                                                                    |
    +----------------------------+--------------------------------------------------------------+--------------------------------------------------------------+-------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------+
-   | Typical use cases          | Log storage, file sharing, content management, and websites. | Log storage, file sharing, content management, and websites. | AI training, autonomous driving, EDA simulation, rendering, enterprise NAS, and HPC web applications. | AI training, autonomous driving, EDA simulation, rendering, enterprise NAS, and HPC web applications. |
+   | Typical scenarios          | Log storage, file sharing, content management, and websites. | Log storage, file sharing, content management, and websites. | AI training, autonomous driving, EDA simulation, rendering, enterprise NAS, and HPC web applications. | AI training, autonomous driving, EDA simulation, rendering, enterprise NAS, and HPC web applications. |
    +----------------------------+--------------------------------------------------------------+--------------------------------------------------------------+-------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------+
 
-.. table:: **Table 3** Previous-generation SFS Turbo file systems
+.. table:: **Table 4** Previous-generation SFS Turbo file systems
 
    +----------------------------+-------------------------------------------------------------+-------------------------------------------------------------+--------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+
-   | **Parameter**              | **Standard**                                                | **Standard - Enhanced**                                     | **Performance**                                                                                  | **Performance - Enhanced**                                                                       |
+   | **Parameter**              | **Standard**                                                | **Standard-Enhanced**                                       | **Performance**                                                                                  | **Performance-Enhanced**                                                                         |
    +----------------------------+-------------------------------------------------------------+-------------------------------------------------------------+--------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+
    | Max. bandwidth             | 120 MB/s                                                    | 1 GB/s                                                      | 320 MB/s                                                                                         | 2 GB/s                                                                                           |
    +----------------------------+-------------------------------------------------------------+-------------------------------------------------------------+--------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+
@@ -79,11 +98,11 @@ SFS Turbo
    +----------------------------+-------------------------------------------------------------+-------------------------------------------------------------+--------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+
    | Highlights                 | Low latency and tenant exclusive                            | Low latency, high bandwidth, and tenant exclusive           | Low latency, high IOPS, and tenant exclusive                                                     | Low latency, high IOPS, high bandwidth, and tenant exclusive                                     |
    +----------------------------+-------------------------------------------------------------+-------------------------------------------------------------+--------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+
-   | Typical use cases          | Code storage, file sharing, enterprise OA, and log storage. | Code storage, file sharing, enterprise OA, and log storage. | HPC websites, file sharing, content management, image rendering, AI training, and enterprise OA. | HPC websites, file sharing, content management, image rendering, AI training, and enterprise OA. |
+   | Typical scenarios          | Code storage, file sharing, enterprise OA, and log storage. | Code storage, file sharing, enterprise OA, and log storage. | HPC websites, file sharing, content management, image rendering, AI training, and enterprise OA. | HPC websites, file sharing, content management, image rendering, AI training, and enterprise OA. |
    +----------------------------+-------------------------------------------------------------+-------------------------------------------------------------+--------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+
 
 .. note::
 
    -  In the table, the maximum IOPS and maximum bandwidth all include both the read and write operations. So, maximum IOPS = read IOPS + write IOPS.
-   -  The expansion increment of SFS Turbo Standard, SFS Turbo Standard - Enhanced, SFS Turbo Performance, or SFS Turbo Performance - Enhanced file systems is 100 GB. The expansion increment of file systems with the 20 MB/s/TiB, 40 MB/s/TiB, 125 MB/s/TiB, or 250 MB/s/TiB flavor is 1.2 TB.
+   -  The expansion increment of SFS Turbo Standard, Standard - Enhanced, Performance, or Performance - Enhanced file systems is 100 GB. The expansion increment of 20 MB/s/TiB, 40 MB/s/TiB, 125 MB/s/TiB, or 250 MB/s/TiB file systems is 1.2 TB.
    -  Maximum performance can be reached with multiple ECSs in parallel which have recommended configuration c4.4xlarge.4.

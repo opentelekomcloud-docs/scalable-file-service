@@ -12,7 +12,7 @@ Scalable File Service (SFS) provides scalable, high-performance (NAS) file stora
 
 .. _en-us_topic_0034428718__fig1762807410259:
 
-.. figure:: /_static/images/en-us_image_0000001516236400.png
+.. figure:: /_static/images/en-us_image_0259710043.png
    :alt: **Figure 1** Accessing SFS
 
    **Figure 1** Accessing SFS
@@ -29,7 +29,9 @@ Compared with traditional file sharing storage, SFS has the following advantages
 
 -  Superior performance
 
-   The service enables file system performance to increase as capacity grows, and delivers a high data durability to support rapid service growth.
+   SFS enables file system performance to increase as capacity grows, and it delivers a high data durability to support rapid service growth.
+
+   The backend storage system supports both HDD and SSD storage media. It adopts a distributed architecture and uses full redundant design for modules, which eliminate single-node faults.
 
 -  Seamless integration
 

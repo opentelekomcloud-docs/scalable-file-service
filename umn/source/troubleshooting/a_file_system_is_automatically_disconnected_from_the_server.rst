@@ -18,4 +18,4 @@ Automatic mounting is not configured. The server is automatically disconnected f
 Solution
 --------
 
-Configure automatic mounting for the server so that the file system will be automatically mounted to the server after startup. For details, see .
+Configure auto mount on the server by referring to :ref:`Mounting a File System Automatically <sfs_01_0025>`.

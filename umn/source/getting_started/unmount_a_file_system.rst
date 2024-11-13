@@ -45,7 +45,7 @@ Windows OS
 #. Right-click the file system to be unmounted and choose **Disconnect**.
 
 
-   .. figure:: /_static/images/en-us_image_0000001567316373.png
+   .. figure:: /_static/images/en-us_image_0000001268123369.png
       :alt: **Figure 1** Unmounting
 
       **Figure 1** Unmounting
