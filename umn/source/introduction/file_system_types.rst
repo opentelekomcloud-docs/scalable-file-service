@@ -34,8 +34,8 @@ SFS Capacity-Oriented
    | Application Scenarios             | Cost-sensitive workloads which require large-capacity scalability, such as media processing, file sharing, HPC, and data backup. For workloads dealing with massive small files, SFS Turbo is recommended. |
    +-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-General Purpose File System
----------------------------
+General Purpose File System (BETA)
+----------------------------------
 
 .. table:: **Table 2** General purpose file systems
 
