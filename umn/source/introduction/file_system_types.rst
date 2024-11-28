@@ -37,6 +37,8 @@ SFS Capacity-Oriented
 General Purpose File System (BETA)
 ----------------------------------
 
+.. _sfs_01_0005__table1763981963410:
+
 .. table:: **Table 2** General purpose file systems
 
    +-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -46,7 +48,7 @@ General Purpose File System (BETA)
    +-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | Latency               | 10 ms                                                                                                                                                                                                                             |
    +-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Max. capacity         | EB                                                                                                                                                                                                                                |
+   | Max. capacity         | 4 PB                                                                                                                                                                                                                              |
    +-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | Highlights            | Large capacity, high bandwidth, and low cost                                                                                                                                                                                      |
    +-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -104,5 +106,5 @@ SFS Turbo
 .. note::
 
    -  In the table, the maximum IOPS and maximum bandwidth all include both the read and write operations. So, maximum IOPS = read IOPS + write IOPS.
-   -  The expansion increment of SFS Turbo Standard, Standard - Enhanced, Performance, or Performance - Enhanced file systems is 100 GB. The expansion increment of 20 MB/s/TiB, 40 MB/s/TiB, 125 MB/s/TiB, or 250 MB/s/TiB file systems is 1.2 TB.
+   -  The minimum expansion increment of SFS Turbo Standard, Standard-Enhanced, Performance, and Performance-Enhanced file systems is 100 GB. The expansion increment of 20 MB/s/TiB, 40 MB/s/TiB, 125 MB/s/TiB, and 250 MB/s/TiB file systems is 1.2 TB.
    -  Maximum performance can be reached with multiple ECSs in parallel which have recommended configuration c4.4xlarge.4.
