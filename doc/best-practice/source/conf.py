@@ -110,7 +110,7 @@ html_copy_source = False
 latex_documents = [
     ('index',
      'sfs-best-practice.tex',
-     u'Scalable File Service - Best Practice',
+    u'Scalable File Service - Best Practice',
      u'OpenTelekomCloud', 'manual'),
 ]
 
