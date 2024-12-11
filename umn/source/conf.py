@@ -110,7 +110,7 @@ html_copy_source = False
 latex_documents = [
     ('index',
      'sfs-umn.tex',
-     u'Scalable File Service - User Guide',
+    u'Scalable File Service - User Guide',
      u'OpenTelekomCloud', 'manual'),
 ]
 

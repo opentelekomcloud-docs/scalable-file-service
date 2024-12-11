@@ -110,7 +110,7 @@ html_copy_source = False
 latex_documents = [
     ('index',
      'sfs-api-ref.tex',
-     u'Scalable File Service - API Reference',
+    u'Scalable File Service - API Reference',
      u'OpenTelekomCloud', 'manual'),
 ]
 
