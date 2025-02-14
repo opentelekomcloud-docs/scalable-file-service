@@ -6,9 +6,9 @@
       - helpcenter-base-jobs
     vars:
       sphinx_pdf_files:
-        - sfs-umn.pdf
         - sfs-api-ref.pdf
         - sfs-best-practice.pdf
+        - sfs-umn.pdf
     check:
       jobs:
         - noop
