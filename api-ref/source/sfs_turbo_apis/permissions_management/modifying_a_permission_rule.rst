@@ -39,27 +39,27 @@ Request Parameters
 
 .. table:: **Table 3** Request body parameters
 
-   +-----------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Parameter       | Mandatory       | Type            | Description                                                                                                                                                      |
-   +=================+=================+=================+==================================================================================================================================================================+
-   | ip_cidr         | No              | String          | IP address or IP address range of the object to be authorized. Once configured, this parameter cannot be modified.                                               |
-   +-----------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | rw_type         | No              | String          | Read/write permission of the object to be authorized.                                                                                                            |
-   |                 |                 |                 |                                                                                                                                                                  |
-   |                 |                 |                 | -  **rw**: read and write permission, which is the default option                                                                                                |
-   |                 |                 |                 |                                                                                                                                                                  |
-   |                 |                 |                 | -  **ro**: read-only permission                                                                                                                                  |
-   |                 |                 |                 |                                                                                                                                                                  |
-   |                 |                 |                 | -  **none**: no permission                                                                                                                                       |
-   +-----------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | user_type       | No              | String          | File system access permission granted to the user of the object to be authorized. Supported values are:                                                          |
-   |                 |                 |                 |                                                                                                                                                                  |
-   |                 |                 |                 | -  **no_root_squash**: allows any user including the root user on the client to access the file system as who they are, instead of mapping them to another user. |
-   |                 |                 |                 |                                                                                                                                                                  |
-   |                 |                 |                 | -  **root_squash**: allows the root user on the client to access the file system as **nfsnobody**.                                                               |
-   |                 |                 |                 |                                                                                                                                                                  |
-   |                 |                 |                 | -  **all_squash**: allows any user on the client to access the file system as **nfsnobody**.                                                                     |
-   +-----------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   +-----------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Parameter       | Mandatory       | Type            | Description                                                                                                                                                                                                                                    |
+   +=================+=================+=================+================================================================================================================================================================================================================================================+
+   | ip_cidr         | No              | String          | IP address or IP address range of the object to be authorized. Once configured, this parameter cannot be modified.                                                                                                                             |
+   +-----------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | rw_type         | No              | String          | Read/write permission of the object to be authorized.                                                                                                                                                                                          |
+   |                 |                 |                 |                                                                                                                                                                                                                                                |
+   |                 |                 |                 | -  **rw**: read and write permission, which is the default option                                                                                                                                                                              |
+   |                 |                 |                 |                                                                                                                                                                                                                                                |
+   |                 |                 |                 | -  **ro**: read-only permission                                                                                                                                                                                                                |
+   |                 |                 |                 |                                                                                                                                                                                                                                                |
+   |                 |                 |                 | -  **none**: no permission                                                                                                                                                                                                                     |
+   +-----------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | user_type       | No              | String          | System user's permission to access the file system. The value can be any of the following:                                                                                                                                                     |
+   |                 |                 |                 |                                                                                                                                                                                                                                                |
+   |                 |                 |                 | -  no_root_squash: default option. The client uses any user, including the root user. The NFS server retains the user used by the client and does not map the user.                                                                            |
+   |                 |                 |                 |                                                                                                                                                                                                                                                |
+   |                 |                 |                 | -  root_squash: When the client uses the root user, the user mapped to the NFS server is the NFS anonymous user (nfsnobody). If the client uses a non-root user, the NFS server retains the user used by the client and does not map the user. |
+   |                 |                 |                 |                                                                                                                                                                                                                                                |
+   |                 |                 |                 | -  all_squash: All users of clients that access the NFS server are mapped as anonymous users.                                                                                                                                                  |
+   +-----------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Response Parameters
 -------------------
@@ -96,41 +96,23 @@ Response Parameters
 
 .. table:: **Table 5** Response body parameters
 
-   +-----------------------+-----------------------+-----------------------+
-   | Parameter             | Type                  | Description           |
-   +=======================+=======================+=======================+
-   | errCode               | String                | Error code            |
-   |                       |                       |                       |
-   |                       |                       | Minimum: **8**        |
-   |                       |                       |                       |
-   |                       |                       | Maximum: **36**       |
-   +-----------------------+-----------------------+-----------------------+
-   | errMsg                | String                | Error description     |
-   |                       |                       |                       |
-   |                       |                       | Minimum: **2**        |
-   |                       |                       |                       |
-   |                       |                       | Maximum: **512**      |
-   +-----------------------+-----------------------+-----------------------+
+   ========= ====== =================
+   Parameter Type   Description
+   ========= ====== =================
+   errCode   String Error code
+   errMsg    String Error description
+   ========= ====== =================
 
 **Status code: 500**
 
 .. table:: **Table 6** Response body parameters
 
-   +-----------------------+-----------------------+-----------------------+
-   | Parameter             | Type                  | Description           |
-   +=======================+=======================+=======================+
-   | errCode               | String                | Error code            |
-   |                       |                       |                       |
-   |                       |                       | Minimum: **8**        |
-   |                       |                       |                       |
-   |                       |                       | Maximum: **36**       |
-   +-----------------------+-----------------------+-----------------------+
-   | errMsg                | String                | Error description     |
-   |                       |                       |                       |
-   |                       |                       | Minimum: **2**        |
-   |                       |                       |                       |
-   |                       |                       | Maximum: **512**      |
-   +-----------------------+-----------------------+-----------------------+
+   ========= ====== =================
+   Parameter Type   Description
+   ========= ====== =================
+   errCode   String Error code
+   errMsg    String Error description
+   ========= ====== =================
 
 Example Requests
 ----------------

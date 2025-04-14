@@ -37,7 +37,7 @@ Similar to a request, a response also has a header, for example, **Content-Type*
 
 The body of a response is often returned in a structured format (for example, JSON or XML) as specified in the **Content-Type** header field. The response body transfers content except the response header.
 
-The following is part of the response body for the API used to .
+The following shows part of the response body for the API used to .
 
 If an error occurs during API calling, an error code and a message will be displayed. The following shows an error response body.
 

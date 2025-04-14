@@ -13,18 +13,16 @@ For details about how to use APIs, see `API Usage Guidelines <https://docs.otc.t
 
 An endpoint is the **request address** for calling an API. Endpoints vary depending on services and regions.
 
-.. _sfs_02_0001__table10404183115620:
-
 .. table:: **Table 1** SFS endpoint information
 
-   +-----------------------------+--------+-----------------------------------+----------+
-   | Service Name                | Region | URL                               | Protocol |
-   +=============================+========+===================================+==========+
-   | Scalable File Service Turbo | eu-de  | sfs-turbo.eu-de.otc.t-systems.com | HTTPS    |
-   +-----------------------------+--------+-----------------------------------+----------+
-   |                             | eu-nl  | sfs-turbo.eu-nl.otc.t-systems.com | HTTPS    |
-   +-----------------------------+--------+-----------------------------------+----------+
-   | Scalable File Service       | eu-de  | sfs.eu-de.otc.t-systems.com       | HTTPS    |
-   +-----------------------------+--------+-----------------------------------+----------+
-   | SFS 3.0 Capacity-Oriented   | eu-de  | sfs3.eu-de.otc.t-systems.com      | HTTPS    |
-   +-----------------------------+--------+-----------------------------------+----------+
+   +------------------------------------+--------+-----------------------------------+----------+
+   | Service Name                       | Region | URL                               | Protocol |
+   +====================================+========+===================================+==========+
+   | Scalable File Service Turbo        | eu-de  | sfs-turbo.eu-de.otc.t-systems.com | HTTPS    |
+   +------------------------------------+--------+-----------------------------------+----------+
+   |                                    | eu-nl  | sfs-turbo.eu-nl.otc.t-systems.com | HTTPS    |
+   +------------------------------------+--------+-----------------------------------+----------+
+   | Scalable File Service              | eu-de  | sfs.eu-de.otc.t-systems.com       | HTTPS    |
+   +------------------------------------+--------+-----------------------------------+----------+
+   | General Purpose File System (BETA) | eu-de  | sfs3.eu-de.otc.t-systems.com      | HTTPS    |
+   +------------------------------------+--------+-----------------------------------+----------+

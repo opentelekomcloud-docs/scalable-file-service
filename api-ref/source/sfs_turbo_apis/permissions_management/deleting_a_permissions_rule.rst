@@ -44,41 +44,23 @@ Response Parameters
 
 .. table:: **Table 3** Response body parameters
 
-   +-----------------------+-----------------------+-----------------------+
-   | Parameter             | Type                  | Description           |
-   +=======================+=======================+=======================+
-   | errCode               | String                | Error code            |
-   |                       |                       |                       |
-   |                       |                       | Minimum: **8**        |
-   |                       |                       |                       |
-   |                       |                       | Maximum: **36**       |
-   +-----------------------+-----------------------+-----------------------+
-   | errMsg                | String                | Error description     |
-   |                       |                       |                       |
-   |                       |                       | Minimum: **2**        |
-   |                       |                       |                       |
-   |                       |                       | Maximum: **512**      |
-   +-----------------------+-----------------------+-----------------------+
+   ========= ====== =================
+   Parameter Type   Description
+   ========= ====== =================
+   errCode   String Error code
+   errMsg    String Error description
+   ========= ====== =================
 
 **Status code: 500**
 
 .. table:: **Table 4** Response body parameters
 
-   +-----------------------+-----------------------+-----------------------+
-   | Parameter             | Type                  | Description           |
-   +=======================+=======================+=======================+
-   | errCode               | String                | Error code            |
-   |                       |                       |                       |
-   |                       |                       | Minimum: **8**        |
-   |                       |                       |                       |
-   |                       |                       | Maximum: **36**       |
-   +-----------------------+-----------------------+-----------------------+
-   | errMsg                | String                | Error description     |
-   |                       |                       |                       |
-   |                       |                       | Minimum: **2**        |
-   |                       |                       |                       |
-   |                       |                       | Maximum: **512**      |
-   +-----------------------+-----------------------+-----------------------+
+   ========= ====== =================
+   Parameter Type   Description
+   ========= ====== =================
+   errCode   String Error code
+   errMsg    String Error description
+   ========= ====== =================
 
 Example Requests
 ----------------

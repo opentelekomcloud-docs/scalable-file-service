@@ -24,10 +24,19 @@ GET /v1/{project_id}/sfs-turbo/shares/{share_id}/fs/perm-rules
    share_id   Yes       String File system ID
    ========== ========= ====== ==============
 
+.. table:: **Table 2** Query Parameters
+
+   ========= ========= ==== =======================================
+   Parameter Mandatory Type Description
+   ========= ========= ==== =======================================
+   limit     No        Long Number of returned permission rules.
+   offset    No        Long Offset of the returned permission rule.
+   ========= ========= ==== =======================================
+
 Request Parameters
 ------------------
 
-.. table:: **Table 2** Request header parameters
+.. table:: **Table 3** Request header parameters
 
    ============ ========= ====== =============
    Parameter    Mandatory Type   Description
@@ -41,7 +50,7 @@ Response Parameters
 
 **Status code: 200**
 
-.. table:: **Table 3** Response body parameters
+.. table:: **Table 4** Response body parameters
 
    +-----------+---------------------------------------------------------------------------------------------------+-----------------------------+
    | Parameter | Type                                                                                              | Description                 |
@@ -51,7 +60,7 @@ Response Parameters
 
 .. _listpermrules__response_onepermruleresponseinfo:
 
-.. table:: **Table 4** OnePermRuleResponseInfo
+.. table:: **Table 5** OnePermRuleResponseInfo
 
    +-----------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------+
    | Parameter             | Type                  | Description                                                                                                           |
@@ -79,23 +88,14 @@ Response Parameters
 
 **Status code: 500**
 
-.. table:: **Table 5** Response body parameters
+.. table:: **Table 6** Response body parameters
 
-   +-----------------------+-----------------------+-----------------------+
-   | Parameter             | Type                  | Description           |
-   +=======================+=======================+=======================+
-   | errCode               | String                | Error code            |
-   |                       |                       |                       |
-   |                       |                       | Minimum: **8**        |
-   |                       |                       |                       |
-   |                       |                       | Maximum: **36**       |
-   +-----------------------+-----------------------+-----------------------+
-   | errMsg                | String                | Error description     |
-   |                       |                       |                       |
-   |                       |                       | Minimum: **2**        |
-   |                       |                       |                       |
-   |                       |                       | Maximum: **512**      |
-   +-----------------------+-----------------------+-----------------------+
+   ========= ====== =================
+   Parameter Type   Description
+   ========= ====== =================
+   errCode   String Error code
+   errMsg    String Error description
+   ========= ====== =================
 
 Example Requests
 ----------------
@@ -118,12 +118,12 @@ Successful query
    {
      "rules" : [ {
        "id" : "1131ed520xxxxxxebedb6e57xxxxxxxx",
-       "ip_cidr" : "192.168.0.0/16",
+       "ip_cidr" : "192.168.xx.xx/16",
        "rw_type" : "rw",
        "user_type" : "no_root_squash"
      }, {
        "id" : "1231ed520xxxxxxebedb6e57xxxxxxxx",
-       "ip_cidr" : "192.32.0.0/16",
+       "ip_cidr" : "192.32.xx.xx/16",
        "rw_type" : "rw",
        "user_type" : "no_root_squash"
      } ]
