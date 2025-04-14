@@ -23,10 +23,19 @@ GET /v1/{project_id}/sfs-turbo/tags
    project_id Yes       String Project ID
    ========== ========= ====== ===========
 
+.. table:: **Table 2** Query Parameters
+
+   ========= ========= ======= =======================
+   Parameter Mandatory Type    Description
+   ========= ========= ======= =======================
+   limit     No        Integer Number of returned tags
+   offset    No        Integer Tag query offset
+   ========= ========= ======= =======================
+
 Request Parameters
 ------------------
 
-.. table:: **Table 2** Request header parameters
+.. table:: **Table 3** Request header parameters
 
    ============ ========= ====== =============
    Parameter    Mandatory Type   Description
@@ -40,7 +49,7 @@ Response Parameters
 
 **Status code: 200**
 
-.. table:: **Table 3** Response body parameters
+.. table:: **Table 4** Response body parameters
 
    +-----------+------------------------------------------------------------+-------------+
    | Parameter | Type                                                       | Description |
@@ -50,7 +59,7 @@ Response Parameters
 
 .. _listsharedtags__response_tag:
 
-.. table:: **Table 4** Tag
+.. table:: **Table 5** Tag
 
    +-----------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | Parameter             | Type                  | Description                                                                                                                                                           |
@@ -58,16 +67,8 @@ Response Parameters
    | key                   | String                | Tag key.                                                                                                                                                              |
    |                       |                       |                                                                                                                                                                       |
    |                       |                       | A key can contain a maximum of 128 characters and cannot be left blank.                                                                                               |
-   |                       |                       |                                                                                                                                                                       |
-   |                       |                       | Minimum: **1**                                                                                                                                                        |
-   |                       |                       |                                                                                                                                                                       |
-   |                       |                       | Maximum: **128**                                                                                                                                                      |
    +-----------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | values                | Array of strings      | Tag values. Each value can contain a maximum of 255 characters. An empty list of values can match with any value. All values of a tag key are in the OR relationship. |
-   |                       |                       |                                                                                                                                                                       |
-   |                       |                       | Minimum: **0**                                                                                                                                                        |
-   |                       |                       |                                                                                                                                                                       |
-   |                       |                       | Maximum: **255**                                                                                                                                                      |
    +-----------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Example Requests
