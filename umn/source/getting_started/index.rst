@@ -5,7 +5,7 @@
 Getting Started
 ===============
 
--  :ref:`Overview <en-us_topic_0037925065>`
+-  :ref:`Overview <sfs_01_0162>`
 -  :ref:`Configure a VPC Endpoint <sfs_01_0134>`
 -  :ref:`Create a File System <en-us_topic_0034428727>`
 -  :ref:`Mount a File System <sfs_01_0024>`
