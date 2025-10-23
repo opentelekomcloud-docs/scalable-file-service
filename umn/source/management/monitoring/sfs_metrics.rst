@@ -5,7 +5,7 @@
 SFS Metrics
 ===========
 
-General purpose file systems do not support monitoring. The monitoring metrics described in this section apply only to SFS Capacity-Oriented file systems.
+General purpose file systems do not support monitoring. This section describes only the monitoring metrics of SFS Capacity-Oriented.
 
 Function
 --------

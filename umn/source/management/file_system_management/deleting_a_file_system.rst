@@ -27,7 +27,7 @@ Procedure
 
    .. note::
 
-      Only **Available** and **Unavailable** file systems can be deleted.
+      Only file systems whose statuses are **Available** or **Creation failed** can be deleted.
 
    .. _sfs_01_0347__fig10624128141112:
 

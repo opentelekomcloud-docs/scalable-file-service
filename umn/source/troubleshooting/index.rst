@@ -5,7 +5,7 @@
 Troubleshooting
 ===============
 
--  :ref:`Mounting a File System Times Out <en-us_topic_0037934210>`
+-  :ref:`Mounting a File System Times Out <sfs_01_0348>`
 -  :ref:`Mounting a File System Fails <sfs_01_0057>`
 -  :ref:`Failed to Create an SFS Turbo File System <sfs_01_0118>`
 -  :ref:`A File System Is Automatically Disconnected from the Server <sfs_01_0119>`

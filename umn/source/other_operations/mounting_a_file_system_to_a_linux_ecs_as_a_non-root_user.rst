@@ -8,13 +8,13 @@ Mounting a File System to a Linux ECS as a Non-root User
 Scenarios
 ---------
 
-By default, a Linux ECS allows only the **root** user to run the **mount** command to mount a file system. However, if the permissions of user **root** are assigned to other users, such users can also run the **mount** command to mount the file system. The following describes how to mount a file system to a Linux ECS as a common user. EulerOS is used as in this example.
+By default, a Linux ECS allows only the **root** user to use the **mount** command to mount file systems, but you can grant the permissions of user **root** to other users. Then, such users can use the **mount** command to mount the file systems. The following describes how to mount a file system to a Linux ECS as a common user. EulerOS is used in this example.
 
 Prerequisites
 -------------
 
 -  A non-**root** user has been created on the ECS.
--  A file system has been created and can be mounted to the ECS by the **root** user.
+-  A file system has been created and can be mounted to the ECS as **root**.
 -  The mount point of the file system has been obtained.
 
 Procedure
@@ -34,7 +34,7 @@ Procedure
 
          **Figure 1** Viewing command paths
 
-   c. Run the **vi /etc/resolv.conf** command to edit the **sudoers** file.
+   c. Run the **vi /etc/sudoers** command to edit the **sudoers** file.
 
    d. Add a common user under the **root** account. In this example, user **Mike** is added.
 
@@ -67,7 +67,7 @@ Procedure
       |                                   |                                                                                           |
       |                                   |    If the mount point is too long to display completely, you can adjust the column width. |
       +-----------------------------------+-------------------------------------------------------------------------------------------+
-      | *Local path*                      | Local path on the ECS, used to mount the file system, for example, **/local_path**.       |
+      | *Local path*                      | A local directory on the ECS used to mount the file system, for example, **/local_path**. |
       +-----------------------------------+-------------------------------------------------------------------------------------------+
 
 #. Run the following command to view the mounted file system:
