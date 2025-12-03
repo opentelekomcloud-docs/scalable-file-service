@@ -16,7 +16,7 @@ Involved APIs
 
 If you use a token for authentication, you must obtain the token and add **X-Auth-Token** to the request header of the API when making a call. The following APIs are involved in the request for creating an SFS Turbo file system:
 
--  API for obtaining tokens from IAM
+-  IAM API used to obtain a token
 -  API for creating SFS Turbo file systems.
 
 Procedure

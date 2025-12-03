@@ -8,7 +8,14 @@ Querying Permission Rules of a File System
 Function
 --------
 
-This API is used to query the permission rules of a file system.
+This API is used to query permission rules of a file system.
+
+Constraints
+-----------
+
+A maximum of 64 permission rules can be added for a file system.
+
+This API is only supported for NFS file systems.
 
 URI
 ---
@@ -17,33 +24,34 @@ GET /v1/{project_id}/sfs-turbo/shares/{share_id}/fs/perm-rules
 
 .. table:: **Table 1** Path Parameters
 
-   ========== ========= ====== ==============
+   ========== ========= ====== ===================
    Parameter  Mandatory Type   Description
-   ========== ========= ====== ==============
-   project_id Yes       String Project ID
-   share_id   Yes       String File system ID
-   ========== ========= ====== ==============
+   ========== ========= ====== ===================
+   project_id Yes       String The project ID.
+   share_id   Yes       String The file system ID.
+   ========== ========= ====== ===================
 
 .. table:: **Table 2** Query Parameters
 
-   ========= ========= ==== =======================================
-   Parameter Mandatory Type Description
-   ========= ========= ==== =======================================
-   limit     No        Long Number of returned permission rules.
-   offset    No        Long Offset of the returned permission rule.
-   ========= ========= ==== =======================================
+   +-----------+-----------+------+--------------------------------------------------------------+
+   | Parameter | Mandatory | Type | Description                                                  |
+   +===========+===========+======+==============================================================+
+   | limit     | No        | Long | The maximum number of permission rules that can be returned. |
+   +-----------+-----------+------+--------------------------------------------------------------+
+   | offset    | No        | Long | The offset of the returned permission rules.                 |
+   +-----------+-----------+------+--------------------------------------------------------------+
 
 Request Parameters
 ------------------
 
 .. table:: **Table 3** Request header parameters
 
-   ============ ========= ====== =============
+   ============ ========= ====== ==================
    Parameter    Mandatory Type   Description
-   ============ ========= ====== =============
-   X-Auth-Token Yes       String Account token
-   Content-Type Yes       String MIME type
-   ============ ========= ====== =============
+   ============ ========= ====== ==================
+   X-Auth-Token Yes       String The account token.
+   Content-Type Yes       String The MIME type.
+   ============ ========= ====== ==================
 
 Response Parameters
 -------------------
@@ -55,47 +63,47 @@ Response Parameters
    +-----------+---------------------------------------------------------------------------------------------------+-----------------------------+
    | Parameter | Type                                                                                              | Description                 |
    +===========+===================================================================================================+=============================+
-   | rules     | Array of :ref:`OnePermRuleResponseInfo <listpermrules__response_onepermruleresponseinfo>` objects | Permission rule information |
+   | rules     | Array of :ref:`OnePermRuleResponseInfo <listpermrules__response_onepermruleresponseinfo>` objects | The permission information. |
    +-----------+---------------------------------------------------------------------------------------------------+-----------------------------+
 
 .. _listpermrules__response_onepermruleresponseinfo:
 
 .. table:: **Table 5** OnePermRuleResponseInfo
 
-   +-----------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------+
-   | Parameter             | Type                  | Description                                                                                                           |
-   +=======================+=======================+=======================================================================================================================+
-   | id                    | String                | Permission rule ID                                                                                                    |
-   +-----------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------+
-   | ip_cidr               | String                | IP address or IP address range of the authorized object                                                               |
-   +-----------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------+
-   | rw_type               | String                | Read/write permission of the authorized object.                                                                       |
-   |                       |                       |                                                                                                                       |
-   |                       |                       | -  **rw**: read and write permission, which is the default option                                                     |
-   |                       |                       |                                                                                                                       |
-   |                       |                       | -  **ro**: read-only permission                                                                                       |
-   |                       |                       |                                                                                                                       |
-   |                       |                       | -  **none**: no permission                                                                                            |
-   +-----------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------+
-   | user_type             | String                | File system access permission granted to the user of the authorized object. Supported values are:                     |
-   |                       |                       |                                                                                                                       |
-   |                       |                       | -  **no_root_squash**: allows the root user on the client to access the file system as **root**.                      |
-   |                       |                       |                                                                                                                       |
-   |                       |                       | -  **root_squash**: allows the root user on the client to access the file system as **nfsnobody**.                    |
-   |                       |                       |                                                                                                                       |
-   |                       |                       | -  **all_squash**: allows any user on the client to access the file system as **nfsnobody**. It is the default value. |
-   +-----------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------+
+   +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Parameter             | Type                  | Description                                                                                                                                                                                           |
+   +=======================+=======================+=======================================================================================================================================================================================================+
+   | id                    | String                | The permission rule ID.                                                                                                                                                                               |
+   +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | ip_cidr               | String                | The IP address or IP address range of the authorized object. It cannot be modified after configuration.                                                                                               |
+   +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | rw_type               | String                | The read/write permission of the authorized object.                                                                                                                                                   |
+   |                       |                       |                                                                                                                                                                                                       |
+   |                       |                       | -  **rw**: read and write permission, which is the default option                                                                                                                                     |
+   |                       |                       |                                                                                                                                                                                                       |
+   |                       |                       | -  **ro**: read-only permission                                                                                                                                                                       |
+   |                       |                       |                                                                                                                                                                                                       |
+   |                       |                       | -  **none**: no permission                                                                                                                                                                            |
+   +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | user_type             | String                | The file system access permission granted to the user of the authorized object. The value can be:                                                                                                     |
+   |                       |                       |                                                                                                                                                                                                       |
+   |                       |                       | -  **no_root_squash** (default value): allows any user including root on the client to access the file system as who they are, instead of mapping them to another user.                               |
+   |                       |                       |                                                                                                                                                                                                       |
+   |                       |                       | -  **root_squash**: allows root on the client to access the file system as **nfsnobody** and allows a non-root user on the client to access as who they are, instead of being mapped to another user. |
+   |                       |                       |                                                                                                                                                                                                       |
+   |                       |                       | -  **all_squash**: allows any user on the client to access the file system as **nfsnobody**.                                                                                                          |
+   +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 **Status code: 500**
 
 .. table:: **Table 6** Response body parameters
 
-   ========= ====== =================
+   ========= ====== ==================
    Parameter Type   Description
-   ========= ====== =================
-   errCode   String Error code
-   errMsg    String Error description
-   ========= ====== =================
+   ========= ====== ==================
+   errCode   String The error code.
+   errMsg    String The error message.
+   ========= ====== ==================
 
 Example Requests
 ----------------
@@ -113,21 +121,23 @@ Example Responses
 
 Successful query
 
-.. code-block::
+-  Response example of querying the permission rules of a file system
 
-   {
-     "rules" : [ {
-       "id" : "1131ed520xxxxxxebedb6e57xxxxxxxx",
-       "ip_cidr" : "192.168.xx.xx/16",
-       "rw_type" : "rw",
-       "user_type" : "no_root_squash"
-     }, {
-       "id" : "1231ed520xxxxxxebedb6e57xxxxxxxx",
-       "ip_cidr" : "192.32.xx.xx/16",
-       "rw_type" : "rw",
-       "user_type" : "no_root_squash"
-     } ]
-   }
+   .. code-block::
+
+      {
+        "rules" : [ {
+          "id" : "1131ed520xxxxxxebedb6e57xxxxxxxx",
+          "ip_cidr" : "192.168.xx.xx/16",
+          "rw_type" : "rw",
+          "user_type" : "no_root_squash"
+        }, {
+          "id" : "1231ed520xxxxxxebedb6e57xxxxxxxx",
+          "ip_cidr" : "192.32.xx.xx/16",
+          "rw_type" : "rw",
+          "user_type" : "no_root_squash"
+        } ]
+      }
 
 **Status code: 500**
 

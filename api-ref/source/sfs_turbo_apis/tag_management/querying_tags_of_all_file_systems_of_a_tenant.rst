@@ -17,32 +17,33 @@ GET /v1/{project_id}/sfs-turbo/tags
 
 .. table:: **Table 1** Path Parameters
 
-   ========== ========= ====== ===========
+   ========== ========= ====== ===============
    Parameter  Mandatory Type   Description
-   ========== ========= ====== ===========
-   project_id Yes       String Project ID
-   ========== ========= ====== ===========
+   ========== ========= ====== ===============
+   project_id Yes       String The project ID.
+   ========== ========= ====== ===============
 
 .. table:: **Table 2** Query Parameters
 
-   ========= ========= ======= =======================
-   Parameter Mandatory Type    Description
-   ========= ========= ======= =======================
-   limit     No        Integer Number of returned tags
-   offset    No        Integer Tag query offset
-   ========= ========= ======= =======================
+   +-----------+-----------+---------+--------------------------------------------------+
+   | Parameter | Mandatory | Type    | Description                                      |
+   +===========+===========+=========+==================================================+
+   | limit     | No        | Integer | The maximum number of tags that can be returned. |
+   +-----------+-----------+---------+--------------------------------------------------+
+   | offset    | No        | Integer | The tag query offset.                            |
+   +-----------+-----------+---------+--------------------------------------------------+
 
 Request Parameters
 ------------------
 
 .. table:: **Table 3** Request header parameters
 
-   ============ ========= ====== =============
+   ============ ========= ====== ==================
    Parameter    Mandatory Type   Description
-   ============ ========= ====== =============
-   X-Auth-Token Yes       String Account token
-   Content-Type Yes       String MIME type
-   ============ ========= ====== =============
+   ============ ========= ====== ==================
+   X-Auth-Token Yes       String The account token.
+   Content-Type Yes       String The MIME type.
+   ============ ========= ====== ==================
 
 Response Parameters
 -------------------
@@ -51,11 +52,11 @@ Response Parameters
 
 .. table:: **Table 4** Response body parameters
 
-   +-----------+------------------------------------------------------------+-------------+
-   | Parameter | Type                                                       | Description |
-   +===========+============================================================+=============+
-   | tags      | Array of :ref:`Tag <listsharedtags__response_tag>` objects | Tag list    |
-   +-----------+------------------------------------------------------------+-------------+
+   +-----------+------------------------------------------------------------+---------------+
+   | Parameter | Type                                                       | Description   |
+   +===========+============================================================+===============+
+   | tags      | Array of :ref:`Tag <listsharedtags__response_tag>` objects | The tag list. |
+   +-----------+------------------------------------------------------------+---------------+
 
 .. _listsharedtags__response_tag:
 
@@ -64,17 +65,17 @@ Response Parameters
    +-----------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | Parameter             | Type                  | Description                                                                                                                                                           |
    +=======================+=======================+=======================================================================================================================================================================+
-   | key                   | String                | Tag key.                                                                                                                                                              |
+   | key                   | String                | The tag key.                                                                                                                                                          |
    |                       |                       |                                                                                                                                                                       |
    |                       |                       | A key can contain a maximum of 128 characters and cannot be left blank.                                                                                               |
    +-----------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | values                | Array of strings      | Tag values. Each value can contain a maximum of 255 characters. An empty list of values can match with any value. All values of a tag key are in the OR relationship. |
+   | values                | Array of strings      | The list the tag values. Each value can contain a maximum of 255 characters. An empty list for **values** indicates any value. The values are in the OR relationship. |
    +-----------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Example Requests
 ----------------
 
-Query tags of all file systems in the project whose ID is **e1e45b08f3ea4480ab4655ef9c7160ba**
+Querying tags of all file systems in the project whose ID is **e1e45b08f3ea4480ab4655ef9c7160ba**
 
 .. code-block:: text
 
@@ -85,7 +86,7 @@ Example Responses
 
 **Status code: 200**
 
-Response body for querying a file system
+Query response body
 
 .. code-block::
 
@@ -102,11 +103,11 @@ Response body for querying a file system
 Status Codes
 ------------
 
-=========== ========================================
+=========== ===================
 Status Code Description
-=========== ========================================
-200         Response body for querying a file system
-=========== ========================================
+=========== ===================
+200         Query response body
+=========== ===================
 
 Error Codes
 -----------
