@@ -23,7 +23,7 @@ Take troubleshooting measures based on possible causes.
 Solution
 --------
 
-#. Log in to the ECS. An ECS running Windows Server 2012 R2 is used in this example.
+#. Log in to the cloud server. An ECS running Windows Server 2012 R2 is used in this example.
 
 #. Click **Server Manager** in the lower left corner.
 

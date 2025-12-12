@@ -30,7 +30,7 @@ Configuration Process
 
 #. Organize the files of DNA sequencing to be uploaded.
 #. Log in to the SFS console. Create a file system to store the files of DNA sequencing.
-#. Log in to the servers that function as the head node and compute node, and mount the file system.
+#. Log in to the cloud servers that function as the head node and compute node, and mount the file system on them, respectively.
 #. On the head node, upload the files to the file system.
 #. On the compute node, edit the files.
 
@@ -38,7 +38,7 @@ Prerequisites
 -------------
 
 -  A VPC has been created.
--  ECSs that function as head nodes and compute nodes have been created, and have been assigned to the VPC.
+-  Cloud servers that function as the head node and compute node have been created and are in the created VPC.
 -  SFS has been enabled.
 
 Example Configuration
@@ -52,8 +52,8 @@ Example Configuration
 
 #. After the configuration is complete, click **Create Now**.
 
-   To mount a file system to Linux ECSs, see :ref:`Mounting an NFS File System to ECSs (Linux) <sfs_01_1001>`. To mount a file system to Windows ECSs, see :ref:`Mounting an NFS File System to ECSs (Windows) <en-us_topic_0105224109>`.
+   To mount a file system to Linux ECSs, see :ref:`Mounting an NFS File System to ECSs (Linux) <en-us_topic_0034428728>`. To mount a file system to Windows ECSs, see :ref:`Mounting an NFS File System to ECSs (Windows) <en-us_topic_0105224109>`.
 
-#. Log in to the head node, and upload the files to the file system.
+#. Log in to the head node and upload the files to the file system.
 
 #. Start gene sequencing, and the compute node obtains the gene sequencing file from the mounted file system for calculation.

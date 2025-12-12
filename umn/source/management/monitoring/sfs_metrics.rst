@@ -10,7 +10,11 @@ General purpose file systems do not support monitoring. This section describes o
 Function
 --------
 
-This section describes metrics reported by Scalable File Service (SFS) as well as their namespaces and dimensions. You can use the console or APIs provided by Cloud Eye to query the metrics generated for SFS.
+This section describes the SFS metrics reported to Cloud Eye as well as their namespaces and dimensions. You can use the Cloud Eye console or APIs provided by Cloud Eye to query the SFS metrics and alarms.
+
+.. note::
+
+   Cloud Eye can monitor dimensions nested to a maximum depth of four levels (levels 0 to 3). 3 is the deepest level.
 
 Namespace
 ---------
@@ -22,46 +26,32 @@ Metrics
 
 .. table:: **Table 1** SFS metrics
 
-   +-----------------+--------------------------+-----------------------------------------------------------------------+---------------+------------------+------------------------------+
-   | Metric ID       | Metric Name              | Description                                                           | Value Range   | Monitored Object | Monitoring Period (Raw Data) |
-   +=================+==========================+=======================================================================+===============+==================+==============================+
-   | read_bandwidth  | Read Bandwidth           | Read bandwidth of a file system within a monitoring period            | >= 0 bytes/s  | SFS file system  | 4 minutes                    |
-   |                 |                          |                                                                       |               |                  |                              |
-   |                 |                          | Unit: byte/s                                                          |               |                  |                              |
-   +-----------------+--------------------------+-----------------------------------------------------------------------+---------------+------------------+------------------------------+
-   | write_bandwidth | Write Bandwidth          | Write bandwidth of a file system within a monitoring period           | >= 0 bytes/s  | SFS file system  | 4 minutes                    |
-   |                 |                          |                                                                       |               |                  |                              |
-   |                 |                          | Unit: byte/s                                                          |               |                  |                              |
-   +-----------------+--------------------------+-----------------------------------------------------------------------+---------------+------------------+------------------------------+
-   | rw_bandwidth    | Read and Write Bandwidth | Read and write bandwidth of a file system within a monitoring period  | >= 0 bytes/s  | SFS file system  | 4 minutes                    |
-   |                 |                          |                                                                       |               |                  |                              |
-   |                 |                          | Unit: byte/s                                                          |               |                  |                              |
-   +-----------------+--------------------------+-----------------------------------------------------------------------+---------------+------------------+------------------------------+
-   | read_ops        | Read OPS                 | Read operations of a file system within a monitoring period           | >= 0 counts/s | SFS file system  | 4 minutes                    |
-   |                 |                          |                                                                       |               |                  |                              |
-   |                 |                          | Unit: count/s                                                         |               |                  |                              |
-   +-----------------+--------------------------+-----------------------------------------------------------------------+---------------+------------------+------------------------------+
-   | write_ops       | Write OPS                | Write operations of a file system within a monitoring period          | >= 0 counts/s | SFS file system  | 4 minutes                    |
-   |                 |                          |                                                                       |               |                  |                              |
-   |                 |                          | Unit: count/s                                                         |               |                  |                              |
-   +-----------------+--------------------------+-----------------------------------------------------------------------+---------------+------------------+------------------------------+
-   | rw_ops          | Read Write OPS           | Read and write operations of a file system within a monitoring period | >= 0 counts/s | SFS file system  | 4 minutes                    |
-   |                 |                          |                                                                       |               |                  |                              |
-   |                 |                          | Unit: count/s                                                         |               |                  |                              |
-   +-----------------+--------------------------+-----------------------------------------------------------------------+---------------+------------------+------------------------------+
-   | used_capicity   | Used Capacity            | Used capacity of a file system within a monitoring period             | >= 0 bytes    | SFS file system  | 4 minutes                    |
-   |                 |                          |                                                                       |               |                  |                              |
-   |                 |                          | Unit: byte                                                            |               |                  |                              |
-   +-----------------+--------------------------+-----------------------------------------------------------------------+---------------+------------------+------------------------------+
+   +-----------------+--------------------------+-----------------------------------------------------------------------+-------------+---------+-----------------+-----------+------------------------------+
+   | Metric ID       | Metric Name              | Description                                                           | Value Range | Unit    | Conversion Rule | Dimension | Monitoring Period (Raw Data) |
+   +=================+==========================+=======================================================================+=============+=========+=================+===========+==============================+
+   | read_bandwidth  | Read Bandwidth           | Read bandwidth of a file system within a monitoring period            | >= 0        | bytes/s | 1024 (IEC)      | share_id  | 4 minutes                    |
+   +-----------------+--------------------------+-----------------------------------------------------------------------+-------------+---------+-----------------+-----------+------------------------------+
+   | write_bandwidth | Write Bandwidth          | Write bandwidth of a file system within a monitoring period           | >= 0        | bytes/s | 1024 (IEC)      | share_id  | 4 minutes                    |
+   +-----------------+--------------------------+-----------------------------------------------------------------------+-------------+---------+-----------------+-----------+------------------------------+
+   | rw_bandwidth    | Read and Write Bandwidth | Read and write bandwidth of a file system within a monitoring period  | >= 0        | bytes/s | 1024 (IEC)      | share_id  | 4 minutes                    |
+   +-----------------+--------------------------+-----------------------------------------------------------------------+-------------+---------+-----------------+-----------+------------------------------+
+   | read_ops        | Read OPS                 | Read operations of a file system within a monitoring period           | >= 0        | count/s | N/A             | share_id  | 4 minutes                    |
+   +-----------------+--------------------------+-----------------------------------------------------------------------+-------------+---------+-----------------+-----------+------------------------------+
+   | write_ops       | Write OPS                | Write operations of a file system within a monitoring period          | >= 0        | count/s | N/A             | share_id  | 4 minutes                    |
+   +-----------------+--------------------------+-----------------------------------------------------------------------+-------------+---------+-----------------+-----------+------------------------------+
+   | rw_ops          | Read Write OPS           | Read and write operations of a file system within a monitoring period | >= 0        | count/s | N/A             | share_id  | 4 minutes                    |
+   +-----------------+--------------------------+-----------------------------------------------------------------------+-------------+---------+-----------------+-----------+------------------------------+
+   | used_capicity   | Used Capacity            | Used capacity of a file system within a monitoring period             | >= 0        | bytes   | 1024 (IEC)      | share_id  | 4 minutes                    |
+   +-----------------+--------------------------+-----------------------------------------------------------------------+-------------+---------+-----------------+-----------+------------------------------+
 
 Dimension
 ---------
 
-======== ===============
+======== =====================
 Key      Value
-======== ===============
-share_id SFS file system
-======== ===============
+======== =====================
+share_id SFS Capacity-Oriented
+======== =====================
 
 Viewing Monitoring Statistics
 -----------------------------

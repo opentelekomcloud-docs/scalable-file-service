@@ -36,7 +36,7 @@ You can grant users permissions by using roles and policies.
    +==========================+================================================================================================================================+=======================+============+
    | SFS Turbo FullAccess     | Administrator permissions for SFS Turbo. Users granted these permissions can perform all operations on SFS Turbo file systems. | System-defined policy | None       |
    +--------------------------+--------------------------------------------------------------------------------------------------------------------------------+-----------------------+------------+
-   | SFS Turbo ReadOnlyAccess | Read-only permissions for SFS Turbo. Users granted these permissions can only view SFS Turbo file system data.                 | System-defined policy | None       |
+   | SFS Turbo ReadOnlyAccess | Read-only permissions for SFS Turbo. Users with these permissions can only view SFS Turbo file system data.                    | System-defined policy | None       |
    +--------------------------+--------------------------------------------------------------------------------------------------------------------------------+-----------------------+------------+
 
 :ref:`Table 2 <sfs_01_0013__table1836173142018>` lists all the system-defined roles and policies supported by General Purpose File System.

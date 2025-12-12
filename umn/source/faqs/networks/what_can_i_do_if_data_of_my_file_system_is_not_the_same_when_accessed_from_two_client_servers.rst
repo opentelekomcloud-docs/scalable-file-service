@@ -22,9 +22,9 @@ The **lookupcache** option is related to directory entry caching, and the value 
 Solution
 --------
 
-#. Unmount the file system if it has been mounted. To unmount a file system, see :ref:`Unmount a File System <sfs_01_0026>`.
+#. Unmount the file system if it has been mounted. For details, see :ref:`Unmount a File System <sfs_01_0026>`.
 
-#. Complete the preparations before mounting the file system. For details, see :ref:`Mounting an NFS File System to ECSs (Linux) <sfs_01_1001>`.
+#. Prepare for the mount by referring to :ref:`Mounting an NFS File System to ECSs (Linux) <en-us_topic_0034428728>`.
 
 #. Mount the file system.
 

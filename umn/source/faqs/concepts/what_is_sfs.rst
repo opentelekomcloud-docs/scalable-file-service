@@ -9,4 +9,4 @@ Scalable File Service (SFS) provides scalable, high-performance file storage. Wi
 
 SFS provides an easy-to-use graphical user interface (GUI). On the GUI, users can create and configure file systems, saving effort in deploying, resizing, and optimizing file systems.
 
-In addition, SFS features high availability. It can be elastically expanded, and it performs better as its capacity grows. The service is suitable for a wide range of scenarios, including media processing, file sharing, content management and web services, big data, and analytic applications.
+In addition, SFS features high availability. It can be elastically expanded, and it performs better as its capacity grows. It is suitable for a wide range of scenarios, including media processing, file sharing, content management and web services, big data, and analytic applications.

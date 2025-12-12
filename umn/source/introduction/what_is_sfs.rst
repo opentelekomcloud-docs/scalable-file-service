@@ -31,7 +31,7 @@ Compared with traditional file sharing storage, SFS has the following advantages
 
    SFS enables file system performance to increase as capacity grows, and it delivers a high data durability to support rapid service growth.
 
-   The backend storage system supports both HDD and SSD storage media. It adopts a distributed architecture and uses full redundant design for modules, which eliminate single-node faults.
+   The backend storage system supports HDD and SSD storage media. It adopts a distributed architecture and uses full redundant design for modules, eliminating single-node faults.
 
 -  Seamless integration
 
@@ -44,7 +44,7 @@ Compared with traditional file sharing storage, SFS has the following advantages
 Accessing SFS
 -------------
 
-You can access SFS on the management console or via APIs by sending HTTPS requests.
+You can access SFS on the management console or through APIs by sending HTTPS requests.
 
 -  APIs
 

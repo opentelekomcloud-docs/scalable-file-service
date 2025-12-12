@@ -5,12 +5,12 @@
 Mounting a File System Automatically
 ====================================
 
-File system mounting information may be lost after a server is restarted. You can configure automatic mounting for the server to avoid the mounting information loss.
+File system mount information may be lost after a server is restarted. You can configure auto mount on the server to avoid losing the mount information.
 
 Restrictions
 ------------
 
-Because the service startup sequences in different operating systems vary, some servers running CentOS may not support the following automatic mounting schemes. In this case, manually mount the file system.
+Because service startup sequences in different OSs vary, some servers running CentOS may not support the following auto mount plan. In this case, manually mount the file system.
 
 Procedure (Linux)
 -----------------
@@ -18,7 +18,7 @@ Procedure (Linux)
 #. Log in to the management console using a cloud account.
 
    a. Log in to the management console and select a region and a project.
-   b. Under **Computing**, click **Elastic Cloud Server** to switch to the ECS console.
+   b. Choose **Compute** > **Elastic Cloud Server** to go to the ECS console.
 
 #. Log in to the ECS as user **root**.
 
@@ -38,7 +38,7 @@ Procedure (Linux)
 
 #. Press **Esc**, input **:wq**, and press **Enter** to save and exit.
 
-   After the preceding configurations are complete, the system reads mounting information from the **/etc/fstab** file to automatically mount the file system when the ECS restarts.
+   After the preceding configurations are complete, the system reads mount information from the **/etc/fstab** file to automatically mount the file system when the ECS restarts.
 
 #. (Optional) Run the following command to view the updated content of the **/etc/fstab** file:
 
@@ -70,31 +70,31 @@ Field Description
 
 .. table:: **Table 1** Field description
 
-   +-----------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Field                             | Description                                                                                                                                                                                                                          |
-   +===================================+======================================================================================================================================================================================================================================+
-   | *Mount point*                     | Mount object, that is, the mount point of the file system to be mounted. Set this parameter to the mount point in the **mount** command that is used in :ref:`Mounting an NFS File System to ECSs (Linux) <sfs_01_1001>`.            |
-   +-----------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | */local_path*                     | Mount point, that is, the directory created on the ECS for mounting the file system. Set this parameter to the local path in the **mount** command that is used in :ref:`Mounting an NFS File System to ECSs (Linux) <sfs_01_1001>`. |
-   +-----------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | nfs                               | Mount type, that is, file system or partition type. Set it to **nfs**.                                                                                                                                                               |
-   +-----------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | vers=3,timeo=600,nolock           | Mount options, used to set mount parameters. Use commas (,) to separate between multiple options.                                                                                                                                    |
-   |                                   |                                                                                                                                                                                                                                      |
-   |                                   | -  **vers**: file system version. The value **3** indicates NFSv3.                                                                                                                                                                   |
-   |                                   | -  **timeo**: waiting time before the NFS client retransmits a request. The unit is 0.1 second. The recommended value is **600**.                                                                                                    |
-   |                                   | -  **nolock**: specifies whether to lock files on the server using the NLM protocol.                                                                                                                                                 |
-   +-----------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | 0                                 | Choose whether to back up file systems using the dump command.                                                                                                                                                                       |
-   |                                   |                                                                                                                                                                                                                                      |
-   |                                   | -  **0**: not to back up file systems                                                                                                                                                                                                |
-   |                                   | -  An integer larger than 0: to back up file systems. A file system with a smaller integer is checked earlier than that with a larger integer.                                                                                       |
-   +-----------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | 0                                 | Choose whether to check file systems using the fsck command when the ECS is starting and specify the sequence for checking file systems.                                                                                             |
-   |                                   |                                                                                                                                                                                                                                      |
-   |                                   | -  **0**: to check file systems                                                                                                                                                                                                      |
-   |                                   | -  By default, this field is set to **1** for the root directory partition. Other partitions start from **2**, and a partition with a smaller integer is checked earlier than that with a larger integer.                            |
-   +-----------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   +-----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Field                             | Description                                                                                                                                                                                               |
+   +===================================+===========================================================================================================================================================================================================+
+   | *Mount point*                     | The mount point of the file system to be mounted. Set it to the mount point in the **mount** command in :ref:`Mounting an NFS File System to ECSs (Linux) <en-us_topic_0034428728>`.                      |
+   +-----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | */local_path*                     | A directory created on the ECS used to mount the file system. Set it to the local path in the **mount** command in :ref:`Mounting an NFS File System to ECSs (Linux) <en-us_topic_0034428728>`.           |
+   +-----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | nfs                               | The file system or partition mount type. Set it to **nfs**.                                                                                                                                               |
+   +-----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | vers=3,timeo=600,nolock           | Mount options, used to set mount parameters. Use commas (,) to separate between multiple options.                                                                                                         |
+   |                                   |                                                                                                                                                                                                           |
+   |                                   | -  **vers**: file system version. The value **3** indicates NFSv3.                                                                                                                                        |
+   |                                   | -  **timeo**: waiting time before the NFS client retransmits a request. The unit is 0.1 second. The recommended value is **600**.                                                                         |
+   |                                   | -  **nolock**: specifies whether to lock files on the server using the NLM protocol.                                                                                                                      |
+   +-----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | 0                                 | Choose whether to back up file systems using the dump command.                                                                                                                                            |
+   |                                   |                                                                                                                                                                                                           |
+   |                                   | -  **0**: not to back up file systems                                                                                                                                                                     |
+   |                                   | -  An integer larger than 0: to back up file systems. A file system with a smaller integer is checked earlier than that with a larger integer.                                                            |
+   +-----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | 0                                 | Choose whether to check file systems using the fsck command when the ECS is starting and specify the sequence for checking file systems.                                                                  |
+   |                                   |                                                                                                                                                                                                           |
+   |                                   | -  **0**: to check file systems                                                                                                                                                                           |
+   |                                   | -  By default, this field is set to **1** for the root directory partition. Other partitions start from **2**, and a partition with a smaller integer is checked earlier than that with a larger integer. |
+   +-----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Procedure (Windows)
 -------------------
@@ -104,7 +104,7 @@ Ensure that an NFS client has been installed on the target server before mountin
 #. Log in to the management console using a cloud account.
 
    a. Log in to the management console and select a region and a project.
-   b. Under **Computing**, click **Elastic Cloud Server** to switch to the ECS console.
+   b. Choose **Compute** > **Elastic Cloud Server** to go to the ECS console.
 
 #. Log in to the ECS.
 
@@ -122,7 +122,7 @@ Ensure that an NFS client has been installed on the target server before mountin
 
    For example, the **auto_mount.bat** script of a file system contains the following content:
 
-   For SFS Capacity-Oriented file systems: **mount -o nolock** *mount point* **X:**
+   For SFS Capacity-Oriented file systems: **mount -o nolock** *Mount point* **X:**
 
    .. note::
 

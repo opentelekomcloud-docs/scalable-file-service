@@ -29,16 +29,16 @@ Expandable to 32 TB, SFS Turbo provides fully hosted shared file storage. It fea
 
 -  High-performance websites
 
-   For I/O-intensive website services, SFS Turbo can provide shared website source code directories for multiple web servers, enabling low-latency and high-IOPS concurrent share access.
+   For I/O-intensive website services, SFS Turbo can provide shared website source code directories for multiple web servers, enabling low-latency and high-IOPS concurrent shared access.
 
 -  Log storage
 
-   SFS Turbo can provide multiple service nodes for shared log output directories, facilitating log collection and management of distributed applications.
+   SFS Turbo can provide shared log output directories for multiple service nodes, facilitating log collection and management of distributed applications.
 
 -  DevOps
 
-   The development directory can be shared to multiple VMs or containers, simplifying the configuration process and improving R&D experience.
+   The development directory can be shared with multiple VMs or containers, which simplifies the configuration process and improves R&D experience.
 
--  Enterprise offices
+-  Enterprise OA
 
    Office documents of enterprises or organizations can be saved in an SFS Turbo file system for high-performance shared access.

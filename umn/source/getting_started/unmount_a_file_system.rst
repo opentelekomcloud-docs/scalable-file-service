@@ -18,7 +18,7 @@ Linux OS
 #. Log in to the management console using a cloud account.
 
    a. Log in to the management console and select a region and a project.
-   b. Under **Computing**, click **Elastic Cloud Server** to go to the ECS console.
+   b. Choose **Compute** > **Elastic Cloud Server** to go to the ECS console.
 
 #. Log in to the ECS.
 
@@ -38,7 +38,7 @@ Windows OS
 #. Log in to the management console using a cloud account.
 
    a. Log in to the management console and select a region and a project.
-   b. Under **Computing**, click **Elastic Cloud Server** to go to the ECS console.
+   b. Choose **Compute** > **Elastic Cloud Server** to go to the ECS console.
 
 #. Log in to the ECS.
 
