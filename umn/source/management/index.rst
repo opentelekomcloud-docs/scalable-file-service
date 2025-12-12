@@ -13,6 +13,7 @@ Management
 -  :ref:`Encryption <sfs_01_0042>`
 -  :ref:`Tags <sfs_01_0043>`
 -  :ref:`Backup <sfs_01_0044>`
+-  :ref:`Managing SFS Turbo+OBS Storage Interworking <sfs_01_0334>`
 -  :ref:`Monitoring <sfs_01_0046>`
 -  :ref:`Auditing <sfs_01_0340>`
 
@@ -28,5 +29,6 @@ Management
    encryption
    tags
    backup
+   managing_sfs_turboobs_storage_interworking
    monitoring/index
    auditing/index

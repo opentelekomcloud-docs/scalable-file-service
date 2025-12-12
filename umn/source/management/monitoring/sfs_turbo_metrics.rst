@@ -23,7 +23,7 @@ Metrics
    +-----------------------+-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+-----------------------+------------------------------+
    | Metric ID             | Metric Name                       | Description                                                                                                                                                | Value Range  | Monitored Object      | Monitoring Period (Raw Data) |
    +=======================+===================================+============================================================================================================================================================+==============+=======================+==============================+
-   | client_connections    | Client Connections                | Number of client connections                                                                                                                               | >= 0         | SFS Turbo file system | 1 minute                     |
+   | client_connections    | File System Client Connections    | Number of client connections                                                                                                                               | >= 0         | SFS Turbo file system | 1 minute                     |
    |                       |                                   |                                                                                                                                                            |              |                       |                              |
    |                       |                                   | .. note::                                                                                                                                                  |              |                       |                              |
    |                       |                                   |                                                                                                                                                            |              |                       |                              |
@@ -75,7 +75,7 @@ Viewing Monitoring Statistics
 #. View the monitoring graphs using either of the following methods.
 
    -  Method 1: Choose **Service List** > **Storage** > **Scalable File Service**. In the file system list, click **View Metric** in the **Operation** column of the target file system.
-   -  Method 2: Choose **Management & Deployment** > **Cloud Eye** > **Cloud Service Monitoring** > **SFS Turbo**. In the file system list, click **View Metric** in the **Operation** column of the target file system.
+   -  Method 2: Choose **Management & Deployment** > **Cloud Eye** > **Cloud Service Monitoring** > **SFS Turbo**. In the file system list, click **View Metric** in the **Operation** column of the desired file system.
 
 #. View the SFS Turbo file system monitoring data by metric or monitored duration.
 
