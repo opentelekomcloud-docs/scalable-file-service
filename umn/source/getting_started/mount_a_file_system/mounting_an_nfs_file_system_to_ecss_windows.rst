@@ -5,7 +5,7 @@
 Mounting an NFS File System to ECSs (Windows)
 =============================================
 
-After creating a file system, you need to mount the file system to servers so that they can share the file system.
+After creating a file system, you need to mount the file system to cloud servers so that they can share the file system.
 
 This section uses Windows Server 2012 as the example OS to describe how to mount an NFS file system. For other versions, perform the steps based on the actual situation.
 
@@ -15,15 +15,15 @@ Prerequisites
 -------------
 
 -  You have created a file system and have obtained the mount point of the file system.
--  At least one ECS that belongs to the same VPC as the file system exists.
--  The IP address of the DNS server for resolving the domain names of the file systems has been configured on the ECS. For details, see :ref:`Configuring DNS <sfs_01_0038>`. SFS Turbo file systems do not require domain name resolution.
+-  At least one ECS that is in the same VPC as the file system is available.
+-  The IP address of the DNS server for resolving the file system domain name has been configured on the ECS. For details, see :ref:`Configuring DNS <sfs_01_0038>`. SFS Turbo file systems do not require domain name resolution.
 
-Limitations and Constraints
----------------------------
+Constraints
+-----------
 
 SFS Turbo file systems cannot be mounted to Windows ECSs.
 
-General purpose file systems cannot be mounted to Windows ECSs.
+General purpose file systems cannot be mounted to Windows servers.
 
 Procedure
 ---------
@@ -31,9 +31,9 @@ Procedure
 #. Log in to the management console using a cloud account.
 
    a. Log in to the management console and select a region and a project.
-   b. Under **Computing**, click **Elastic Cloud Server** to switch to the ECS console.
+   b. Choose **Compute** > **Elastic Cloud Server** to go to the ECS console.
 
-#. Go to the ECS console and log in to the ECS running Windows Server 2012.
+#. On the ECS console, log in to the ECS running Windows Server 2012.
 
 #. Install the NFS client.
 
@@ -102,15 +102,15 @@ Procedure
 
 #. Check that the IP address of the DNS server for resolving the domain names of the file systems has been configured on the ECS before mounting the file system. For details, see :ref:`Configuring DNS <sfs_01_0038>`. SFS Turbo file systems do not require domain name resolution.
 
-#. Run the following command in the Command Prompt of the Windows Server 2012 (**X** is the drive letter of the free disk). Select the ECS that belongs to the same VPC as the file system to mount the file system.
+#. Run the following command in the Command Prompt of the Windows Server 2012 (**X** is the drive letter of the free disk). Select the ECS that is in the same VPC as the file system to mount the file system.
 
-   For SFS Capacity-Oriented file systems: **mount -o nolock** *mount point* **X:**
+   For SFS Capacity-Oriented file systems: **mount -o nolock** *Mount point* **X:**
 
    .. note::
 
       -  Free drive letter of the disk: A drive letter that is not in use, such as drive letter E or X.
 
-   You can move the cursor to the mount point and click |image1| next to the mount point to copy the mount point. For details, see :ref:`Figure 8 <en-us_topic_0105224109__fig212663513297>`. If the information shown in :ref:`Figure 9 <en-us_topic_0105224109__fig13957194774517>` is displayed, the mounting is successful.
+   You can move the cursor to the mount point and click |image1| next to the mount point to copy it. For details, see :ref:`Figure 8 <en-us_topic_0105224109__fig212663513297>`. If the information shown in :ref:`Figure 9 <en-us_topic_0105224109__fig13957194774517>` is displayed, the mount is successful.
 
    .. _en-us_topic_0105224109__fig212663513297:
 
@@ -144,7 +144,7 @@ Procedure
 Troubleshooting
 ---------------
 
-If a file system is mounted to a Linux ECS and a Windows ECS, on the Windows ECS, data cannot be written to the files created by the Linux ECS. To address this problem, modify the registry and change both UID and GID values to **0** for NFS accesses from Windows. This section uses Windows Server 2012 as an example. Do as follows:
+If a file system is mounted to a Linux ECS and a Windows ECS, on the Windows ECS, you cannot write data to the files created by the Linux ECS. To address this problem, modify the registry and change both UID and GID values to **0** for NFS accesses from Windows. This section uses Windows Server 2012 as an example. Do as follows:
 
 #. Choose **Start** > **Run** and enter **regedit** to open the registry.
 

@@ -43,4 +43,4 @@ Solution
 
 #. Click **OK**. Access the file system again for verification.
 
-.. |image1| image:: /_static/images/en-us_image_0159365094.png
+.. |image1| image:: /_static/images/en-us_image_0000002121585809.png

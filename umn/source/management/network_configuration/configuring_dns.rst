@@ -10,7 +10,7 @@ A DNS server is used to resolve domain names of file systems. The DNS server IP 
 Scenarios
 ---------
 
-By default, the IP address of the DNS server used to resolve domain names of file systems is automatically configured on ECSs when creating ECSs. No manual configuration is needed except when the resolution fails due to a change in the DNS server IP address.
+By default, the IP address of the DNS server used to resolve domain names of file systems is automatically configured on ECSs when they are created. No manual configuration is needed except when the resolution fails due to a change in the DNS server IP address.
 
 Windows Server 2012 is used as an example in the operation procedures for Windows.
 
@@ -50,7 +50,7 @@ Procedure (Linux)
 
       Obtain the file system domain name from the file system mount point.
 
-#. (Optional) In a network environment of the DHCP server, edit the **/etc/resolv.conf** file to prevent the file from being automatically modified upon an ECS startup, and prevent the DNS server IP address added in :ref:`2 <sfs_01_0038__li13553756203149>` from being reset.
+#. (Optional) In a network environment that uses the DHCP server, edit the **/etc/resolv.conf** file to prevent the file from being automatically modified upon an ECS restart, and prevent the DNS server IP address added in :ref:`2 <sfs_01_0038__li13553756203149>` from being reset.
 
    a. Run the following command to lock the file:
 

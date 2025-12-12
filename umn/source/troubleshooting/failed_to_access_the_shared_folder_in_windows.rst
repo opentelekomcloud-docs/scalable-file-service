@@ -8,7 +8,7 @@ Failed to Access the Shared Folder in Windows
 Symptom
 -------
 
-When you mount a file system to an ECS running Windows, the system displays a message "You cannot access this shared folder because your organization's security policies block unauthenticated guest access. These policies help to protect you PC from unsafe or malicious devices on the network."
+When you mount a file system to an ECS running Windows, the system displays a message "You cannot access this shared folder because your organization's security policies block unauthenticated guest access. These policies help protect your PC from unsafe or malicious devices on the network."
 
 Possible Causes
 ---------------
@@ -27,7 +27,7 @@ Solution
 
 **Solution 1: Manually enable guest access.**
 
-#. Open **Run** command box, enter **gpedit.msc**, and press **Enter** to start **Local Group Policy Editor**.
+#. Open the **Run** command box, enter **gpedit.msc**, and press **Enter** to start **Local Group Policy Editor**.
 
 
    .. figure:: /_static/images/en-us_image_0216773813.png
@@ -43,7 +43,7 @@ Solution
 
       **Figure 2** Local Group Policy Editor
 
-#. Under **Administrative Templates**, choose **Network** > **Lanman Workstation** and find the option of **Enable insecure guest logons**.
+#. Under **Administrative Templates**, choose **Network** > **Lanman Workstation** and find the option **Enable insecure guest logons**.
 
 
    .. figure:: /_static/images/en-us_image_0216836626.png

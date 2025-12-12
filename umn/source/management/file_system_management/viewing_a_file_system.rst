@@ -39,7 +39,7 @@ Procedure
       +-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | Maximum Capacity (GB)             | Maximum capacity of the file system                                                                                                                                                                                                                              |
       +-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | Encrypted                         | Encryption status of the file system. The value can be **Yes** or **No**.                                                                                                                                                                                        |
+      | Encryption                        | Encryption status of the file system. The value can be **Yes** or **No**.                                                                                                                                                                                        |
       +-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | Mount Point                       | File system mount point, which is in the format of *File system domain name*\ **:/**\ *Path* or *File system IP address*\ **:/**                                                                                                                                 |
       |                                   |                                                                                                                                                                                                                                                                  |
@@ -64,15 +64,15 @@ Procedure
 
 
    .. figure:: /_static/images/en-us_image_0000001921884002.png
-      :alt: **Figure 2** Details of a general purpose file system
+      :alt: **Figure 2** Basic information of a general purpose file system
 
-      **Figure 2** Details of a general purpose file system
+      **Figure 2** Basic information of a general purpose file system
 
 
    .. figure:: /_static/images/en-us_image_0000001921889038.png
-      :alt: **Figure 3** Details of an SFS Turbo file system
+      :alt: **Figure 3** Basic information of an SFS Turbo file system
 
-      **Figure 3** Details of an SFS Turbo file system
+      **Figure 3** Basic information of an SFS Turbo file system
 
 #. (Optional) Search for the specified file system by file system name.
 

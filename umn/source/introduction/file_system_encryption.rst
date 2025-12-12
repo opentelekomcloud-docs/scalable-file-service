@@ -5,7 +5,7 @@
 File System Encryption
 ======================
 
-SFS provides you with the encryption function. You can encrypt data on the new file systems if needed.
+SFS provides you with the encryption function. You can encrypt data on newly created file systems if needed.
 
 Keys for encrypting file systems are provided by Key Management Service (KMS), which is secure and convenient. You do not need to establish and maintain key management infrastructure. If you want to use your own key material, use the key import function on the KMS console to create a custom key whose key material is empty and import the key material to the custom key. For details, see section "Importing Key Materials" in *Key Management Service User Guide*.
 

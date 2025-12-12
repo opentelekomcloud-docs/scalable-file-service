@@ -5,14 +5,14 @@
 Backup
 ======
 
-You can only back up SFS Turbo file systems using CBR while you cannot back up SFS Capacity-Oriented and general purpose file systems.
+You can only back up SFS Turbo file systems using CBR but you cannot back up SFS Capacity-Oriented and general purpose file systems.
 
 Scenarios
 ---------
 
 A backup is a complete copy of an SFS Turbo file system at a specific time and it records all configuration data and service data at that time.
 
-For example, if a file system is faulty or encounters a logical error (for example, mis-deletion, hacker attacks, and virus infection), you can use data backups to restore data quickly.
+For example, if a file system is faulty or encounters a logical error (like accidental deletion, hacker attack, or virus infection), you can use data backups to restore data quickly.
 
 Creating a File System Backup
 -----------------------------
@@ -63,9 +63,9 @@ In case of a virus attack, accidental deletion, or software or hardware fault, y
 
    .. note::
 
-      -  For detailed parameter descriptions, see table "Parameter description" under :ref:`Table 3 <en-us_topic_0034428727__table724582213143>`.
+      -  For detailed parameter descriptions, see table "File system parameters" under :ref:`Table 3 <en-us_topic_0034428727__table724582213143>`.
 
-#. Click **Next**.
+#. Click **Create Now**.
 
 #. Go back to the file system list and check whether the file system is successfully created.
 

@@ -2,8 +2,8 @@
 
 .. _sfs_01_0074:
 
-How Many Servers Can a File System Be Mounted To?
-=================================================
+How Many Cloud Servers Can I Mount a File System To?
+====================================================
 
 You can mount an SFS Capacity-Oriented file system to a maximum of 10,000 servers.
 

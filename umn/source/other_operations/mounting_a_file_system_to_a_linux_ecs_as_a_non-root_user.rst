@@ -8,7 +8,7 @@ Mounting a File System to a Linux ECS as a Non-root User
 Scenarios
 ---------
 
-By default, a Linux ECS allows only the **root** user to use the **mount** command to mount file systems, but you can grant the permissions of user **root** to other users. Then, such users can use the **mount** command to mount the file systems. The following describes how to mount a file system to a Linux ECS as a common user. EulerOS is used in this example.
+By default, a Linux ECS allows only the **root** user to use the **mount** command to mount file systems, but you can grant the permissions of user **root** to other users. Such users can then use the **mount** command to mount the file systems. The following describes how to mount a file system to a Linux ECS as a non-root user. EulerOS is used in this example.
 
 Prerequisites
 -------------
@@ -74,7 +74,7 @@ Procedure
 
    **mount -l**
 
-   If the command output contains the following information, the file system has been mounted.
+   If the command output contains the following information, the file system has been mounted:
 
    .. code-block::
 
