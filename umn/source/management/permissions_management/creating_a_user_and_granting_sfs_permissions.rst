@@ -12,27 +12,27 @@ This chapter describes how to use IAM to implement fine-grained permissions cont
 
 If your cloud account does not require individual IAM users, skip this section.
 
-This section describes the procedure for granting permissions (see :ref:`Figure 1 <sfs_01_0032__fig625610403530>`).
+This section describes the procedure for granting permissions (see :ref:`Figure 1 <sfs_01_0032__en-us_topic_0000001489537442_fig1351611812271>`).
 
 Prerequisites
 -------------
 
 Learn about the permissions (see :ref:`Permissions <sfs_01_0013>`) supported by SFS and choose policies or roles according to your requirements.
 
-Restrictions
-------------
+Constraints
+-----------
 
 -  Both system-defined policies and custom policies are supported in SFS Turbo file systems.
 
 Process Flow
 ------------
 
-.. _sfs_01_0032__fig625610403530:
+.. _sfs_01_0032__en-us_topic_0000001489537442_fig1351611812271:
 
-.. figure:: /_static/images/en-us_image_0221089836.png
-   :alt: **Figure 1** Process for granting SFS permissions
+.. figure:: /_static/images/en-us_image_0000002419860586.png
+   :alt: **Figure 1** Process of granting SFS Turbo permissions
 
-   **Figure 1** Process for granting SFS permissions
+   **Figure 1** Process of granting SFS Turbo permissions
 
 #. .. _sfs_01_0032__li539812235120:
 

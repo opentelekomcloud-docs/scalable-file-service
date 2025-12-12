@@ -8,7 +8,7 @@ Enterprise Website/App Background
 Context
 -------
 
-For I/O-intensive website services, SFS Turbo can provide shared website source code directories and storage for multiple web servers, enabling low-latency and high-IOPS concurrent share access. Features of such services are as follows:
+For I/O-intensive website services, SFS Turbo can provide shared website source code directories and storage for multiple web servers, enabling low-latency and high-IOPS concurrent shared access. Features of such services are as follows:
 
 -  A large number of small files: Static website files need to be stored, including HTML files, JSON files, and static images.
 -  Read I/O intensive: Scope of data reading is large, and data writing is relatively small.
@@ -19,7 +19,7 @@ Configuration Process
 
 #. Sort out the website files.
 #. Log in to the SFS console. Create an SFS Turbo file system to store the website files.
-#. Log in to the server that functions as the compute node and mount the file system.
+#. Log in to the cloud server that functions as the compute node and mount the file system.
 #. On the head node, upload the files to the file system.
 #. Start the web server.
 
@@ -27,7 +27,7 @@ Prerequisites
 -------------
 
 -  A VPC has been created.
--  Servers that function as head nodes and compute nodes have been created, and have been assigned to the VPC.
+-  Cloud servers that function as the head node and compute node have been created and are in the created VPC.
 -  SFS has been enabled.
 
 Example Configuration
@@ -41,7 +41,7 @@ Example Configuration
 
 #. After the configuration is complete, click **Create Now**.
 
-   To mount a file system to Linux ECSs, see :ref:`Mounting an NFS File System to ECSs (Linux) <sfs_01_1001>`. To mount a file system to Windows ECSs, see :ref:`Mounting an NFS File System to ECSs (Windows) <en-us_topic_0105224109>`.
+   To mount a file system to Linux ECSs, see :ref:`Mounting an NFS File System to ECSs (Linux) <en-us_topic_0034428728>`. To mount a file system to Windows ECSs, see :ref:`Mounting an NFS File System to ECSs (Windows) <en-us_topic_0105224109>`.
 
 #. Log in to the head node and upload the files to the file system.
 

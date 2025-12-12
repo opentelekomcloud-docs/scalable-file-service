@@ -2,10 +2,10 @@
 
 .. _sfs_01_0059:
 
-The File System Is Abnormal
-===========================
+File System Is Abnormal
+=======================
 
-Currently, the file system exceptions include deletion error, expansion error, reduction error, and reduction failure. When the file system is in these statuses, refer to the following handling suggestions.
+Currently, the file system exceptions include reduction error, reduction failure, deletion error and expansion error. When the file system is in these statuses, refer to the following handling suggestions.
 
 .. table:: **Table 1** Measures for handling file system abnormalities
 

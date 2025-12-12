@@ -8,14 +8,14 @@ Mounting a File System Times Out
 Symptom
 -------
 
-When a file system is mounted to servers using the **mount** command, message **timed out** is displayed.
+When a file system was mounted to a cloud server using the **mount** command, message **timed out** was returned.
 
 Possible Causes
 ---------------
 
 -  Cause 1: The network status is not stable.
 -  Cause 2: The network connection is abnormal.
--  Cause 3: The DNS configuration of the server is incorrect. As a result, the domain name of the file system cannot be resolved, and the mounting fails. This issue will not occur on SFS Turbo file systems.
+-  Cause 3: The DNS configuration of the server is incorrect. As a result, the domain name of the file system cannot be resolved, and the mount fails. This issue will not occur on SFS Turbo file systems.
 -  Cause 4: The server that mounts the file system runs Ubuntu18 or later.
 
 Fault Diagnosis
@@ -30,14 +30,14 @@ Solution
 
    Re-mount the file system after the network issue is addressed.
 
-   -  If the patch is uninstalled successfully, no further action is required.
+   -  If the mount is successful, no further action is required.
    -  If the problem persists, see the solution for cause 3.
 
--  Cause 3: The DNS configuration of the server is incorrect. As a result, the domain name of the file system cannot be resolved, and the mounting fails.
+-  Cause 3: The DNS configuration of the server is incorrect. As a result, the domain name of the file system cannot be resolved, and the mount fails.
 
    #. Check the DNS configuration of the tenant and run the **cat /etc/resolv.conf** command.
 
-      -  If the DNS has not been configured, configure it. For details about how to configure the DNS, see :ref:`Configuring DNS <sfs_01_0038>`.
+      -  If the DNS has not been configured, configure it. For details, see :ref:`Configuring DNS <sfs_01_0038>`.
 
       -  If the DNS has been configured, run the following command to check whether the DNS is correct:
 
@@ -78,7 +78,7 @@ Solution
 
       Press **Esc**, input **:wq**, and press **Enter** to save the changes and exit the vi editor.
 
-   #. The default DNS of the ECS applied by the user is inherited from the VPC to which the ECS belongs. Therefore, when the ECS restarts, the ECS changes synchronously. For this reason, changing configurations of the ECS does not settle the issue completely. You need to modify configurations in the VPC. Set a correct tenant DNS for the subnet of the VPC to which the ECS belongs. See :ref:`Figure 3 <sfs_01_0348__fig155441710394>` and :ref:`Figure 4 <sfs_01_0348__fig056217113912>`.
+   #. By default, the server inherits the DNS configuration of the VPC every time the server restarts. Changing only the server DNS configuration does not resolve the issue completely. You need to modify configurations in the VPC. Set a correct tenant DNS for the subnet of the VPC to which the ECS belongs. See :ref:`Figure 3 <sfs_01_0348__fig155441710394>` and :ref:`Figure 4 <sfs_01_0348__fig056217113912>`.
 
       .. _sfs_01_0348__fig155441710394:
 
@@ -98,14 +98,14 @@ Solution
 
    #. Run the **mount** command again.
 
-      -  If the problem is solved, no further action is required.
+      -  If the mount is successful, no further action is required.
       -  If the problem persists, see the solution for cause 4.
 
 -  Cause 4: The server that mounts the file system runs Ubuntu18 or later.
 
    #. Reconfigure DNS by referring to :ref:`Configuring DNS <sfs_01_0038>`.
 
-   #. Check whether the target server running Ubuntu18 or later uses a private image.
+   #. Check whether the server running Ubuntu18 or later was created from a private image.
 
       -  If yes, go to :ref:`4 <sfs_01_0348__li199471275217>`.
       -  If no, go to :ref:`3 <sfs_01_0348__li107041047680>`.
@@ -116,10 +116,10 @@ Solution
 
       a. .. _sfs_01_0348__li57046472083:
 
-         To create a private image based on an existing ECS, see section "Creating an Image" in the *Elastic Cloud Server User Guide*.
+         Create a private image for the server by referring to section "Creating an Image" in the *Elastic Cloud Server User Guide*.
 
-      b. Use the private image created in :ref:`3.a <sfs_01_0348__li57046472083>` to create an ECS or change the ECS OS. For details, see section "Changing the OS" in the *Elastic Cloud Server User Guide*.
+      b. Use the private image obtained in :ref:`3.a <sfs_01_0348__li57046472083>` to create a server or change the server OS to the created private image by referring to section "Changing the OS" in the *Elastic Cloud Server User Guide*.
 
    #. .. _sfs_01_0348__li199471275217:
 
-      Log in to the server and mount the file system again.
+      Log in to the server and remount the file system.

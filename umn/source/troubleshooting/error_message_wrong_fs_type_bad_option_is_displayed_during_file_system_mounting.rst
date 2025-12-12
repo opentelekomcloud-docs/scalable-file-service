@@ -63,7 +63,7 @@ Solution
 
    **mount -l**
 
-   If the command output contains the following information, the file system is mounted successfully.
+   If the command output contains the following information, the file system has been mounted:
 
    .. code-block::
 

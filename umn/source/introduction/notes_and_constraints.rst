@@ -34,19 +34,19 @@ General Purpose File System
 
 -  A single directory can contain a maximum of 30 million files.
 
--  General purpose file systems cannot be mounted to 32-bit Linux ECSs.
+-  General purpose file systems cannot be mounted to 32-bit Linux servers.
 
--  The name of a general purpose file system must be globally unique. It cannot be the same as any existing general purpose file system name or one created by any other user. And it cannot be changed after the file system is created.
+-  The name of a general purpose file system must be globally unique. It cannot be the same as the name of any existing general purpose file system or one created by any other user. And it cannot be changed after the file system is created.
 
--  If a general purpose file system is deleted, you can create a new file system with the same name as the deleted one 30 minutes after that file system has been deleted.
+-  If a general purpose file system is deleted, you can only create a general purpose file system with the same name as the deleted one 30 minutes after that file system has been deleted.
 
--  General purpose file systems cannot be mounted to Windows ECSs.
+-  General purpose file systems cannot be mounted to Windows servers.
 
--  Root directory permissions of general purpose file systems cannot be changed.
+-  General purpose file systems' root directory permissions cannot be changed.
 
--  When General Purpose File System is used as the storage backend of CCE or CCI, you need to empty the in-use file systems before deleting any PVCs or PVs. If you directly delete the PVCs or PVs, the file systems may fail to be deleted. Check whether the file systems are deleted on the General Purpose File System console.
+-  When general purpose file systems are used as the storage backend of CCE or CCI, you need to empty the file systems before you can delete any PVCs or PVs. If you directly delete the PVCs or PVs, the file systems may fail to be deleted. Check whether the file systems are deleted on the General Purpose File System console.
 
-   Deleting PVCs or PVs takes some time. The billing ends until the corresponding file systems are deleted from the General Purpose File System console.
+   Deleting PVCs or PVs takes some time. The billing ends until the corresponding general purpose file systems are deleted.
 
 SFS Turbo
 ---------
@@ -59,7 +59,7 @@ SFS Turbo
 
    .. note::
 
-      If you need to execute the **ls**, **du**, **cp**, **chmod**, or **chown** command on a directory, you are advised to place no more than 500,000 files or subdirectories in that directory. Otherwise, requests may take long times as the NFS protocol sends a large number of requests to traverse directory files and requests are queueing up.
+      If you need to execute the **ls**, **du**, **cp**, **chmod**, or **chown** command on a directory, you are advised to place no more than 500,000 files or subdirectories in that directory. Otherwise, requests may take long times as the NFS protocol sends a large number of requests to traverse directory files and requests are queuing up.
 
 -  The maximum full path is 4,096 bytes, and the maximum file name length is 255 bytes.
 -  The maximum soft link length is 1,024 bytes.
