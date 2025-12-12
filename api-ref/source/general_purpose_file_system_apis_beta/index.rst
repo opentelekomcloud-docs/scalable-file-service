@@ -7,6 +7,7 @@ General Purpose File System APIs (BETA)
 
 -  :ref:`File Systems <sfs_02_0111>`
 -  :ref:`File System Access Rules <sfs_02_0115>`
+-  :ref:`Tags <sfs_03_0001>`
 
 .. toctree::
    :maxdepth: 1
@@ -14,3 +15,4 @@ General Purpose File System APIs (BETA)
 
    file_systems/index
    file_system_access_rules/index
+   tags/index

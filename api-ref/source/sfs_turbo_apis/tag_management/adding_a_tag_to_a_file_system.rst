@@ -2,13 +2,13 @@
 
 .. _CreateSharedTag:
 
-Adding a Tag for a File System
-==============================
+Adding a Tag to a File System
+=============================
 
 Function
 --------
 
-This API is used to add a tag to a specified file system.
+This API is used to add a tag to a file system.
 
 A maximum of 20 tags can be added to a file system.
 
@@ -23,32 +23,32 @@ POST /v1/{project_id}/sfs-turbo/{share_id}/tags
 
 .. table:: **Table 1** Path Parameters
 
-   ========== ========= ====== ==============
+   ========== ========= ====== ===================
    Parameter  Mandatory Type   Description
-   ========== ========= ====== ==============
-   project_id Yes       String Project ID
-   share_id   Yes       String File system ID
-   ========== ========= ====== ==============
+   ========== ========= ====== ===================
+   project_id Yes       String The project ID.
+   share_id   Yes       String The file system ID.
+   ========== ========= ====== ===================
 
 Request Parameters
 ------------------
 
 .. table:: **Table 2** Request header parameters
 
-   ============ ========= ====== =============
+   ============ ========= ====== ==================
    Parameter    Mandatory Type   Description
-   ============ ========= ====== =============
-   X-Auth-Token Yes       String Account token
-   Content-Type Yes       String MIME type
-   ============ ========= ====== =============
+   ============ ========= ====== ==================
+   X-Auth-Token Yes       String The account token.
+   Content-Type Yes       String The MIME type.
+   ============ ========= ====== ==================
 
 .. table:: **Table 3** Request body parameters
 
-   +-----------+-----------+------------------------------------------------------------------+-------------------------------------------+
-   | Parameter | Mandatory | Type                                                             | Description                               |
-   +===========+===========+==================================================================+===========================================+
-   | tag       | Yes       | :ref:`ResourceTag <createsharedtag__request_resourcetag>` object | Description of the **resource_tag** field |
-   +-----------+-----------+------------------------------------------------------------------+-------------------------------------------+
+   +-----------+-----------+------------------------------------------------------------------+-----------------------------------------+
+   | Parameter | Mandatory | Type                                                             | Description                             |
+   +===========+===========+==================================================================+=========================================+
+   | tag       | Yes       | :ref:`ResourceTag <createsharedtag__request_resourcetag>` object | The **resource_tag** field description. |
+   +-----------+-----------+------------------------------------------------------------------+-----------------------------------------+
 
 .. _createsharedtag__request_resourcetag:
 
@@ -57,13 +57,13 @@ Request Parameters
    +-----------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | Parameter       | Mandatory       | Type            | Description                                                                                                                                                                                                                                                                                                      |
    +=================+=================+=================+==================================================================================================================================================================================================================================================================================================================+
-   | key             | Yes             | String          | Tag key.                                                                                                                                                                                                                                                                                                         |
+   | key             | Yes             | String          | The tag key.                                                                                                                                                                                                                                                                                                     |
    |                 |                 |                 |                                                                                                                                                                                                                                                                                                                  |
    |                 |                 |                 | It can contain a maximum of 128 characters.                                                                                                                                                                                                                                                                      |
    |                 |                 |                 |                                                                                                                                                                                                                                                                                                                  |
    |                 |                 |                 | It cannot be left empty and cannot contain the following characters: ASCII (0-31), equal signs (=), asterisks (``*``), left angle brackets (<), right angle brackets (>), backslashes (), commas (,), vertical bars (|), and slashes (/). It can contain only letters, digits, hyphens (-), and underscores (_). |
    +-----------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | value           | Yes             | String          | Tag value.                                                                                                                                                                                                                                                                                                       |
+   | value           | Yes             | String          | The tag value.                                                                                                                                                                                                                                                                                                   |
    |                 |                 |                 |                                                                                                                                                                                                                                                                                                                  |
    |                 |                 |                 | Each tag value can contain a maximum of 255 characters and can be an empty string.                                                                                                                                                                                                                               |
    |                 |                 |                 |                                                                                                                                                                                                                                                                                                                  |
@@ -72,6 +72,10 @@ Request Parameters
 
 Response Parameters
 -------------------
+
+**Status code: 204**
+
+Tag adding request delivered
 
 None
 
@@ -97,11 +101,11 @@ None
 Status Codes
 ------------
 
-=========== =============================
+=========== ============================
 Status Code Description
-=========== =============================
-204         Tag adding request delivered.
-=========== =============================
+=========== ============================
+204         Tag adding request delivered
+=========== ============================
 
 Error Codes
 -----------

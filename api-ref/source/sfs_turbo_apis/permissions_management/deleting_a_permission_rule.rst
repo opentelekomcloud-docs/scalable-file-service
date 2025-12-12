@@ -2,13 +2,18 @@
 
 .. _DeletePermRule:
 
-Deleting a Permissions Rule
-===========================
+Deleting a Permission Rule
+==========================
 
 Function
 --------
 
 This API is used to delete a permission rule.
+
+Constraints
+-----------
+
+This API is only supported for NFS file systems.
 
 URI
 ---
@@ -17,50 +22,54 @@ DELETE /v1/{project_id}/sfs-turbo/shares/{share_id}/fs/perm-rules/{rule_id}
 
 .. table:: **Table 1** Path Parameters
 
-   ========== ========= ====== ==================
+   ========== ========= ====== =======================
    Parameter  Mandatory Type   Description
-   ========== ========= ====== ==================
-   project_id Yes       String Project ID
-   share_id   Yes       String File system ID
-   rule_id    Yes       String Permission rule ID
-   ========== ========= ====== ==================
+   ========== ========= ====== =======================
+   project_id Yes       String The project ID.
+   share_id   Yes       String The file system ID.
+   rule_id    Yes       String The permission rule ID.
+   ========== ========= ====== =======================
 
 Request Parameters
 ------------------
 
 .. table:: **Table 2** Request header parameters
 
-   ============ ========= ====== =============
+   ============ ========= ====== ==================
    Parameter    Mandatory Type   Description
-   ============ ========= ====== =============
-   X-Auth-Token Yes       String Account token
-   Content-Type Yes       String MIME type
-   ============ ========= ====== =============
+   ============ ========= ====== ==================
+   X-Auth-Token Yes       String The account token.
+   Content-Type Yes       String The MIME type.
+   ============ ========= ====== ==================
 
 Response Parameters
 -------------------
+
+**Status code: 204**
+
+Successful deletion
 
 **Status code: 400**
 
 .. table:: **Table 3** Response body parameters
 
-   ========= ====== =================
+   ========= ====== ==================
    Parameter Type   Description
-   ========= ====== =================
-   errCode   String Error code
-   errMsg    String Error description
-   ========= ====== =================
+   ========= ====== ==================
+   errCode   String The error code.
+   errMsg    String The error message.
+   ========= ====== ==================
 
 **Status code: 500**
 
 .. table:: **Table 4** Response body parameters
 
-   ========= ====== =================
+   ========= ====== ==================
    Parameter Type   Description
-   ========= ====== =================
-   errCode   String Error code
-   errMsg    String Error description
-   ========= ====== =================
+   ========= ====== ==================
+   errCode   String The error code.
+   errMsg    String The error message.
+   ========= ====== ==================
 
 Example Requests
 ----------------

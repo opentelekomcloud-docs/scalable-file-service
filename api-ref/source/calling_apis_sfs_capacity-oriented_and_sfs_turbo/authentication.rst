@@ -15,14 +15,15 @@ AK/SK Authentication
 
 .. note::
 
-   AK/SK authentication supports API requests with a body not larger than 12 MB. For API requests with a larger body, token authentication is recommended.
+   -  AK/SK authentication supports API requests with a body not larger than 12 MB. For API requests with a larger body, token authentication is recommended.
+   -  API Gateway checks the time format and compares the request time with the time when API Gateway received the request. If the time difference exceeds 15 minutes, API Gateway will reject the request. So, the local time on the client must be synchronized with the clock server to avoid a large offset in the value of **X-Sdk-Date** in the request header.
 
-In AK/SK authentication, AK/SK is used to sign requests and the signature is then added to the requests for authentication.
+In AK/SK authentication, an AK/SK pair is used to sign requests and the signature is then added to the requests for authentication.
 
 -  AK: access key ID, which is a unique identifier used in conjunction with a secret access key to sign requests cryptographically.
 -  SK: secret access key, which is used in conjunction with an AK to sign requests cryptographically. It identifies a request sender and prevents the request from being modified.
 
-In AK/SK authentication, you can use an AK/SK to sign requests based on the signature algorithm or using the signing SDK.
+In AK/SK authentication, you can use an AK/SK pair to sign requests based on the signature algorithm or using the signing SDK.
 
 .. note::
 
@@ -33,7 +34,8 @@ Token Authentication
 
 .. note::
 
-   The validity period of a token is 24 hours. When using a token for authentication, cache it to prevent frequently calling the IAM API used to obtain a user token.
+   -  A token remains valid for 24 hours after it is generated. You can cache a token and reuse it for authentication instead of generating a new one each time.
+   -  Before using a token, ensure that it has sufficient time remaining before expiration. Using a near-expiry token may cause API call failures.
 
 A token specifies temporary permissions in a computer system. During API authentication using a token, the token is added to requests to get permissions for calling the API. You can obtain a token by calling the `Obtaining a User Token <https://docs.otc.t-systems.com/en-us/api/iam/en-us_topic_0057845583.html>`__ API.
 
@@ -50,7 +52,7 @@ IMS is a project-level service. When you call the API, set **auth.scope** in the
                "password": {
                    "user": {
                        "name": "username",   // IAM user name
-                       "password": $ADMIN_PASS,  //IAM user password. You are advised to store it in ciphertext in the configuration file or an environment variable and decrypt it when needed to ensure security.
+                       "password": $ADMIN_PASS,  // IAM user password. You are advised to store it in ciphertext in the configuration file or an environment variable and decrypt it when needed to ensure security.
                        "domain": {
                            "name": "domainname"  // Name of the domain that the IAM user belongs to
                        }

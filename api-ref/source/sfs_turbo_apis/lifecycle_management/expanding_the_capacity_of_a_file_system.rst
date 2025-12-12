@@ -17,52 +17,52 @@ POST /v1/{project_id}/sfs-turbo/shares/{share_id}/action
 
 .. table:: **Table 1** Path Parameters
 
-   ========== ========= ====== ==============
+   ========== ========= ====== ===================
    Parameter  Mandatory Type   Description
-   ========== ========= ====== ==============
-   project_id Yes       String Project ID
-   share_id   Yes       String File system ID
-   ========== ========= ====== ==============
+   ========== ========= ====== ===================
+   project_id Yes       String The project ID.
+   share_id   Yes       String The file system ID.
+   ========== ========= ====== ===================
 
 Request Parameters
 ------------------
 
 .. table:: **Table 2** Request header parameters
 
-   ============ ========= ====== =============
+   ============ ========= ====== ==================
    Parameter    Mandatory Type   Description
-   ============ ========= ====== =============
-   X-Auth-Token Yes       String Account token
-   Content-Type Yes       String MIME type
-   ============ ========= ====== =============
+   ============ ========= ====== ==================
+   X-Auth-Token Yes       String The account token.
+   Content-Type Yes       String The MIME type.
+   ============ ========= ====== ==================
 
 .. table:: **Table 3** Request body parameters
 
-   +-----------+-----------+----------------------------------------------------+----------------------+
-   | Parameter | Mandatory | Type                                               | Description          |
-   +===========+===========+====================================================+======================+
-   | extend    | Yes       | :ref:`Extend <expandshare__request_extend>` object | Object of **extend** |
-   +-----------+-----------+----------------------------------------------------+----------------------+
+   +-----------+-----------+----------------------------------------------------+------------------------+
+   | Parameter | Mandatory | Type                                               | Description            |
+   +===========+===========+====================================================+========================+
+   | extend    | Yes       | :ref:`Extend <expandshare__request_extend>` object | The **extend** object. |
+   +-----------+-----------+----------------------------------------------------+------------------------+
 
 .. _expandshare__request_extend:
 
 .. table:: **Table 4** Extend
 
-   +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Parameter       | Mandatory       | Type            | Description                                                                                                                                                                                                                                                                                                 |
-   +=================+=================+=================+=============================================================================================================================================================================================================================================================================================================+
-   | new_size        | Yes             | Integer         | New capacity of the file system after expansion, in GiB.                                                                                                                                                                                                                                                    |
-   |                 |                 |                 |                                                                                                                                                                                                                                                                                                             |
-   |                 |                 |                 | The value ranges from 500 GiB to 32768 GiB, and the capacity expansion step is greater than or equal to 100 GiB.                                                                                                                                                                                            |
-   |                 |                 |                 |                                                                                                                                                                                                                                                                                                             |
-   |                 |                 |                 | Specifications of the previous-generation SFS Turbo file system: Standard Enhanced and Performance Enhanced. The capacity ranges from 10240 GiB to 327680 GiB. The capacity expansion step is greater than or equal to 100 GiB.                                                                             |
-   |                 |                 |                 |                                                                                                                                                                                                                                                                                                             |
-   |                 |                 |                 | 20 MB/s/TiB. The capacity ranges from 3686 GiB to 1048576 GiB. The capacity must be a multiple of 1.2 TiB, and the capacity expansion step must be greater than or equal to 1.2 TiB. The target capacity must be converted to GiB and then rounded down. For example, 4.8 TiB->4915 GiB, 8.4 TiB->8601 GiB. |
-   |                 |                 |                 |                                                                                                                                                                                                                                                                                                             |
-   |                 |                 |                 | 40 MB/s/TiB. The capacity ranges from 1228 GiB to 1048576 GiB. The capacity must be a multiple of 1.2 TiB, and the capacity expansion step must be greater than or equal to 1.2 TiB. The target capacity must be converted to GiB and then rounded down. For example, 4.8 TiB->4915 GiB, 8.4 TiB->8601 GiB. |
-   |                 |                 |                 |                                                                                                                                                                                                                                                                                                             |
-   |                 |                 |                 | 125 MB/s/TiB, 250 MB/s/TiB and 40 MB/s/TiB, the expansion steps are the same.                                                                                                                                                                                                                               |
-   +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Parameter       | Mandatory       | Type            | Description                                                                                                                                                                                                                                                                                                                                                 |
+   +=================+=================+=================+=============================================================================================================================================================================================================================================================================================================================================================+
+   | new_size        | Yes             | Integer         | The new capacity of the file system, in GiB.                                                                                                                                                                                                                                                                                                                |
+   |                 |                 |                 |                                                                                                                                                                                                                                                                                                                                                             |
+   |                 |                 |                 | For a previous-generation Standard or Performance file system, the capacity ranges from **500** to **32768** (in GiB), and the minimum expansion increment is 100 GiB.                                                                                                                                                                                      |
+   |                 |                 |                 |                                                                                                                                                                                                                                                                                                                                                             |
+   |                 |                 |                 | For a previous-generation Standard-Enhanced or Performance-Enhanced file system, the capacity ranges from **10240** to **327680** (in GiB), and the minimum expansion increment is 100 GiB.                                                                                                                                                                 |
+   |                 |                 |                 |                                                                                                                                                                                                                                                                                                                                                             |
+   |                 |                 |                 | For a 20 MB/s/TiB file system, the capacity ranges from **3686** to **1048576** (in GiB) and must be a multiple of 1.2 TiB. The desired capacity must be converted to GiB and rounded down to the nearest integer. For example, use 4915 GiB for a 4.8 TiB file system and 8601 GiB for an 8.4 TiB file system. The minimum expansion increment is 1.2 TiB. |
+   |                 |                 |                 |                                                                                                                                                                                                                                                                                                                                                             |
+   |                 |                 |                 | For a 40 MB/s/TiB file system, the capacity ranges from **1228** to **1048576** (in GiB) and must be a multiple of 1.2 TiB. The desired capacity must be converted to GiB and rounded down to the nearest integer. For example, use 4915 GiB for a 4.8 TiB file system and 8601 GiB for an 8.4 TiB file system. The minimum expansion increment is 1.2 TiB. |
+   |                 |                 |                 |                                                                                                                                                                                                                                                                                                                                                             |
+   |                 |                 |                 | The capacity range and minimum expansion increment of 250 MB/s/TiB and 125 MB/s/TiB file systems are the same as those of 40 MB/s/TiB file systems.                                                                                                                                                                                                         |
+   +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Response Parameters
 -------------------
@@ -71,12 +71,12 @@ Response Parameters
 
 .. table:: **Table 5** Response body parameters
 
-   ========= ====== =================================
+   ========= ====== ===============================
    Parameter Type   Description
-   ========= ====== =================================
-   id        String ID of the SFS Turbo file system
-   name      String Name of the SFS Turbo file system
-   ========= ====== =================================
+   ========= ====== ===============================
+   id        String The SFS Turbo file system ID.
+   name      String The SFS Turbo file system name.
+   ========= ====== ===============================
 
 Example Requests
 ----------------

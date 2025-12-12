@@ -5,10 +5,10 @@
 Task Management
 ===============
 
--  :ref:`Querying Details About a Task <showjobdetail>`
+-  :ref:`Querying the Status of a Task <showjobdetail>`
 
 .. toctree::
    :maxdepth: 1
    :hidden: 
 
-   querying_details_about_a_task
+   querying_the_status_of_a_task

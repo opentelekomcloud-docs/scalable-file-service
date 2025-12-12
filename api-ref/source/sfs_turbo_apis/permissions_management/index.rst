@@ -7,9 +7,9 @@ Permissions Management
 
 -  :ref:`Creating a Permission Rule <createpermrule>`
 -  :ref:`Querying Permission Rules of a File System <listpermrules>`
--  :ref:`Querying a Permission Rule by ID <showpermrule>`
+-  :ref:`Querying a Permission Rule of a File System <showpermrule>`
 -  :ref:`Modifying a Permission Rule <updatepermrule>`
--  :ref:`Deleting a Permissions Rule <deletepermrule>`
+-  :ref:`Deleting a Permission Rule <deletepermrule>`
 
 .. toctree::
    :maxdepth: 1
@@ -17,6 +17,6 @@ Permissions Management
 
    creating_a_permission_rule
    querying_permission_rules_of_a_file_system
-   querying_a_permission_rule_by_id
+   querying_a_permission_rule_of_a_file_system
    modifying_a_permission_rule
-   deleting_a_permissions_rule
+   deleting_a_permission_rule

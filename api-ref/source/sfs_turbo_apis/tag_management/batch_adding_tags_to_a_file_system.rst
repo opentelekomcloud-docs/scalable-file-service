@@ -8,7 +8,7 @@ Batch Adding Tags to a File System
 Function
 --------
 
-This API is used to batch add tags for a specified file system.
+This API is used to batch add tags to a file system.
 
 A maximum of 20 tags can be added to a file system.
 
@@ -23,40 +23,38 @@ POST /v1/{project_id}/sfs-turbo/{share_id}/tags/action
 
 .. table:: **Table 1** Path Parameters
 
-   ========== ========= ====== ==============
+   ========== ========= ====== ===================
    Parameter  Mandatory Type   Description
-   ========== ========= ====== ==============
-   project_id Yes       String Project ID
-   share_id   Yes       String File system ID
-   ========== ========= ====== ==============
+   ========== ========= ====== ===================
+   project_id Yes       String The project ID.
+   share_id   Yes       String The file system ID.
+   ========== ========= ====== ===================
 
 Request Parameters
 ------------------
 
 .. table:: **Table 2** Request header parameters
 
-   ============ ========= ====== =============
+   ============ ========= ====== ==================
    Parameter    Mandatory Type   Description
-   ============ ========= ====== =============
-   X-Auth-Token Yes       String Account token
-   Content-Type Yes       String MIME type
-   ============ ========= ====== =============
+   ============ ========= ====== ==================
+   X-Auth-Token Yes       String The account token.
+   Content-Type Yes       String The MIME type.
+   ============ ========= ====== ==================
 
 .. table:: **Table 3** Request body parameters
 
-   +-----------------+-----------------+-------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Parameter       | Mandatory       | Type                                                                          | Description                                                                                                                                                                                             |
-   +=================+=================+===============================================================================+=========================================================================================================================================================================================================+
-   | action          | Yes             | String                                                                        | Operation identifier. The value is **create**. Use **create** if you want to batch add tags to a file system.                                                                                           |
-   +-----------------+-----------------+-------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | tags            | No              | Array of :ref:`ResourceTag <batchaddsharedtags__request_resourcetag>` objects | Tag list.                                                                                                                                                                                               |
-   |                 |                 |                                                                               |                                                                                                                                                                                                         |
-   |                 |                 |                                                                               | This field is mandatory for users. For users with the op_service permission, choose either this field or **sys_tags**.                                                                                  |
-   +-----------------+-----------------+-------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | sys_tags        | No              | Array of :ref:`ResourceTag <batchaddsharedtags__request_resourcetag>` objects | System tag list.                                                                                                                                                                                        |
-   |                 |                 |                                                                               |                                                                                                                                                                                                         |
-   |                 |                 |                                                                               | This field is available only to users with the op_service permission. Choose either this field or **tags**. Only one resource_tag structure key, **\_sys_enterprise_project_id**, is used in TMS calls. |
-   +-----------------+-----------------+-------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   +-----------------+-----------------+-------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------+
+   | Parameter       | Mandatory       | Type                                                                          | Description                                                                                                       |
+   +=================+=================+===============================================================================+===================================================================================================================+
+   | action          | Yes             | String                                                                        | The operation identifier. The value is **create**. Use **create** if you want to batch add tags to a file system. |
+   |                 |                 |                                                                               |                                                                                                                   |
+   |                 |                 |                                                                               | Enumeration values:                                                                                               |
+   |                 |                 |                                                                               |                                                                                                                   |
+   |                 |                 |                                                                               | -  **create**                                                                                                     |
+   +-----------------+-----------------+-------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------+
+   | tags            | Yes             | Array of :ref:`ResourceTag <batchaddsharedtags__request_resourcetag>` objects | The list of tags.                                                                                                 |
+   +-----------------+-----------------+-------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------+
 
 .. _batchaddsharedtags__request_resourcetag:
 
@@ -65,13 +63,13 @@ Request Parameters
    +-----------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | Parameter       | Mandatory       | Type            | Description                                                                                                                                                                                                                                                                                                      |
    +=================+=================+=================+==================================================================================================================================================================================================================================================================================================================+
-   | key             | Yes             | String          | Tag key.                                                                                                                                                                                                                                                                                                         |
+   | key             | Yes             | String          | The tag key.                                                                                                                                                                                                                                                                                                     |
    |                 |                 |                 |                                                                                                                                                                                                                                                                                                                  |
    |                 |                 |                 | It can contain a maximum of 128 characters.                                                                                                                                                                                                                                                                      |
    |                 |                 |                 |                                                                                                                                                                                                                                                                                                                  |
    |                 |                 |                 | It cannot be left empty and cannot contain the following characters: ASCII (0-31), equal signs (=), asterisks (``*``), left angle brackets (<), right angle brackets (>), backslashes (), commas (,), vertical bars (|), and slashes (/). It can contain only letters, digits, hyphens (-), and underscores (_). |
    +-----------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | value           | Yes             | String          | Tag value.                                                                                                                                                                                                                                                                                                       |
+   | value           | Yes             | String          | The tag value.                                                                                                                                                                                                                                                                                                   |
    |                 |                 |                 |                                                                                                                                                                                                                                                                                                                  |
    |                 |                 |                 | Each tag value can contain a maximum of 255 characters and can be an empty string.                                                                                                                                                                                                                               |
    |                 |                 |                 |                                                                                                                                                                                                                                                                                                                  |
@@ -81,12 +79,16 @@ Request Parameters
 Response Parameters
 -------------------
 
+**Status code: 204**
+
+Batch adding tags succeeded
+
 None
 
 Example Requests
 ----------------
 
-Batch adding tags for a file system, with tag key of the first tag set to **key1**, tag value of the first tag **value1**, tag key of the second tag **key2**, and tag value of the second tag **value1**
+Batch adding tags to a file system, with tag key of the first tag set to **key1**, tag value of the first tag **value1**, tag key of the second tag **key2**, and tag value of the second tag **value1**
 
 .. code-block::
 
@@ -109,11 +111,11 @@ None
 Status Codes
 ------------
 
-=========== =======================
+=========== ===========================
 Status Code Description
-=========== =======================
-204         File system tags added.
-=========== =======================
+=========== ===========================
+204         Batch adding tags succeeded
+=========== ===========================
 
 Error Codes
 -----------
