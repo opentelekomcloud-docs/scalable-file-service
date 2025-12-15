@@ -13,7 +13,7 @@ You can grant users permissions by using roles and policies. Roles are a type of
 
 .. note::
 
-   -  Policy-based authorization is useful if you want to allow or deny the access to an API.
+   Policy-based authorization is useful if you want to allow or deny the access to an API.
 
 Each account has all the permissions required to call all APIs, but IAM users must be assigned the required permissions. The permissions required for calling an API are determined by the actions supported by the API. Only users who have been granted permissions allowing the actions can call the API successfully. For example, if an IAM user wants to query ECSs using an API, the user must have been granted permissions that allow the **ecs:servers:list** action.
 

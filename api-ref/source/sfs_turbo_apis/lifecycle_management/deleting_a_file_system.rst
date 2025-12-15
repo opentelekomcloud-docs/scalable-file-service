@@ -17,27 +17,31 @@ DELETE /v1/{project_id}/sfs-turbo/shares/{share_id}
 
 .. table:: **Table 1** Path Parameters
 
-   ========== ========= ====== ==============
+   ========== ========= ====== ===================
    Parameter  Mandatory Type   Description
-   ========== ========= ====== ==============
-   project_id Yes       String Project ID
-   share_id   Yes       String File system ID
-   ========== ========= ====== ==============
+   ========== ========= ====== ===================
+   project_id Yes       String The project ID.
+   share_id   Yes       String The file system ID.
+   ========== ========= ====== ===================
 
 Request Parameters
 ------------------
 
 .. table:: **Table 2** Request header parameters
 
-   ============ ========= ====== =============
+   ============ ========= ====== ==================
    Parameter    Mandatory Type   Description
-   ============ ========= ====== =============
-   X-Auth-Token Yes       String Account token
-   Content-Type Yes       String MIME type
-   ============ ========= ====== =============
+   ============ ========= ====== ==================
+   X-Auth-Token Yes       String The account token.
+   Content-Type Yes       String The MIME type.
+   ============ ========= ====== ==================
 
 Response Parameters
 -------------------
+
+**Status code: 202**
+
+File system deletion request delivered
 
 None
 
@@ -58,11 +62,11 @@ None
 Status Codes
 ------------
 
-=========== =======================================
+=========== ======================================
 Status Code Description
-=========== =======================================
-202         File system deletion request delivered.
-=========== =======================================
+=========== ======================================
+202         File system deletion request delivered
+=========== ======================================
 
 Error Codes
 -----------

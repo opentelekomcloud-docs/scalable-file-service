@@ -19,7 +19,7 @@ Response Header
 
 Similar to a request, a response also has a header, for example, **Content-Type**.
 
-:ref:`Figure 1 <sfs_02_0012__en-us_topic_0170155703_fig4865141011511>` shows the response header fields for the API used to . The **X-Subject-Token** header field is the desired user token. This token can then be used to authenticate the calling of other APIs.
+:ref:`Figure 1 <sfs_02_0012__en-us_topic_0170155703_fig4865141011511>` shows the response header for the API used to . The **X-Subject-Token** header field is the desired user token. This token can then be used to authenticate the calling of other APIs.
 
 .. note::
 

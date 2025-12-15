@@ -9,8 +9,10 @@ SFS Turbo APIs
 -  :ref:`Connection Management <topic_300000001>`
 -  :ref:`Tag Management <topic_300000002>`
 -  :ref:`Name Management <topic_300000003>`
+-  :ref:`File System Management <topic_300000004>`
 -  :ref:`Permissions Management <topic_300000007>`
 -  :ref:`Task Management <topic_300000008>`
+-  :ref:`Tenant Quota Management <topic_300000011>`
 
 .. toctree::
    :maxdepth: 1
@@ -20,5 +22,7 @@ SFS Turbo APIs
    connection_management/index
    tag_management/index
    name_management/index
+   file_system_management/index
    permissions_management/index
    task_management/index
+   tenant_quota_management/index
