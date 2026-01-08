@@ -2,8 +2,8 @@
 
 .. _sfs_02_0100:
 
-Calling APIs (General Purpose File System) (BETA)
-=================================================
+Calling APIs (General Purpose File System)
+==========================================
 
 -  :ref:`Constructing a Request <sfs_02_0101>`
 -  :ref:`Authentication <sfs_02_0102>`
