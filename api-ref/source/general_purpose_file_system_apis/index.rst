@@ -2,8 +2,8 @@
 
 .. _sfs_02_0110:
 
-General Purpose File System APIs (BETA)
-=======================================
+General Purpose File System APIs
+================================
 
 -  :ref:`File Systems <sfs_02_0111>`
 -  :ref:`File System Access Rules <sfs_02_0115>`

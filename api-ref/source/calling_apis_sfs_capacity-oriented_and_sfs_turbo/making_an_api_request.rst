@@ -116,7 +116,7 @@ This part is optional. The body of a request is often sent in a structured forma
 
 The request body varies between APIs. Some APIs do not require the request body, such as the APIs requested using the GET and DELETE methods.
 
-In the case of the API used to `obtain a user token <https://docs.otc.t-systems.com/en-us/api/iam/en-us_topic_0057845583.html>`__, the request parameters and parameter description can be obtained from the API request. The following provides an example request with a body included. Replace *username*, *domainname*, *$ADMIN_PASS* (login password), and *xxxxxxxxxxxxxxxxxx* (project name) with the actual values. Obtain a project name from `Regions and Endpoints <https://docs.otc.t-systems.com/en-us/endpoint/index.html>`__.
+In the case of the API used to `obtain a user token <https://docs.otc.t-systems.com/en-us/api/iam/en-us_topic_0057845583.html>`__, the request parameters and parameter description can be obtained from the API request. The following provides an example request with a body included. Replace *username*, *domainname* (), *$ADMIN_PASS* (login password), and *xxxxxxxxxxxxxxxxxx* (project name) with the actual values. Obtain a project name from `Regions and Endpoints <https://docs.otc.t-systems.com/en-us/endpoint/index.html>`__.
 
 .. note::
 

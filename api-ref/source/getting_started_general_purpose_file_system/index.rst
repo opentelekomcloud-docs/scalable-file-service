@@ -2,8 +2,8 @@
 
 .. _sfs_02_0107:
 
-Getting Started (General Purpose File System) (BETA)
-====================================================
+Getting Started (General Purpose File System)
+=============================================
 
 -  :ref:`Creating a File System <sfs_02_0108>`
 -  :ref:`Listing File Systems <sfs_02_0109>`
