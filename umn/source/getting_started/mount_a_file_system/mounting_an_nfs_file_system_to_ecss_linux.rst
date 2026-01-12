@@ -72,7 +72,7 @@ Procedure
 
       #. Run the following command to check whether the NFS software package is installed.
 
-         -  In CentOS, Red Hat, Oracle Enterprise Linux, SUSE, EulerOS, Fedora, or OpenSUSE:
+         -  In CentOS, Red Hat, Oracle Enterprise Linux, SUSE, EulerOS, Fedora, or openSUSE:
 
             **rpm -qa|grep nfs**
 
@@ -89,7 +89,7 @@ Procedure
                libnfsidmap
                nfs-utils
 
-         -  In SUSE or OpenSUSE:
+         -  In SUSE or openSUSE:
 
             .. code-block::
 
@@ -118,7 +118,7 @@ Procedure
 
             **sudo apt-get install nfs-common**
 
-         -  In SUSE or OpenSUSE:
+         -  In SUSE or openSUSE:
 
             **zypper install nfs-client**
 
@@ -181,25 +181,22 @@ Procedure
       |                                   |                                                                                                                                                                                                                                                                                                                                                                                   |
       |                                   | General Purpose File System does not support UDP. Therefore, you need to set **proto** to **tcp** for general purpose file systems.                                                                                                                                                                                                                                               |
       +-----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | *Mount point*                     | The format for an SFS Capacity-Oriented file system is *File system domain name*:/*Path*, for example, **example.com:/share-**\ *xxx*. The format for an SFS Turbo file system is *File system IP address*:/, for example, **192.168.0.0:/**.                                                                                                                                     |
+      | *Mount point*                     | The format for an SFS Capacity-Oriented file system is *File system domain name*:/*Path*, for example, **example.com:/share-**\ *xxx*.                                                                                                                                                                                                                                            |
       |                                   |                                                                                                                                                                                                                                                                                                                                                                                   |
-      |                                   | :ref:`Figure 1 <en-us_topic_0034428728__fig929579017114>` shows an example.                                                                                                                                                                                                                                                                                                       |
+      |                                   | The format for a general purpose file system is *File system domain name*:/*File system name*, for example, **example.com:/**\ *xxx*.                                                                                                                                                                                                                                             |
+      |                                   |                                                                                                                                                                                                                                                                                                                                                                                   |
+      |                                   | For an SFS Turbo Standard, Standard-Enhanced, Performance, or Performance-Enhanced file system, the format is *File system IP address*\ **:/**, for example, **192.168.0.0:/**.                                                                                                                                                                                                   |
+      |                                   |                                                                                                                                                                                                                                                                                                                                                                                   |
+      |                                   | For an SFS Turbo 1,000 MB/s/TiB, 500 MB/s/TiB, 250 MB/s/TiB, 125 MB/s/TiB, 40 MB/s/TiB, or 20 MB/s/TiB file system, the format is *File system domain name*\ **:/**, for example, **xxx.sfsturbo.internal:/**.                                                                                                                                                                    |
       |                                   |                                                                                                                                                                                                                                                                                                                                                                                   |
       |                                   | .. note::                                                                                                                                                                                                                                                                                                                                                                         |
       |                                   |                                                                                                                                                                                                                                                                                                                                                                                   |
-      |                                   |    -  *x* is a digit or letter.                                                                                                                                                                                                                                                                                                                                                   |
+      |                                   |    -  Variable *x* is a digit or letter.                                                                                                                                                                                                                                                                                                                                          |
       |                                   |    -  If the mount point is too long to display completely, you can adjust the column width.                                                                                                                                                                                                                                                                                      |
       |                                   |    -  Hover the mouse over the mount point to display the complete **mount** command.                                                                                                                                                                                                                                                                                             |
       +-----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | *Local path*                      | A local directory on the ECS used to mount the file system, for example, **/local_path**.                                                                                                                                                                                                                                                                                         |
       +-----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-   .. _en-us_topic_0034428728__fig929579017114:
-
-   .. figure:: /_static/images/en-us_image_0251318230.png
-      :alt: **Figure 1** Mount point
-
-      **Figure 1** Mount point
 
    For more mounting parameters for performance optimization during file system mounting, see :ref:`Table 2 <en-us_topic_0034428728__table372185017537>`. Use commas (,) to separate parameters. The following command is an example:
 
@@ -266,4 +263,4 @@ Procedure
 
       The maximum size of a file that can be written to an SFS Capacity-Oriented file system is 240 TB.
 
-      The maximum size of a file that can be written to an SFS Turbo file system is 32 TB, and that for an SFS Turbo Enhanced file system is 320 TB.
+      The maximum size of a file that can be written to an SFS Turbo Standard or Performance file system is 32 TB, that for a Standard-Enhanced or Performance-Enhanced file system is 320 TB, and that for a 1,000 MB/s/TiB, 500 MB/s/TiB, 250 MB/s/TiB, 125 MB/s/TiB, 40 MB/s/TiB, or 20 MB/s/TiB file system is 1 PB.
