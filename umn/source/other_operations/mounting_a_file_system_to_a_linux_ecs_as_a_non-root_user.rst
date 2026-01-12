@@ -58,17 +58,25 @@ Procedure
 
    .. table:: **Table 1** Parameter description
 
-      +-----------------------------------+-------------------------------------------------------------------------------------------+
-      | Parameter                         | Description                                                                               |
-      +===================================+===========================================================================================+
-      | Mount Point                       | .. note::                                                                                 |
-      |                                   |                                                                                           |
-      |                                   |    *x* is a digit or letter.                                                              |
-      |                                   |                                                                                           |
-      |                                   |    If the mount point is too long to display completely, you can adjust the column width. |
-      +-----------------------------------+-------------------------------------------------------------------------------------------+
-      | *Local path*                      | A local directory on the ECS used to mount the file system, for example, **/local_path**. |
-      +-----------------------------------+-------------------------------------------------------------------------------------------+
+      +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | Parameter                         | Description                                                                                                                                                                                                   |
+      +===================================+===============================================================================================================================================================================================================+
+      | Mount Point                       | The format of an SFS Capacity-Oriented file system is *File system domain name*:/*Path*, for example, **example.com:/share-**\ *xxx*.                                                                         |
+      |                                   |                                                                                                                                                                                                               |
+      |                                   | The format for a general purpose file system is *File system domain name*:/*File system name*, for example, **example.com:/**\ *xxx*.                                                                         |
+      |                                   |                                                                                                                                                                                                               |
+      |                                   | The format for an SFS Turbo Standard, Standard-Enhanced, Performance, or Performance-Enhanced file system is *File system IP address*\ **:/**, for example, **192.168.0.0:/**.                                |
+      |                                   |                                                                                                                                                                                                               |
+      |                                   | The format for an SFS Turbo 1,000 MB/s/TiB, 500 MB/s/TiB, 250 MB/s/TiB, 125 MB/s/TiB, 40 MB/s/TiB, or 20 MB/s/TiB file system is *File system domain name*\ **:/**, for example, **xxx.sfsturbo.internal:/**. |
+      |                                   |                                                                                                                                                                                                               |
+      |                                   | .. note::                                                                                                                                                                                                     |
+      |                                   |                                                                                                                                                                                                               |
+      |                                   |    Variable *x* is a digit or letter.                                                                                                                                                                         |
+      |                                   |                                                                                                                                                                                                               |
+      |                                   |    If the mount point is too long to display completely, you can adjust the column width.                                                                                                                     |
+      +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | *Local path*                      | A local directory on the ECS used to mount the file system, for example, **/local_path**.                                                                                                                     |
+      +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 #. Run the following command to view the mounted file system:
 

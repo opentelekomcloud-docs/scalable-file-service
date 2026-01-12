@@ -13,7 +13,7 @@ In scenarios like AI training and inference, high-performance data preprocessing
 Constraints
 -----------
 
--  SFS Turbo file system types that support storage interworking: 250 MB/s/TiB, 125 MB/s/TiB, 40 MB/s/TiB, and 20 MB/s/TiB
+-  SFS Turbo file system types that support storage interworking: 1,000 MB/s/TiB, 500 MB/s/TiB 250 MB/s/TiB, 125 MB/s/TiB, 40 MB/s/TiB, and 20 MB/s/TiB
 -  After you have configured storage interworking between OBS and a directory in SFS Turbo, operations like creating hard links, configuring directory quota limits, and renaming are no longer supported.
 -  You can configure a maximum of 16 interworking directories for a single SFS Turbo file system.
 -  Adding OBS buckets as storage backends depends on the OBS service, so you must have the OBS Administrator permissions.
@@ -22,6 +22,7 @@ Constraints
 -  For import tasks, the length of a file or subdirectory name cannot exceed 255 bytes.
 -  If an OBS bucket has WORM enabled, you can only import data from OBS to SFS Turbo, but cannot export data from SFS Turbo to OBS.
 -  OBS buckets configured with server-side encryption and OBS parallel file systems cannot be added as storage backends.
+-  Windows systems do not allow special characters ``(/\:*?"<>|)`` in file or folder names. You are advised not to use these characters when naming files or folders. Otherwise, files (objects) or directories downloaded to Windows from SFS Turbo file systems or OBS buckets will be renamed.
 
 .. _sfs_01_0334__en-us_topic_0000001964056989_section18118125142619:
 
@@ -82,7 +83,7 @@ Adding an OBS Bucket
 Auto Synchronization
 --------------------
 
-After you add an OBS bucket as a storage backend, you can configure auto synchronization.
+You can configure auto synchronization when adding an OBS storage backend or after an OBS storage backed is added.
 
 If you enable auto export, SFS Turbo will asynchronously export data to OBS based on the types of data you select.
 
@@ -122,7 +123,7 @@ Metadata Import
 
 After you add an OBS bucket as a storage backend, you can use the metadata import function.
 
-Before accessing data in your OBS bucket from SFS Turbo, you need to use metadata import to import the object metadata (name, size, and last modification time) from the bucket to the file system. You can only access the object data in the interworking directory after the metadata is imported. This operation only imports the metadata. The data will be loaded from the bucket and cached in the file system when it is accessed for the first time. When the same data is accessed later, it will be accessed from the cache, instead of the bucket.
+Before accessing data in your OBS bucket from SFS Turbo, you need to use metadata import to import the object metadata (name, size, and last modification time) from the bucket to the file system. You can only access the object data in the interworking directory after the metadata is imported. This operation only imports the metadata. The data will be loaded from the bucket and cached in the file system when it is accessed for the first time. When the same data is accessed later, it will be accessed from the file system, instead of the bucket.
 
 SFS Turbo supports two metadata import methods: quick import and additional metadata import. After the metadata import is complete, you can view the imported directories and files in the interworking directory.
 
@@ -153,7 +154,7 @@ Data Import
 
 After you add an OBS bucket as a storage backend, you can use the data import function.
 
-After a metadata import, data is not imported to the SFS Turbo file system. Instead, data will be loaded from the bucket to the file system when a file is accessed for the first time, which may take a long time. If your workloads are latency-sensitive and you know which directories and files need to be accessed, for example, AI training involves a large number of small files and is sensitive to latency, you can import specified directories and files in advance.
+After a metadata import, data is not imported to the SFS Turbo file system. Instead, data will be loaded from the bucket to the file system when a file is accessed for the first time, which may take some time. If your workloads are latency-sensitive and you know which directories and files need to be accessed, for example, AI training involves a large number of small files and is sensitive to latency, you can import specified directories and files in advance.
 
 During a data import, both data and metadata will be imported, and a quick metadata import will be performed, meaning that the additional metadata (such as uid, gid, and mode) will not be imported. If you want to specify the permissions of imported directories and files, follow the instructions in section "Creating a Data Import or Export Task" in the *Scalable File Service API Reference*. Such an operation is only valid for the current task.
 
@@ -221,7 +222,7 @@ Data export allows you to export to the OBS bucket the files newly created in th
 
    -  When a file is exported from SFS Turbo to OBS:
 
-      If it was previously imported to and then modified in SFS Turbo, it will overwrite its peer object in the bucket if it is newer. Otherwise, it will not overwrite its peer object in the bucket.
+      If it was previously imported to and then modified in SFS Turbo, it will overwrite its peer object in the bucket if it is newer. Otherwise, it will not overwrite its peer object in the bucket. During an overwritten process, the file's peer object in the bucket is deleted first, and then the updated file is written to the bucket. This may remove a peer object that is still in use. When auto export is enabled, if a file in the SFS Turbo file system is frequently modified, it is recommended that you avoid accessing its peer object in the OBS bucket.
 
       If you upload an object to OBS when an object with the same name is being exported, the object you uploaded may be overwritten.
 
@@ -230,9 +231,9 @@ Data export allows you to export to the OBS bucket the files newly created in th
 Cold Data Eviction
 ------------------
 
-After you add an OBS bucket as a storage backend, you can use the cold data eviction function. Only data is deleted during an eviction. The metadata is retained. When the file is accessed later, the file data is loaded from OBS again.
+After you add an OBS bucket as a storage backend, you can use the cold data eviction function. Only data is deleted during an eviction. The metadata is retained. When the deleted file data is accessed later, SFS Turbo loads the data from the OBS bucket.
 
-**Evicting data by time**
+**Time-based Eviction**
 
 After adding an OBS bucket, you can configure a cold data eviction duration to delete data from the cache by time. Files that have not been accessed within the specified duration will be evicted.
 
@@ -250,16 +251,16 @@ The procedure is as follows:
 
       **Figure 7** Setting a cold data eviction duration
 
-**Evicting data by capacity**
+**Capacity-based Eviction**
 
-SFS Turbo file systems also support data eviction by capacity.
+SFS Turbo file systems also support capacity-based data eviction.
 
 When the capacity usage of a file system reaches 95%, SFS Turbo will delete data that has not been accessed in the last 30 minutes until the capacity usage falls below 85%.
 
 .. note::
 
    -  Data can be evicted by time or capacity depending on which rule is triggered first.
-   -  Cold data eviction is enabled by default, and the default duration is 60 hours. To configure a cold data eviction duration by calling the API, see section "Updating a File System" in the *Scalable File Service API Reference*.
+   -  Cold data eviction is enabled by default, and the default duration is 60 hours. To configure a cold data eviction duration by calling the API, see section "Updating the Cold Data Eviction Duration of a File System" in the *Scalable File Service API Reference*.
    -  Services will be affected if the capacity of an SFS Turbo file system is used up, so you are advised to configure an alarm rule on Cloud Eye to monitor the file system capacity usage.
    -  When a file system capacity alarm is generated, change the cold data eviction duration to a shorter one, for example, from 60 hours to 40 minutes, to speed up data eviction, or simply expand the file system capacity.
    -  In high-performance scenarios, you are advised to configure a relatively long eviction duration to avoid the high latency caused by frequently loading data from OBS.
@@ -267,14 +268,14 @@ When the capacity usage of a file system reaches 95%, SFS Turbo will delete data
 Task Status
 -----------
 
-When you export data, a task record will be generated. You can view the task progress and status.
+When you export data, import data, or import metadata, a task record will be generated. You can view the task status.
 
 .. note::
 
    The system retains the latest 1,000 task records. Earlier records will be deleted automatically.
 
 #. Above the storage backend list, click **View Task Status**.
-#. View the task records about export tasks. Click |image1| to the right of the status to view the number of failures or successful executions.
+#. View the task records about data export, data import, and metadata import tasks. Click |image1| to the right of the status to view the number of failures or successful executions.
 #. In the search box in the upper right corner, enter the status, type, or creation time to filter tasks.
 
 FAQs
