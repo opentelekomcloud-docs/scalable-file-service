@@ -38,7 +38,7 @@ General Purpose File System
 
 -  The name of a general purpose file system must be globally unique. It cannot be the same as the name of any existing general purpose file system or one created by any other user. And it cannot be changed after the file system is created.
 
--  If a general purpose file system is deleted, you can only create a general purpose file system with the same name as the deleted one 30 minutes after that file system has been deleted.
+-  If a general purpose file system is deleted, you can create a new file system with the same name after at least 12 hours.
 
 -  General purpose file systems cannot be mounted to Windows servers.
 
