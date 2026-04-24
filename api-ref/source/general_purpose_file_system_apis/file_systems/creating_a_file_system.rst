@@ -14,7 +14,7 @@ This API is used to create a file system with a specified name.
 
    -  A file system name must be unique in SFS. If a user repeatedly creates a file system with the same name as that of an existing file system in a given region, a success response is returned. In other cases, if a file system with the same name is repeatedly created, an error message will be returned, indicating that the file system already exists.
    -  By default, a user can have a maximum of 100 file systems.
-   -  If a file system is deleted, you can only create a file system with the same name as the deleted one 30 minutes after that file system has been deleted.
+   -  If a general purpose file system is deleted, you can create a new file system with the same name after at least 12 hours.
 
 URI
 ---
