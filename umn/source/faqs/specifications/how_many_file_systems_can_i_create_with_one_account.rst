@@ -2,8 +2,8 @@
 
 .. _sfs_01_0073:
 
-How Many File Systems Can Be Created by Each Account?
-=====================================================
+How Many File Systems Can I Create with One Account?
+====================================================
 
 You can create a maximum of 10 SFS Capacity-Oriented file systems and 10 SFS Turbo file systems with each account.
 

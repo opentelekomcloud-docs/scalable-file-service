@@ -22,17 +22,17 @@ Operations
 
 .. table:: **Table 1** SFS Capacity-Oriented operations traced by CTS
 
-   ============================== ============= ===============
-   Operation                      Resource Type Trace
-   ============================== ============= ===============
-   Creating a shared file system  sfs           createShare
-   Modifying a shared file system sfs           updateShareInfo
-   Deleting a shared file system  sfs           deleteShare
-   Adding a share access rule     sfs           addShareACL
-   Deleting a share access rule   sfs           deleteShareACL
-   Expanding a shared file system sfs           extendShare
-   Shrinking a shared file system sfs           shrinkShare
-   ============================== ============= ===============
+   ======================================= ============= ===============
+   Operation                               Resource Type Trace
+   ======================================= ============= ===============
+   Creating a file system                  sfs           createShare
+   Modifying a file system                 sfs           updateShareInfo
+   Deleting a file system                  sfs           deleteShare
+   Adding a file system access rule        sfs           addShareACL
+   Deleting a file system access rule      sfs           deleteShareACL
+   Expanding the capacity of a file system sfs           extendShare
+   Shrinking the capacity of a file system sfs           shrinkShare
+   ======================================= ============= ===============
 
 .. _sfs_01_0050__table11412122812424:
 

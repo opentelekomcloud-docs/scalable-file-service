@@ -13,7 +13,7 @@ In scenarios like AI training and inference, high-performance data preprocessing
 Constraints
 -----------
 
--  SFS Turbo file system types that support storage interworking: 1,000 MB/s/TiB, 500 MB/s/TiB 250 MB/s/TiB, 125 MB/s/TiB, 40 MB/s/TiB, and 20 MB/s/TiB
+-  SFS Turbo file system types that support storage interworking: 1,000 MB/s/TiB, 500 MB/s/TiB, 250 MB/s/TiB, 125 MB/s/TiB, 40 MB/s/TiB, and 20 MB/s/TiB
 -  After you have configured storage interworking between OBS and a directory in SFS Turbo, operations like creating hard links, configuring directory quota limits, and renaming are no longer supported.
 -  You can configure a maximum of 16 interworking directories for a single SFS Turbo file system.
 -  Adding OBS buckets as storage backends depends on the OBS service, so you must have the OBS Administrator permissions.
@@ -138,7 +138,7 @@ SFS Turbo supports two metadata import methods: quick import and additional meta
 
       **Figure 4** Import Metadata
 
-#. Set **Object Prefix** to the prefix of objects in the OBS bucket. It can be a specific object name. To import metadata of all the objects in the OBS bucket, leave the prefix field empty.
+#. Set **Object Prefix** to the prefix of objects in the OBS bucket. It can be a specific object name. To import metadata of all the objects in the OBS bucket, leave the object prefix field empty.
 
 #. Select **Import Additional Metadata** to import additional metadata. If this option is not selected, the system will perform a quick import.
 
@@ -222,7 +222,7 @@ Data export allows you to export to the OBS bucket the files newly created in th
 
    -  When a file is exported from SFS Turbo to OBS:
 
-      If it was previously imported to and then modified in SFS Turbo, it will overwrite its peer object in the bucket if it is newer. Otherwise, it will not overwrite its peer object in the bucket. During an overwritten process, the file's peer object in the bucket is deleted first, and then the updated file is written to the bucket. This may remove a peer object that is still in use. When auto export is enabled, if a file in the SFS Turbo file system is frequently modified, it is recommended that you avoid accessing its peer object in the OBS bucket.
+      If it was previously imported to and then modified in SFS Turbo, it will overwrite its peer object in the bucket if it is newer. Otherwise, it will not overwrite its peer object in the bucket. During an overwrite process, the file's peer object in the bucket is deleted first, and then the updated file is written to the bucket. This may remove a peer object that is still in use. When auto export is enabled, if a file in the SFS Turbo file system is frequently modified, it is recommended that you avoid accessing its peer object in the OBS bucket.
 
       If you upload an object to OBS when an object with the same name is being exported, the object you uploaded may be overwritten.
 
@@ -303,5 +303,9 @@ FAQs
 -  If I delete the files in the SFS Turbo interworking directory, will the objects in the OBS bucket be deleted as well?
 
    If auto synchronization is disabled, the answer is no. If auto synchronization is enabled, the answer is yes.
+
+-  Why isn't my file exported after I edit it with vim, even though auto synchronization is set to export changed data?
+
+   In the SFS Turbo file system, when you edit a file (data or metadata) with vim, the editor doesn't just modify the file. It actually deletes and recreates it. Auto synchronization treats this as a new file rather than a changed file, so the changes cannot be exported with the "changed data" policy. To fix this, configure auto synchronization to export new data. That way, files edited with vim will be properly exported.
 
 .. |image1| image:: /_static/images/en-us_image_0000001964057245.png

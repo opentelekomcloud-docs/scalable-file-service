@@ -7,8 +7,8 @@ Mounting a File System Automatically
 
 File system mount information may be lost after a server is restarted. You can configure auto mount on the server to avoid losing the mount information.
 
-Restrictions
-------------
+Constraints
+-----------
 
 Because service startup sequences in different OSs vary, some servers running CentOS may not support the following auto mount plan. In this case, manually mount the file system.
 
@@ -75,7 +75,7 @@ Field Description
    +===================================+===========================================================================================================================================================================================================+
    | *Mount point*                     | The mount point of the file system to be mounted. Set it to the mount point in the **mount** command in :ref:`Mounting an NFS File System to ECSs (Linux) <en-us_topic_0034428728>`.                      |
    +-----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | */local_path*                     | A directory created on the ECS used to mount the file system. Set it to the local path in the **mount** command in :ref:`Mounting an NFS File System to ECSs (Linux) <en-us_topic_0034428728>`.           |
+   | */local_path*                     | A directory on the ECS used to mount the file system. Set it to the local path in the **mount** command in :ref:`Mounting an NFS File System to ECSs (Linux) <en-us_topic_0034428728>`.                   |
    +-----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | nfs                               | The file system or partition mount type. Set it to **nfs**.                                                                                                                                               |
    +-----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+

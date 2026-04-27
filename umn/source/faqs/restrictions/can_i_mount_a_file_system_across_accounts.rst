@@ -2,8 +2,8 @@
 
 .. _sfs_01_0078:
 
-Can a File System Be Mounted to Multiple Accounts?
-==================================================
+Can I Mount a File System Across Accounts?
+==========================================
 
 SFS Capacity-Oriented file systems can be mounted across accounts.
 

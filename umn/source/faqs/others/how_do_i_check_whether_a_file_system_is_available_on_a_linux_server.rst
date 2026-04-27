@@ -2,7 +2,7 @@
 
 .. _sfs_01_0093:
 
-How Do I Check Whether a File System on a Linux Server Is Available?
+How Do I Check Whether a File System Is Available on a Linux Server?
 ====================================================================
 
 Log in to the server as the **root** user. Run the following command to list all available file systems with the specified domain name or IP address:
