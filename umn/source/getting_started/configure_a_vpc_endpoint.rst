@@ -19,7 +19,7 @@ Prerequisites
 
 #. Before creating a general purpose file system, ensure that a VPC is available.
 
-   If no VPC is available, create one by referring to section "Creating a VPC" in the *Virtual Private Cloud User Guide*.
+   If no VPC is available, create one by referring to section "Creating a VPC with a Subnet" in the *Virtual Private Cloud User Guide*.
 
 #. Before creating a general purpose file system, ensure that ECSs are available and in the created VPC.
 

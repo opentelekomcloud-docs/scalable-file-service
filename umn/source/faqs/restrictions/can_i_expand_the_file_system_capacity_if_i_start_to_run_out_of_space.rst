@@ -2,8 +2,8 @@
 
 .. _sfs_01_0076:
 
-Can the Capacity of a File System Be Expanded?
-==============================================
+Can I Expand the File System Capacity If I Start to Run Out of Space?
+=====================================================================
 
 Both SFS Capacity-Oriented and SFS Turbo file systems can be expanded by capacity resizing.
 

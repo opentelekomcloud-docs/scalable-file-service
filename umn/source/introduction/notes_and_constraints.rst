@@ -18,7 +18,7 @@ SFS Capacity-Oriented
 
 -  SFS Capacity-Oriented can be accessed only on the intranet and used only on the cloud.
 
--  Only NFSv3 is supported (NFSv4 is not supported).
+-  NFSv3 is supported (NFSv4 is not supported).
 -  A maximum of 10,000 compute nodes can be mounted to and access a single file system at the same time.
 -  The maximum capacity of a single file system is 2 PB, and that of a single file is 240 TB.
 -  Multi-VPC access is supported. You can add a maximum of 20 VPCs for one file system and create a maximum of 400 ACL rules for all added VPCs.
@@ -27,8 +27,6 @@ General Purpose File System
 ---------------------------
 
 -  Only the NFSv3 protocol is supported (NFSv4 is not supported).
-
--  General purpose file systems do not support file system encryption.
 
 -  General purpose file systems can only be accessed over the intranet.
 

@@ -18,7 +18,7 @@ The ECS security group configuration is incorrect. The port used to communicate 
 Fault Diagnosis
 ---------------
 
-Check whether the port of the target server is enabled and correctly configure the port on the security group console.
+On the security group console, check the port configuration for the target ECS and ensure that required ports are correctly configured.
 
 Solution
 --------

@@ -85,9 +85,9 @@ Procedure (Windows)
    .. _sfs_01_0038__fig11811485719:
 
    .. figure:: /_static/images/en-us_image_0110762886.png
-      :alt: **Figure 3** Page for network and sharing center
+      :alt: **Figure 3** Network and Sharing Center
 
-      **Figure 3** Page for network and sharing center
+      **Figure 3** Network and Sharing Center
 
 #. In the **Activity** area, select **Properties**. See :ref:`Figure 4 <sfs_01_0038__fig18980173031015>`.
 
