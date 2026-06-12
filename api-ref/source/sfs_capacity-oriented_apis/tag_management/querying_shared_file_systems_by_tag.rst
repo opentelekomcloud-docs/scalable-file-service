@@ -216,7 +216,7 @@ Response
    |                       |                        | #. Currently, only one tag structure key is used, **\_sys_enterprise_project_id**.                                       |
    |                       |                        | #. Currently, **key** contains only one value.                                                                           |
    |                       |                        |                                                                                                                          |
-   |                       |                        | This field cannot be returned in non-op_service scenarios.                                                               |
+   |                       |                        | This field is not returned for users without the op_service permission.                                                  |
    +-----------------------+------------------------+--------------------------------------------------------------------------------------------------------------------------+
    | resource_name         | String                 | Specifies the resource name.                                                                                             |
    +-----------------------+------------------------+--------------------------------------------------------------------------------------------------------------------------+

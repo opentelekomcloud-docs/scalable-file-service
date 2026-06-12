@@ -10,6 +10,11 @@ Function
 
 This API is used to obtain the IP addresses of the clients who have mounted the file system.
 
+Constraints
+-----------
+
+Only the IP addresses of clients that sent access requests in the last 5 minutes are obtained.
+
 URI
 ---
 
