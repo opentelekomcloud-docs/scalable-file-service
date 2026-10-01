@@ -5,6 +5,8 @@
 Creating a Shared File System (Deprecated)
 ==========================================
 
+This API is no longer available.
+
 Function
 --------
 
