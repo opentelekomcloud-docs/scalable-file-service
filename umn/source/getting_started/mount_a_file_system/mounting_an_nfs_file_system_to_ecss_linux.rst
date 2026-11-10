@@ -5,7 +5,7 @@
 Mounting an NFS File System to ECSs (Linux)
 ===========================================
 
-After creating a file system, you need to mount the file system to cloud servers so that they can share the file system.
+After creating a file system, you need to mount it to cloud servers so that they can share the file system.
 
 In this section, ECSs are used as example servers. Operations on BMSs and containers (CCE) are the same as those on ECSs.
 
@@ -17,7 +17,7 @@ Prerequisites
 -  You have checked the OS type of each ECS. Different OSs require different commands to install the NFS client.
 -  You have created a file system and have obtained the mount point of the file system.
 -  At least one ECS that is in the same VPC as the file system is available.
--  The IP address of the DNS server for resolving the domain names of the file systems has been configured on the ECS. SFS Turbo file systems do not require domain name resolution.
+-  The IP address of the DNS server for resolving the file system domain name has been configured on the ECS. SFS Turbo file systems do not require domain name resolution.
 
 Constraints
 -----------
@@ -146,7 +146,7 @@ Procedure
 
       If there is any resource, such as a disk, already mounted on the local path, create a new path. (NFS clients do not refuse repeated mounts. If there are repeated mounts, information of the last successful mount is displayed.)
 
-#. Run the following command to mount the file system to the ECS in the same VPC as the file system. You can now mount the file system to Linux ECSs using NFSv3 only.
+#. Mount the file system to the ECSs in the same VPC as the file system. You can now mount the file system to Linux ECSs using NFSv3 only.
 
    :ref:`Table 1 <en-us_topic_0034428728__table199544014035>` describes the variables.
 
@@ -185,7 +185,7 @@ Procedure
       |                                   |                                                                                                                                                                                                                                                                                                                                                                                   |
       |                                   | The format for a general purpose file system is *File system domain name*:/*File system name*, for example, **example.com:/**\ *xxx*.                                                                                                                                                                                                                                             |
       |                                   |                                                                                                                                                                                                                                                                                                                                                                                   |
-      |                                   | For an SFS Turbo Standard, Standard-Enhanced, Performance, or Performance-Enhanced file system, the format is *File system IP address*\ **:/**, for example, **192.168.0.0:/**.                                                                                                                                                                                                   |
+      |                                   | The format for an SFS Turbo Standard, Standard-Enhanced, Performance, or Performance-Enhanced file system is *File system IP address*\ **:/**, for example, **192.168.0.0:/**.                                                                                                                                                                                                    |
       |                                   |                                                                                                                                                                                                                                                                                                                                                                                   |
       |                                   | For an SFS Turbo 1,000 MB/s/TiB, 500 MB/s/TiB, 250 MB/s/TiB, 125 MB/s/TiB, 40 MB/s/TiB, or 20 MB/s/TiB file system, the format is *File system domain name*\ **:/**, for example, **xxx.sfsturbo.internal:/**.                                                                                                                                                                    |
       |                                   |                                                                                                                                                                                                                                                                                                                                                                                   |

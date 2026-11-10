@@ -94,6 +94,6 @@ Procedure
       |                                   | -  For a 20 MB/s/TiB, 40 MB/s/TiB, 125 MB/s/TiB, 250 MB/s/TiB, 500 MB/s/TiB, or 1,000 MB/s/TiB file system, the minimum expansion increment is 1.2 TB, and the increment must be an integer multiple of 1.2 TB. The new capacity can be no more than 1 PB.                                            |
       +-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-#. In the displayed dialog box, confirm the information and click **OK**.
+#. On the displayed page, confirm the information and click **OK**.
 
 #. In the file system list, check the capacity information after resizing.

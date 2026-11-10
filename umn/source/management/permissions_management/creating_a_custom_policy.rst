@@ -7,7 +7,7 @@ Creating a Custom Policy
 
 Custom policies can be created to supplement the system-defined policies of SFS. For the actions supported for custom policies, see section "Permissions Policies and Supported Actions" in the *Scalable File Service API Reference*.
 
-You can create custom policies in either of the following two ways:
+You can create custom policies in either of the following ways:
 
 -  Visual editor: Select cloud services, actions, resources, and request conditions. This does not require knowledge of policy syntax.
 -  JSON: Edit JSON policies from scratch or based on an existing policy.
@@ -37,7 +37,7 @@ Example Custom Policies
 
    A policy with only "Deny" permissions must be used in conjunction with other policies to take effect. If the permissions assigned to a user contain both "Allow" and "Deny", the "Deny" permissions take precedence over the "Allow" permissions.
 
-   The following method can be used if you need to assign permissions of the **SFS Turbo FullAccess** policy to a user but also forbid the user from deleting file systems. Create a custom policy for denying file system deletion, and attach both policies to the group to which the user belongs. Then, the user can perform all operations on SFS except deleting file systems. The following is an example of a deny policy:
+   Assume that you want to grant the permissions of the **SFS Turbo FullAccess** policy to a user but want to prevent them from deleting file systems. You can create a custom policy for denying file system deletion, and attach this policy together with the **SFS Turbo FullAccess** policy to the user. As an explicit deny in any policy overrides any allows, the user can perform all operations on file systems except deleting them. The following is an example of a deny policy:
 
    .. code-block::
 

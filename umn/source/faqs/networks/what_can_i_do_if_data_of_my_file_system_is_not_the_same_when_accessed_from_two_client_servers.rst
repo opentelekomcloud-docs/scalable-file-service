@@ -13,7 +13,7 @@ A file system was mounted to two servers. There was a delay in synchronizing fil
 Fault Diagnosis
 ---------------
 
-Add **noac, lookupcache=none** to the mount command.
+Add **noac,lookupcache=none** to the mount command.
 
 The **noac** option disables file attribute caching and forces write synchronization. By default, an NFS client's file attribute information is cached using the **ac** option to improve performance, and the client checks file attribute information periodically and updates it if there are any changes. Within the cache validity period, the client does not check whether file attribute information on the server is changed. By default, the value of this option is **ac**. Set it to **noac**.
 

@@ -13,7 +13,7 @@ By default, a Linux ECS allows only the **root** user to use the **mount** comma
 Prerequisites
 -------------
 
--  A non-**root** user has been created on the ECS.
+-  A non-root user has been created on the ECS.
 -  A file system has been created and can be mounted to the ECS as **root**.
 -  The mount point of the file system has been obtained.
 

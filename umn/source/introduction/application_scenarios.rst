@@ -12,7 +12,7 @@ Expandable to petabytes, SFS Capacity-Oriented provides fully hosted shared file
 
 -  Media processing
 
-   Services of TV stations and new media are more likely to be deployed on cloud platforms than before. Such services include streaming media, archiving, editing, transcoding, content distribution, and video on demand (VoD). In such scenarios, a large number of workstations are involved in the whole program production process. Different operating systems may be used by different workstations, requiring file systems to share materials. In addition, HD/4K videos have become a major trend in the broadcasting and TV industry. Taking video editing as an example, to improve audiences' audiovisual experience, HD editing is being transformed to 30- to 40-layer editing. A single editing client may require a file system with a bandwidth up to hundreds of MB per second. Usually, producing a single TV program needs several editing clients to process a lot of video materials concurrently. To meet such requirement, SFS provides customers with stable, bandwidth-intensive, and latency-sensitive performance.
+   Services of TV stations and new media are more likely to be deployed on cloud platforms than before. Such services include streaming media, archiving, editing, transcoding, content distribution, and video on demand (VOD). In such scenarios, a large number of workstations are involved in the whole program production process. Different operating systems may be used by different workstations, requiring file systems to share materials. In addition, HD/4K videos have become a major trend in the broadcasting and TV industry. Taking video editing as an example, to improve audiences' audiovisual experience, HD editing is being transformed to 30- to 40-layer editing. A single editing client may require a file system with a bandwidth up to hundreds of MB per second. Usually, producing a single TV program needs several editing clients to process a lot of video materials concurrently. To meet such requirement, SFS provides customers with stable, bandwidth-intensive, and latency-sensitive performance.
 
 -  Content management and web service
 
@@ -20,12 +20,12 @@ Expandable to petabytes, SFS Capacity-Oriented provides fully hosted shared file
 
 -  Big data and analytic applications
 
-   SFS delivers an aggregate bandwidth of up to 10 Gbit/s, capable of handling ultra-large data files such as satellite images.
+   SFS delivers an aggregate bandwidth of up to 10 GB/s, capable of handling ultra-large data files such as satellite images.
 
 SFS Turbo
 ---------
 
-Expandable to 32 TB, SFS Turbo provides fully hosted shared file storage. It features high availability and durability to support massive small files and applications requiring low latency and high IOPS. SFS Turbo is perfect to scenarios such as high-performance websites, log storage, compression and decompression, DevOps, enterprise offices, and container applications.
+Expandable to 32 TB, SFS Turbo provides fully hosted shared file storage. It features high availability and durability to support massive small files and applications requiring low latency and high IOPS. You can use SFS Turbo for high-performance websites, log storage, compression and decompression, DevOps, enterprise OA, and containerized applications.
 
 -  High-performance websites
 
@@ -33,11 +33,11 @@ Expandable to 32 TB, SFS Turbo provides fully hosted shared file storage. It fea
 
 -  Log storage
 
-   SFS Turbo can provide shared log output directories for multiple service nodes, facilitating log collection and management of distributed applications.
+   SFS Turbo can provide multiple service nodes with a shared log output directory, easily collecting and managing distributed applications' logs.
 
 -  DevOps
 
-   The development directory can be shared with multiple VMs or containers, which simplifies the configuration process and improves R&D experience.
+   The development directory can be shared with multiple VMs or containers, simplifying the configuration process and improving R&D experience.
 
 -  Enterprise OA
 
