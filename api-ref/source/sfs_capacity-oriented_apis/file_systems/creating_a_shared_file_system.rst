@@ -2,8 +2,10 @@
 
 .. _sfs_02_0021:
 
-Creating a Shared File System
-=============================
+Creating a Shared File System (Deprecated)
+==========================================
+
+This API is no longer available.
 
 Function
 --------
