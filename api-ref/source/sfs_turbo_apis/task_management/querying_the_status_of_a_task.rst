@@ -70,7 +70,7 @@ Response Parameters
    +-----------------------+-----------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------+
    | job_type              | String                                                                            | The task type.                                                                          |
    |                       |                                                                                   |                                                                                         |
-   |                       |                                                                                   | Enumerated values:                                                                      |
+   |                       |                                                                                   | Enumeration values:                                                                     |
    |                       |                                                                                   |                                                                                         |
    |                       |                                                                                   | -  **create_share**: creating a file system                                             |
    |                       |                                                                                   |                                                                                         |
@@ -120,7 +120,7 @@ Response Parameters
    +-----------------------+-----------------------+-----------------------------------------------------------------------------------------+
    | job_type              | String                | The subtask type.                                                                       |
    |                       |                       |                                                                                         |
-   |                       |                       | Enumerated values:                                                                      |
+   |                       |                       | Enumeration values:                                                                     |
    |                       |                       |                                                                                         |
    |                       |                       | -  **create_share**: creating a file system                                             |
    |                       |                       |                                                                                         |
