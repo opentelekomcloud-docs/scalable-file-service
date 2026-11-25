@@ -46,6 +46,8 @@ General Purpose File System
 
    Deleting PVCs or PVs takes some time. The billing ends until the corresponding general purpose file systems are deleted.
 
+-  When creating an encrypted general purpose file system on the console, you can select only a custom KMS key in the default project. Custom KMS keys in other projects are not supported. To use a custom KMS key in a non-default project, call the API for creating a file system and specify the project ID associated with the KMS key in the request header.
+
 SFS Turbo
 ---------
 
