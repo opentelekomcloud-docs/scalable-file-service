@@ -20,7 +20,7 @@ Each account has all the permissions required to call all APIs, but IAM users mu
 Supported Actions
 -----------------
 
-SFS provides system-defined policies that can be directly used in IAM. You can also create custom policies and use them to supplement system-defined policies, implementing more refined access control. Operations supported by policies are specific to APIs. The following are common concepts related to policies:
+SFS provides system-defined policies that can be directly used in IAM. You can also create custom policies and use them to supplement system-defined policies, implementing more refined access control. Actions supported by policies are specific to APIs. See the following common concepts related to policies:
 
 -  Permissions: Statements in a policy that allow or deny certain operations.
 -  APIs: REST APIs that can be called by a user who has been granted specific permissions.
