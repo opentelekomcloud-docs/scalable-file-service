@@ -38,7 +38,7 @@ Process Flow
 
    Create a user group and assign permissions to it.
 
-   Create a user group on the IAM console, and attach the **SFS Turbo ReadOnlyAccess** policy to the group.
+   Create a user group on the IAM console and attach the **SFS Turbo ReadOnlyAccess** policy to the group.
 
 #. Create a user and add it to a user group.
 

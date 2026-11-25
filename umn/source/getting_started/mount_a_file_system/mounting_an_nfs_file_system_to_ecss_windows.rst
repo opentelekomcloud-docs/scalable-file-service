@@ -5,7 +5,7 @@
 Mounting an NFS File System to ECSs (Windows)
 =============================================
 
-After creating a file system, you need to mount the file system to cloud servers so that they can share the file system.
+After creating a file system, you need to mount it to cloud servers so that they can share the file system.
 
 This section uses Windows Server 2012 as the example OS to describe how to mount an NFS file system. For other versions, perform the steps based on the actual situation.
 
@@ -16,7 +16,7 @@ Prerequisites
 
 -  You have created a file system and have obtained the mount point of the file system.
 -  At least one ECS that is in the same VPC as the file system is available.
--  The IP address of the DNS server for resolving the file system domain name has been configured on the ECS. For details, see :ref:`Configuring DNS <sfs_01_0038>`. SFS Turbo file systems do not require domain name resolution.
+-  The IP address of the DNS server for resolving the file system domain name has been configured on the ECSs. For details, see :ref:`Configuring DNS <sfs_01_0038>`. SFS Turbo file systems do not require domain name resolution.
 
 Constraints
 -----------
@@ -100,7 +100,7 @@ Procedure
 
          **Figure 7** Client for NFS properties
 
-#. Check that the IP address of the DNS server for resolving the domain names of the file systems has been configured on the ECS before mounting the file system. For details, see :ref:`Configuring DNS <sfs_01_0038>`. SFS Turbo file systems do not require domain name resolution.
+#. Check that the IP address of the DNS server for resolving the file system domain name has been configured on the ECS before mounting the file system. For details, see :ref:`Configuring DNS <sfs_01_0038>`. SFS Turbo file systems do not require domain name resolution.
 
 #. Run the following command in the Command Prompt of the Windows Server 2012 (**X** is the drive letter of the free disk). Select the ECS that is in the same VPC as the file system to mount the file system.
 

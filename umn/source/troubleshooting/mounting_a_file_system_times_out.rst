@@ -72,7 +72,7 @@ Solution
 
             **Figure 2** A locked file
 
-         Run the **chattr -i/etc/resolv.conf** command to unlock the file. Then, re-configure the DNS and go to :ref:`3 <sfs_01_0348__li1340101763913>`.
+         Run the **chattr -i /etc/resolv.conf** command to unlock the file. Then, re-configure the DNS and go to :ref:`3 <sfs_01_0348__li1340101763913>`.
 
    #. .. _sfs_01_0348__li1340101763913:
 

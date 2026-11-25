@@ -2,7 +2,7 @@
 
 .. _sfs_01_0072:
 
-What Access Protocols Are Supported by SFS?
-===========================================
+What Access Protocols Does SFS Support?
+=======================================
 
 SFS Capacity-Oriented and SFS Turbo all support the standard NFSv3 protocol.

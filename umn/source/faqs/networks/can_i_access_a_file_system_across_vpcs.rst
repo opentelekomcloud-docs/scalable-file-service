@@ -2,8 +2,8 @@
 
 .. _sfs_01_0080:
 
-Can a File System Be Accessed Across VPCs?
-==========================================
+Can I Access a File System Across VPCs?
+=======================================
 
 Yes.
 

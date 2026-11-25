@@ -2,8 +2,8 @@
 
 .. _sfs_01_0058:
 
-A Client Server Failed to Access a File System
-==============================================
+A Client Server Failed to Access a General Purpose File System
+==============================================================
 
 Symptom
 -------
